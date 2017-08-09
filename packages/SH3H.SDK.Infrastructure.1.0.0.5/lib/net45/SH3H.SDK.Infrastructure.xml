@@ -1,0 +1,1282 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SH3H.SDK.Infrastructure</name>
+    </assembly>
+    <members>
+        <member name="T:SH3H.SDK.Infrastructure.ConfigurationHelper">
+            <summary>
+            定义获取.config文件的辅助函数类
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.ConfigurationHelper.GetConfig(System.String)">
+            <summary>
+            加载指定的配置文件
+            </summary>
+            <param name="filePath">配置文件路径</param>
+            <returns>
+            如果指定的配置文件存在返回对应的配置对象，否则返回NULL
+            </returns>
+            <exception cref="T:System.IO.FileNotFoundException">无法打开配置文件。</exception>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.ConfigurationHelper.GetSection``1(System.String,System.String)">
+            <summary>
+            获取指定的配置块
+            </summary>
+            <typeparam name="TSection">配置类型</typeparam>
+            <param name="filePath">配置文件路径</param>
+            <param name="sectionName">配置块名称</param>
+            <returns>返回配置块对象实例</returns>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.ConfigurationHelper.GetSection``1(System.String)">
+            <summary>
+            获取指定的配置块
+            </summary>
+            <typeparam name="TSection">配置类型</typeparam>
+            <param name="sectionName">配置块名称</param>
+            <returns>返回配置块对象实例</returns>
+        </member>
+        <member name="T:SH3H.SDK.Infrastructure.Logging.ConsoleLogEntry">
+            <summary>
+            定义Console类型的日志入口对象
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.ConsoleLogEntry.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Infrastructure.Logging.ConsoleLogEntry.BackgroundColor">
+            <summary>
+            获取或设置背景颜色
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Infrastructure.Logging.ConsoleLogEntry.ForegroundColor">
+            <summary>
+            获取或设置字体颜色
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Infrastructure.Logging.ConsoleTraceListener">
+            <summary>
+            扩展了EntLib库中的自定义日志监听器，实现了Console的输出
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.ConsoleTraceListener.Write(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.ConsoleTraceListener.WriteLine(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.ConsoleTraceListener.TraceData(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.ConsoleTraceListener.ApplyConsoleColor(System.Diagnostics.TraceEventType)">
+            <summary>
+            根据事件类型修改Console输出的颜色
+            </summary>
+            <param name="eventType">事件类型</param>
+        </member>
+        <member name="T:SH3H.SDK.Infrastructure.Logging.LogEntryExtension">
+            <summary>
+            定义<see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry"/>对象的扩展方法
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogEntryExtension.SetCode(Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry,System.Int32)">
+            <summary>
+            设置日志对象
+            </summary>
+            <param name="entry">日志对象</param>
+            <param name="code">日志代码</param>
+            <returns>返回日志对象</returns>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogEntryExtension.SetMessage(Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry,System.String)">
+            <summary>
+            设置日志对象
+            </summary>
+            <param name="entry">日志对象</param>
+            <param name="message">日志内容</param>
+            <returns>返回日志对象</returns>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogEntryExtension.SetMessage(Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry,System.String,System.Object[])">
+            <summary>
+            设置日志对象
+            </summary>
+            <param name="entry">日志对象</param>
+            <param name="format">日志内容</param>
+            <param name="args">日志参数</param>
+            <returns>返回日志对象</returns>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogEntryExtension.SetMessage(Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry,System.IFormatProvider,System.String,System.Object[])">
+            <summary>
+            设置日志对象
+            </summary>
+            <param name="entry">日志对象</param>
+            <param name="provider">字符串格式化提供器</param>
+            <param name="format">日志内容</param>
+            <param name="args">日志参数</param>
+            <returns>返回日志对象</returns>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogEntryExtension.SetTitle(Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry,System.String)">
+            <summary>
+            设置日志标题
+            </summary>
+            <param name="entry">日志对象</param>
+            <param name="title">日志标题</param>
+            <returns>返回日志对象</returns>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogEntryExtension.SetSeverity(Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry,System.Diagnostics.TraceEventType)">
+            <summary>
+            设置日志对象
+            </summary>
+            <param name="entry">日志对象</param>
+            <param name="severity">严重程度</param>
+            <returns>返回日志对象</returns>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogEntryExtension.SetCategory(Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry,System.String[])">
+            <summary>
+            设置日志分类
+            </summary>
+            <param name="entry">日志对象</param>
+            <param name="categories">日志分类</param>
+            <returns>返回日志对象</returns>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogEntryExtension.SetException(Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry,System.Exception)">
+            <summary>
+            根据参数填写LogEntry中的内容
+            </summary>
+            <param name="entry">日志入口对象</param>
+            <param name="ex">异常对象</param>
+            <returns>返回LogEntry对象</returns>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogEntryExtension.SetProperty(Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry,System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            根据参数填写LogEntry中的内容
+            </summary>
+            <param name="entry">日志入口对象</param>
+            <param name="properties">日志扩展属性</param>
+            <returns>返回LogEntry对象</returns>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogEntryExtension.SetColor(Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry,System.ConsoleColor,System.ConsoleColor)">
+            <summary>
+            根据参数填写LogEntry中的内容
+            </summary>
+            <param name="entry">日志入口对象</param>
+            <param name="foregroundColor">Console文字颜色</param>
+            <param name="backgroundColor">Console背景颜色</param>
+            <returns>返回LogEntry对象</returns>
+        </member>
+        <member name="T:SH3H.SDK.Infrastructure.Logging.LogManager">
+            <summary>
+            定义日志管理器对象
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Infrastructure.Logging.LogManager.POLICY_EXCEPTION_HANDLING">
+            <summary>
+            ExceptionHandling模块的策略名称
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Infrastructure.Logging.LogManager.DEFAULT_LOGGER_CATEGORY">
+            <summary>
+            GDI默认日志目录名称
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.Get">
+            <summary>
+            静态方法，获取日志记录器实例
+            </summary>
+            <returns>返回<see cref="T:SH3H.SDK.Infrastructure.Logging.LogManager"/>对象实例</returns>
+        </member>
+        <member name="F:SH3H.SDK.Infrastructure.Logging.LogManager.instance">
+            <summary>
+            日志对象实例
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.#ctor">
+            <summary>
+            私有构造函数
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Infrastructure.Logging.LogManager.exManager">
+            <summary>
+            Entlib异常处理模块
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.CanLog(System.Diagnostics.TraceEventType)">
+            <summary>
+            判断当前类型的日志是否能被记录
+            </summary>
+            <param name="severity">日志类型</param>
+            <returns>如果日志能被记录返回true，否则返回false</returns>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.Write(System.String)">
+            <summary>
+            输出日志
+            </summary>
+            <param name="message">日志文本</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.Write(System.String,System.Diagnostics.TraceEventType)">
+            <summary>
+            输出日志
+            </summary>
+            <param name="message">日志文本</param>
+            <param name="severity">日志级别</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.Write(System.String,System.Diagnostics.TraceEventType,System.Exception)">
+            <summary>
+            输出日志
+            </summary>
+            <param name="message">日志文本</param>
+            <param name="severity">日志级别</param>
+            <param name="exception">异常对象</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.Write(System.String,System.Collections.Generic.KeyValuePair{System.String,System.Object}[])">
+            <summary>
+            输出日志
+            </summary>
+            <param name="message">日志文本</param>
+            <param name="properties">日志扩展属性</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.WriteWithCategory(System.String,System.String)">
+            <summary>
+            输出日志
+            </summary>
+            <param name="category">日志分类</param>
+            <param name="message">日志文本</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.WriteWithCategory(System.String,System.String,System.Diagnostics.TraceEventType)">
+            <summary>
+            输出日志
+            </summary>
+            <param name="message">日志文本</param>
+            <param name="category">日志分类</param>
+            <param name="severity">日志级别</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.WriteWithCategory(System.String,System.String,System.Diagnostics.TraceEventType,System.Exception)">
+            <summary>
+            输出日志
+            </summary>
+            <param name="message">日志文本</param>
+            <param name="category">日志分类</param>
+            <param name="severity">日志级别</param>
+            <param name="exception">异常对象</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.WriteWithCategory(System.String,System.String,System.Collections.Generic.KeyValuePair{System.String,System.Object}[])">
+            <summary>
+            输出日志
+            </summary>
+            <param name="message">日志文本</param>
+            <param name="category">日志分类</param>
+            <param name="properties">日志扩展属性</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.WriteFormat(System.String,System.Object[])">
+            <summary>
+            输出格式化日志
+            </summary>
+            <param name="format">日志模板文本</param>
+            <param name="args">日志格式化参数</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.WriteFormat(System.String,System.Diagnostics.TraceEventType,System.Object[])">
+            <summary>
+            输出格式化日志
+            </summary>
+            <param name="format">日志模板文本</param>
+            <param name="severity">日志级别</param>
+            <param name="args">日志格式化参数</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.WriteFormat(System.String,System.Exception,System.Object[])">
+            <summary>
+            输出异常日志
+            </summary>
+            <param name="format">日志模板文本</param>
+            <param name="exception">异常对象</param>
+            <param name="args">日志格式化参数</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.WriteFormat(System.String,System.ConsoleColor,System.ConsoleColor,System.Object[])">
+            <summary>
+            输出格式化日志
+            </summary>
+            <param name="format">日志模板文本</param>
+            <param name="foregroundColor">日志输出文字颜色，用于Console类型的日志输出</param>
+            <param name="backgroundColor">日志输出背景颜色，用于Console类型的日志输出</param>
+            <param name="args">日志格式化参数</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.WriteFormat(System.String,System.Diagnostics.TraceEventType,System.ConsoleColor,System.ConsoleColor,System.Object[])">
+            <summary>
+            输入格式化日志
+            </summary>
+            <param name="format">日志模板文本</param>
+            <param name="severity">日志级别</param>
+            <param name="foregroundColor">日志输出文字颜色，用于Console类型的日志输出</param>
+            <param name="backgroundColor">日志输出背景颜色，用于Console类型的日志输出</param>
+            <param name="args">日志格式化参数</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.WriteFormat(System.IFormatProvider,System.String,System.Diagnostics.TraceEventType,System.Object[])">
+            <summary>
+            输出格式化日志
+            </summary>
+            <param name="provider">字符串格式化提供器</param>
+            <param name="format">日志模板文本</param>
+            <param name="severity">日志级别</param>
+            <param name="args">日志格式化参数</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.WriteFormat(System.IFormatProvider,System.String,System.Diagnostics.TraceEventType,System.Exception,System.Object[])">
+            <summary>
+            输出格式化日志
+            </summary>
+            <param name="provider">字符串格式化提供器</param>
+            <param name="format">日志模板文本</param>
+            <param name="severity">日志级别</param>
+            <param name="exception">异常对象</param>
+            <param name="args">日志格式化参数</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.WriteFormatWithCategory(System.String,System.String,System.Object[])">
+            <summary>
+            输出格式化日志
+            </summary>
+            <param name="format">日志模板文本</param>
+            <param name="category">日志分类</param>
+            <param name="args">日志格式化参数</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.WriteFormatWithCategory(System.String,System.String,System.Diagnostics.TraceEventType,System.Object[])">
+            <summary>
+            输出格式化日志
+            </summary>
+            <param name="format">日志模板文本</param>
+            <param name="category">日志分类</param>
+            <param name="severity">日志级别</param>
+            <param name="args">日志格式化参数</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.WriteFormatWithCategory(System.String,System.String,System.Exception,System.Object[])">
+            <summary>
+            输出异常日志
+            </summary>
+            <param name="format">日志模板文本</param>
+            <param name="category">日志分类</param>
+            <param name="exception">异常对象</param>
+            <param name="args">日志格式化参数</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.WriteFormatWithCategory(System.String,System.String,System.ConsoleColor,System.ConsoleColor,System.Object[])">
+            <summary>
+            输出格式化日志
+            </summary>
+            <param name="format">日志模板文本</param>
+            <param name="category">日志分类</param>
+            <param name="foregroundColor">日志输出文字颜色，用于Console类型的日志输出</param>
+            <param name="backgroundColor">日志输出背景颜色，用于Console类型的日志输出</param>
+            <param name="args">日志格式化参数</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.WriteFormatWithCategory(System.String,System.String,System.Diagnostics.TraceEventType,System.ConsoleColor,System.ConsoleColor,System.Object[])">
+            <summary>
+            输入格式化日志
+            </summary>
+            <param name="format">日志模板文本</param>
+            <param name="category">日志分类</param>
+            <param name="severity">日志级别</param>
+            <param name="foregroundColor">日志输出文字颜色，用于Console类型的日志输出</param>
+            <param name="backgroundColor">日志输出背景颜色，用于Console类型的日志输出</param>
+            <param name="args">日志格式化参数</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.WriteFormatWithCategory(System.IFormatProvider,System.String,System.String,System.Diagnostics.TraceEventType,System.Object[])">
+            <summary>
+            输出格式化日志
+            </summary>
+            <param name="provider">字符串格式化提供器</param>
+            <param name="format">日志模板文本</param>
+            <param name="category">日志分类</param>
+            <param name="severity">日志级别</param>
+            <param name="args">日志格式化参数</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.WriteFormatWithCategory(System.IFormatProvider,System.String,System.String,System.Diagnostics.TraceEventType,System.Exception,System.Object[])">
+            <summary>
+            输出格式化日志
+            </summary>
+            <param name="provider">字符串格式化提供器</param>
+            <param name="format">日志模板文本</param>
+            <param name="category">日志分类</param>
+            <param name="severity">日志级别</param>
+            <param name="exception">异常对象</param>
+            <param name="args">日志格式化参数</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.WriteReturn``1(``0,System.String)">
+            <summary>
+            输入日志并返回指定值
+            </summary>
+            <typeparam name="TReturn">返回值类型</typeparam>
+            <param name="returnValue">返回值</param>
+            <param name="message">需要输出到日志的消息</param>
+            <returns>返回指定值</returns>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.WriteReturn``1(``0,System.String,System.Object[])">
+            <summary>
+            输入格式化日志并返回指定值
+            </summary>
+            <typeparam name="TReturn">返回值类型</typeparam> 
+            <param name="returnValue">返回值</param>
+            <param name="format">日志模板文本</param>
+            <param name="args">日志格式化参数</param>
+            <returns>返回指定值</returns>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.WriteReturn``1(``0,System.String,System.Diagnostics.TraceEventType,System.Object[])">
+            <summary>
+            输入格式化日志并返回指定值
+            </summary>
+            <typeparam name="TReturn">返回值类型</typeparam> 
+            <param name="returnValue">返回值</param>
+            <param name="format">日志模板文本</param>
+            <param name="severity">日志级别</param>
+            <param name="args">日志格式化参数</param>
+            <returns>返回指定值</returns>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.WriteReturn``1(``0,System.String,System.Exception,System.Object[])">
+            <summary>
+            输出异常日志并返回指定值
+            </summary>
+            <typeparam name="TReturn">返回值类型</typeparam> 
+            <param name="returnValue">返回值</param>
+            <param name="format">日志模板文本</param>
+            <param name="ex">异常对象</param>
+            <param name="args">日志格式化参数</param>
+            <returns>返回指定值</returns>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.WriteReturnWithCategory``1(``0,System.String,System.String)">
+            <summary>
+            输入日志并返回指定值
+            </summary>
+            <typeparam name="TReturn">返回值类型</typeparam>
+            <param name="returnValue">返回值</param>
+            <param name="message">需要输出到日志的消息</param>
+            <param name="category">日志分类</param>
+            <returns>返回指定值</returns>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.WriteReturnWithCategory``1(``0,System.String,System.String,System.Object[])">
+            <summary>
+            输入格式化日志并返回指定值
+            </summary>
+            <typeparam name="TReturn">返回值类型</typeparam> 
+            <param name="returnValue">返回值</param>
+            <param name="format">日志模板文本</param>
+            <param name="category">日志分类</param>
+            <param name="args">日志格式化参数</param>
+            <returns>返回指定值</returns>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.WriteReturnWithCategory``1(``0,System.String,System.String,System.Diagnostics.TraceEventType,System.Object[])">
+            <summary>
+            输入格式化日志并返回指定值
+            </summary>
+            <typeparam name="TReturn">返回值类型</typeparam> 
+            <param name="returnValue">返回值</param>
+            <param name="format">日志模板文本</param>
+            <param name="category">日志分类</param>
+            <param name="severity">日志级别</param>
+            <param name="args">日志格式化参数</param>
+            <returns>返回指定值</returns>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.WriteReturnWithCategory``1(``0,System.String,System.String,System.Exception,System.Object[])">
+            <summary>
+            输出异常日志并返回指定值
+            </summary>
+            <typeparam name="TReturn">返回值类型</typeparam> 
+            <param name="returnValue">返回值</param>
+            <param name="format">日志模板文本</param>
+            <param name="category">日志分类</param>
+            <param name="ex">异常对象</param>
+            <param name="args">日志格式化参数</param>
+            <returns>返回指定值</returns>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.Throw(System.Exception)">
+            <summary>
+            输出异常日志
+            </summary>
+            <param name="ex">异常对象</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.Throw(System.Action)">
+            <summary>
+            运行方法并尝试捕获运行过程中的异常输入到日志
+            </summary>
+            <param name="action">方法委托</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.Throw``1(System.Func{``0})">
+            <summary>
+            运行方法并尝试捕获运行过程中的异常输入到日志
+            </summary>
+            <typeparam name="TResult">方法返回类型</typeparam>
+            <param name="func">方法委托</param>
+            <returns>返回委托的返回值</returns>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.Trace(System.Object)">
+            <summary>
+            输出Trace类型日志
+            </summary>
+            <param name="message">日志文本</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.Trace(System.Object,System.Exception)">
+            <summary>
+            输出Debug类型异常日志
+            </summary>
+            <param name="message">日志文本</param>
+            <param name="exception">异常对象</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.TraceFormat(System.String,System.Object[])">
+            <summary>
+            输出Trace类型格式化日志
+            </summary>
+            <param name="format">日志模板文本</param>
+            <param name="args">日志格式化参数</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.TraceFormat(System.String,System.Exception,System.Object[])">
+            <summary>
+            输出Trace类型格式化异常日志
+            </summary>
+            <param name="format">日志模板文本</param>
+            <param name="exception">异常对象</param>
+            <param name="args">日志格式化参数</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.TraceFormat(System.IFormatProvider,System.String,System.Object[])">
+            <summary>
+            输出Trace类型格式化日志
+            </summary>
+            <param name="formatProvider">字符串格式化提供器</param>
+            <param name="format">日志模板文本</param>
+            <param name="args">日志格式化参数</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.TraceFormat(System.IFormatProvider,System.String,System.Exception,System.Object[])">
+            <summary>
+            输出Trace类型格式化日志
+            </summary>
+            <param name="formatProvider">字符串格式化提供器</param>
+            <param name="format">日志模板文本</param>
+            <param name="exception">异常对象</param>
+            <param name="args">日志格式化参数</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.TraceWithCategory(System.Object,System.String)">
+            <summary>
+            输出Trace类型日志
+            </summary>
+            <param name="message">日志文本</param>
+            <param name="category">日志分类</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.TraceWithCategory(System.Object,System.String,System.Exception)">
+            <summary>
+            输出Debug类型异常日志
+            </summary>
+            <param name="message">日志文本</param>
+            <param name="category">日志分类</param>
+            <param name="exception">异常对象</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.TraceFormatWithCategory(System.String,System.String,System.Object[])">
+            <summary>
+            输出Trace类型格式化日志
+            </summary>
+            <param name="format">日志模板文本</param>
+            <param name="category">日志分类</param>
+            <param name="args">日志格式化参数</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.TraceFormatWithCategory(System.String,System.String,System.Exception,System.Object[])">
+            <summary>
+            输出Trace类型格式化异常日志
+            </summary>
+            <param name="format">日志模板文本</param>
+            <param name="category">日志分类</param>
+            <param name="exception">异常对象</param>
+            <param name="args">日志格式化参数</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.TraceFormatWithCategory(System.IFormatProvider,System.String,System.String,System.Object[])">
+            <summary>
+            输出Trace类型格式化日志
+            </summary>
+            <param name="formatProvider">字符串格式化提供器</param>
+            <param name="format">日志模板文本</param>
+            <param name="category">日志分类</param>
+            <param name="args">日志格式化参数</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.TraceFormatWithCategory(System.IFormatProvider,System.String,System.String,System.Exception,System.Object[])">
+            <summary>
+            输出Trace类型格式化日志
+            </summary>
+            <param name="formatProvider">字符串格式化提供器</param>
+            <param name="format">日志模板文本</param>
+            <param name="category">日志分类</param>
+            <param name="exception">异常对象</param>
+            <param name="args">日志格式化参数</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.Debug(System.Object)">
+            <summary>
+            输出Debug类型日志
+            </summary>
+            <param name="message">日志文本</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.Debug(System.Object,System.Exception)">
+            <summary>
+            输出Debug类型异常日志
+            </summary>
+            <param name="message">日志文本</param>
+            <param name="exception">异常对象</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.DebugFormat(System.String,System.Object[])">
+            <summary>
+            输出Debug类型格式化日志
+            </summary>
+            <param name="format">日志模板文本</param>
+            <param name="args">日志格式化参数</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.DebugFormat(System.String,System.Exception,System.Object[])">
+            <summary>
+            输出Debug类型格式化日志
+            </summary>
+            <param name="format">日志模板文本</param>
+            <param name="exception">异常对象</param>
+            <param name="args">日志格式化参数</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.DebugFormat(System.IFormatProvider,System.String,System.Object[])">
+            <summary>
+            输出Debug类型格式化日志
+            </summary>
+            <param name="formatProvider">字符串格式化提供器</param>
+            <param name="format">日志模板文本</param>
+            <param name="args">日志格式化参数</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.DebugFormat(System.IFormatProvider,System.String,System.Exception,System.Object[])">
+            <summary>
+            输出Debug类型格式化日志
+            </summary>
+            <param name="formatProvider">字符串格式化提供器</param>
+            <param name="format">日志模板文本</param>
+            <param name="exception">异常对象</param>
+            <param name="args">日志格式化参数</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.DebugWithCategory(System.Object,System.String)">
+            <summary>
+            输出Debug类型日志
+            </summary>
+            <param name="message">日志文本</param>
+            <param name="category">日志分类</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.DebugWithCategory(System.Object,System.String,System.Exception)">
+            <summary>
+            输出Debug类型异常日志
+            </summary>
+            <param name="message">日志文本</param>
+            <param name="category">日志分类</param>
+            <param name="exception">异常对象</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.DebugFormatWithCategory(System.String,System.String,System.Object[])">
+            <summary>
+            输出Debug类型格式化日志
+            </summary>
+            <param name="format">日志模板文本</param>
+            <param name="category">日志分类</param>
+            <param name="args">日志格式化参数</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.DebugFormatWithCategory(System.String,System.String,System.Exception,System.Object[])">
+            <summary>
+            输出Debug类型格式化异常日志
+            </summary>
+            <param name="format">日志模板文本</param>
+            <param name="category">日志分类</param>
+            <param name="exception">异常对象</param>
+            <param name="args">日志格式化参数</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.DebugFormatWithCategory(System.IFormatProvider,System.String,System.String,System.Object[])">
+            <summary>
+            输出Debug类型格式化日志
+            </summary>
+            <param name="formatProvider">字符串格式化提供器</param>
+            <param name="format">日志模板文本</param>
+            <param name="category">日志分类</param>
+            <param name="args">日志格式化参数</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.DebugFormatWithCategory(System.IFormatProvider,System.String,System.String,System.Exception,System.Object[])">
+            <summary>
+            输出Debug类型格式化日志
+            </summary>
+            <param name="formatProvider">字符串格式化提供器</param>
+            <param name="format">日志模板文本</param>
+            <param name="category">日志分类</param>
+            <param name="exception">异常对象</param>
+            <param name="args">日志格式化参数</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.Info(System.Object)">
+            <summary>
+            输出Info类型日志
+            </summary>
+            <param name="message">日志文本</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.Info(System.Object,System.Exception)">
+            <summary>
+            输出Info类型异常日志
+            </summary>
+            <param name="message">日志文本</param>
+            <param name="exception">异常对象</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.InfoFormat(System.String,System.Object[])">
+            <summary>
+            输出Info类型格式化日志
+            </summary>
+            <param name="format">日志模板文本</param>
+            <param name="args">日志格式化参数</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.InfoFormat(System.String,System.Exception,System.Object[])">
+            <summary>
+            输出Info类型格式化日志
+            </summary>
+            <param name="format">日志模板文本</param>
+            <param name="exception">异常对象</param>
+            <param name="args">日志格式化参数</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.InfoFormat(System.IFormatProvider,System.String,System.Object[])">
+            <summary>
+            输出Info类型格式化日志
+            </summary>
+            <param name="formatProvider">字符串格式化提供器</param>
+            <param name="format">日志模板文本</param>
+            <param name="args">日志格式化参数</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.InfoFormat(System.IFormatProvider,System.String,System.Exception,System.Object[])">
+            <summary>
+            输出Info类型格式化日志
+            </summary>
+            <param name="formatProvider">字符串格式化提供器</param>
+            <param name="format">日志模板文本</param>
+            <param name="exception">异常对象</param>
+            <param name="args">日志格式化参数</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.InfoWithCategory(System.Object,System.String)">
+            <summary>
+            输出Info类型日志
+            </summary>
+            <param name="message">日志文本</param>
+            <param name="category">日志分类</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.InfoWithCategory(System.Object,System.String,System.Exception)">
+            <summary>
+            输出Debug类型异常日志
+            </summary>
+            <param name="message">日志文本</param>
+            <param name="category">日志分类</param>
+            <param name="exception">异常对象</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.InfoFormatWithCategory(System.String,System.String,System.Object[])">
+            <summary>
+            输出Info类型格式化日志
+            </summary>
+            <param name="format">日志模板文本</param>
+            <param name="category">日志分类</param>
+            <param name="args">日志格式化参数</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.InfoFormatWithCategory(System.String,System.String,System.Exception,System.Object[])">
+            <summary>
+            输出Info类型格式化异常日志
+            </summary>
+            <param name="format">日志模板文本</param>
+            <param name="category">日志分类</param>
+            <param name="exception">异常对象</param>
+            <param name="args">日志格式化参数</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.InfoFormatWithCategory(System.IFormatProvider,System.String,System.String,System.Object[])">
+            <summary>
+            输出Info类型格式化日志
+            </summary>
+            <param name="formatProvider">字符串格式化提供器</param>
+            <param name="format">日志模板文本</param>
+            <param name="category">日志分类</param>
+            <param name="args">日志格式化参数</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.InfoFormatWithCategory(System.IFormatProvider,System.String,System.String,System.Exception,System.Object[])">
+            <summary>
+            输出Info类型格式化日志
+            </summary>
+            <param name="formatProvider">字符串格式化提供器</param>
+            <param name="format">日志模板文本</param>
+            <param name="category">日志分类</param>
+            <param name="exception">异常对象</param>
+            <param name="args">日志格式化参数</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.Warn(System.Object)">
+            <summary>
+            输出Warn类型日志
+            </summary>
+            <param name="message">日志文本</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.Warn(System.Object,System.Exception)">
+            <summary>
+            输出Warn类型异常日志
+            </summary>
+            <param name="message">日志文本</param>
+            <param name="exception">异常对象</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.WarnFormat(System.String,System.Object[])">
+            <summary>
+            输出Warn类型格式化日志
+            </summary>
+            <param name="format">日志模板文本</param>
+            <param name="args">日志格式化参数</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.WarnFormat(System.String,System.Exception,System.Object[])">
+            <summary>
+            输出Warn类型格式化日志
+            </summary>
+            <param name="format">日志模板文本</param>
+            <param name="exception">异常对象</param>
+            <param name="args">日志格式化参数</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.WarnFormat(System.IFormatProvider,System.String,System.Object[])">
+            <summary>
+            输出Warn类型格式化日志
+            </summary>
+            <param name="formatProvider">字符串格式化提供器</param>
+            <param name="format">日志模板文本</param>
+            <param name="args">日志格式化参数</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.WarnFormat(System.IFormatProvider,System.String,System.Exception,System.Object[])">
+            <summary>
+            输出Warn类型格式化日志
+            </summary>
+            <param name="formatProvider">字符串格式化提供器</param>
+            <param name="format">日志模板文本</param>
+            <param name="exception">异常对象</param>
+            <param name="args">日志格式化参数</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.WarnWithCategory(System.Object,System.String)">
+            <summary>
+            输出Warn类型日志
+            </summary>
+            <param name="message">日志文本</param>
+            <param name="category">日志分类</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.WarnWithCategory(System.Object,System.String,System.Exception)">
+            <summary>
+            输出Debug类型异常日志
+            </summary>
+            <param name="message">日志文本</param>
+            <param name="category">日志分类</param>
+            <param name="exception">异常对象</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.WarnFormatWithCategory(System.String,System.String,System.Object[])">
+            <summary>
+            输出Warn类型格式化日志
+            </summary>
+            <param name="format">日志模板文本</param>
+            <param name="category">日志分类</param>
+            <param name="args">日志格式化参数</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.WarnFormatWithCategory(System.String,System.String,System.Exception,System.Object[])">
+            <summary>
+            输出Warn类型格式化异常日志
+            </summary>
+            <param name="format">日志模板文本</param>
+            <param name="category">日志分类</param>
+            <param name="exception">异常对象</param>
+            <param name="args">日志格式化参数</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.WarnFormatWithCategory(System.IFormatProvider,System.String,System.String,System.Object[])">
+            <summary>
+            输出Warn类型格式化日志
+            </summary>
+            <param name="formatProvider">字符串格式化提供器</param>
+            <param name="format">日志模板文本</param>
+            <param name="category">日志分类</param>
+            <param name="args">日志格式化参数</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.WarnFormatWithCategory(System.IFormatProvider,System.String,System.String,System.Exception,System.Object[])">
+            <summary>
+            输出Warn类型格式化日志
+            </summary>
+            <param name="formatProvider">字符串格式化提供器</param>
+            <param name="format">日志模板文本</param>
+            <param name="category">日志分类</param>
+            <param name="exception">异常对象</param>
+            <param name="args">日志格式化参数</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.Error(System.Object)">
+            <summary>
+            输出Error类型日志
+            </summary>
+            <param name="message">日志文本</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.Error(System.Object,System.Exception)">
+            <summary>
+            输出Error类型异常日志
+            </summary>
+            <param name="message">日志文本</param>
+            <param name="exception">异常对象</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.ErrorFormat(System.String,System.Object[])">
+            <summary>
+            输出Error类型格式化日志
+            </summary>
+            <param name="format">日志模板文本</param>
+            <param name="args">日志格式化参数</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.ErrorFormat(System.String,System.Exception,System.Object[])">
+            <summary>
+            输出Error类型格式化日志
+            </summary>
+            <param name="format">日志模板文本</param>
+            <param name="exception">异常对象</param>
+            <param name="args">日志格式化参数</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.ErrorFormat(System.IFormatProvider,System.String,System.Object[])">
+            <summary>
+            输出Error类型格式化日志
+            </summary>
+            <param name="formatProvider">字符串格式化提供器</param>
+            <param name="format">日志模板文本</param>
+            <param name="args">日志格式化参数</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.ErrorFormat(System.IFormatProvider,System.String,System.Exception,System.Object[])">
+            <summary>
+            输出Error类型格式化日志
+            </summary>
+            <param name="formatProvider">字符串格式化提供器</param>
+            <param name="format">日志模板文本</param>
+            <param name="exception">异常对象</param>
+            <param name="args">日志格式化参数</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.ErrorWithCategory(System.Object,System.String)">
+            <summary>
+            输出Error类型日志
+            </summary>
+            <param name="message">日志文本</param>
+            <param name="category">日志分类</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.ErrorWithCategory(System.Object,System.String,System.Exception)">
+            <summary>
+            输出Debug类型异常日志
+            </summary>
+            <param name="message">日志文本</param>
+            <param name="category">日志分类</param>
+            <param name="exception">异常对象</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.ErrorFormatWithCategory(System.String,System.String,System.Object[])">
+            <summary>
+            输出Error类型格式化日志
+            </summary>
+            <param name="format">日志模板文本</param>
+            <param name="category">日志分类</param>
+            <param name="args">日志格式化参数</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.ErrorFormatWithCategory(System.String,System.String,System.Exception,System.Object[])">
+            <summary>
+            输出Error类型格式化异常日志
+            </summary>
+            <param name="format">日志模板文本</param>
+            <param name="category">日志分类</param>
+            <param name="exception">异常对象</param>
+            <param name="args">日志格式化参数</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.ErrorFormatWithCategory(System.IFormatProvider,System.String,System.String,System.Object[])">
+            <summary>
+            输出Error类型格式化日志
+            </summary>
+            <param name="formatProvider">字符串格式化提供器</param>
+            <param name="format">日志模板文本</param>
+            <param name="category">日志分类</param>
+            <param name="args">日志格式化参数</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.ErrorFormatWithCategory(System.IFormatProvider,System.String,System.String,System.Exception,System.Object[])">
+            <summary>
+            输出Error类型格式化日志
+            </summary>
+            <param name="formatProvider">字符串格式化提供器</param>
+            <param name="format">日志模板文本</param>
+            <param name="category">日志分类</param>
+            <param name="exception">异常对象</param>
+            <param name="args">日志格式化参数</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.Fatal(System.Object)">
+            <summary>
+            输出Fatal类型日志
+            </summary>
+            <param name="message">日志文本</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.Fatal(System.Object,System.Exception)">
+            <summary>
+            输出Fatal类型异常日志
+            </summary>
+            <param name="message">日志文本</param>
+            <param name="exception">异常对象</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.FatalFormat(System.String,System.Object[])">
+            <summary>
+            输出Fatal类型格式化日志
+            </summary>
+            <param name="format">日志模板文本</param>
+            <param name="args">日志格式化参数</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.FatalFormat(System.String,System.Exception,System.Object[])">
+            <summary>
+            输出Fatal类型格式化日志
+            </summary>
+            <param name="format">日志模板文本</param>
+            <param name="exception">异常对象</param>
+            <param name="args">日志格式化参数</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.FatalFormat(System.IFormatProvider,System.String,System.Object[])">
+            <summary>
+            输出Fatal类型格式化日志
+            </summary>
+            <param name="formatProvider">字符串格式化提供器</param>
+            <param name="format">日志模板文本</param>
+            <param name="args">日志格式化参数</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.FatalFormat(System.IFormatProvider,System.String,System.Exception,System.Object[])">
+            <summary>
+            输出Fatal类型格式化日志
+            </summary>
+            <param name="formatProvider">字符串格式化提供器</param>
+            <param name="format">日志模板文本</param>
+            <param name="exception">异常对象</param>
+            <param name="args">日志格式化参数</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.FatalWithCategory(System.Object,System.String)">
+            <summary>
+            输出Fatal类型日志
+            </summary>
+            <param name="message">日志文本</param>
+            <param name="category">日志分类</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.FatalWithCategory(System.Object,System.String,System.Exception)">
+            <summary>
+            输出Debug类型异常日志
+            </summary>
+            <param name="message">日志文本</param>
+            <param name="category">日志分类</param>
+            <param name="exception">异常对象</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.FatalFormatWithCategory(System.String,System.String,System.Object[])">
+            <summary>
+            输出Fatal类型格式化日志
+            </summary>
+            <param name="format">日志模板文本</param>
+            <param name="category">日志分类</param>
+            <param name="args">日志格式化参数</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.FatalFormatWithCategory(System.String,System.String,System.Exception,System.Object[])">
+            <summary>
+            输出Fatal类型格式化异常日志
+            </summary>
+            <param name="format">日志模板文本</param>
+            <param name="category">日志分类</param>
+            <param name="exception">异常对象</param>
+            <param name="args">日志格式化参数</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.FatalFormatWithCategory(System.IFormatProvider,System.String,System.String,System.Object[])">
+            <summary>
+            输出Fatal类型格式化日志
+            </summary>
+            <param name="formatProvider">字符串格式化提供器</param>
+            <param name="format">日志模板文本</param>
+            <param name="category">日志分类</param>
+            <param name="args">日志格式化参数</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.LogManager.FatalFormatWithCategory(System.IFormatProvider,System.String,System.String,System.Exception,System.Object[])">
+            <summary>
+            输出Fatal类型格式化日志
+            </summary>
+            <param name="formatProvider">字符串格式化提供器</param>
+            <param name="format">日志模板文本</param>
+            <param name="category">日志分类</param>
+            <param name="exception">异常对象</param>
+            <param name="args">日志格式化参数</param>
+        </member>
+        <member name="P:SH3H.SDK.Infrastructure.Logging.LogManager.DefaultCategory">
+            <summary>
+            获取或设置日志默认分类
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Infrastructure.Logging.LogManager.IsTraceEnabled">
+            <summary>
+            获取是否可以输出Trace类型日志
+            </summary>        
+        </member>
+        <member name="P:SH3H.SDK.Infrastructure.Logging.LogManager.IsDebugEnabled">
+            <summary>
+            获取是否可以输出Debug类型日志
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Infrastructure.Logging.LogManager.IsErrorEnabled">
+            <summary>
+            获取是否可以输出Error类型日志
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Infrastructure.Logging.LogManager.IsFatalEnabled">
+            <summary>
+            获取是否可以输出Fatal类型日志
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Infrastructure.Logging.LogManager.IsInfoEnabled">
+            <summary>
+            获取是否可以输出Info类型日志
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Infrastructure.Logging.LogManager.IsWarnEnabled">
+            <summary>
+            获取是否可以输出Warn类型日志
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Infrastructure.Logging.StackExchangeListener">
+            <summary>
+            定义StackExchange类型的
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.StackExchangeListener.Write(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.StackExchangeListener.WriteLine(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.StackExchangeListener.TraceData(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.StackExchangeListener.SaveLog(SH3H.SDK.Infrastructure.Logging.StackExchangeLogEntry)">
+            <summary>
+            将日志写入数据库
+            </summary>
+            <param name="entry">日志对象</param>
+        </member>
+        <member name="T:SH3H.SDK.Infrastructure.Logging.StackExchangeLogEntry">
+            <summary>
+            定义StackExchange监控系统Opserver的日志记录对象
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.StackExchangeLogEntry.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Logging.StackExchangeLogEntry.GetHashCode">
+            <inheritdoc/>
+        </member>
+        <member name="P:SH3H.SDK.Infrastructure.Logging.StackExchangeLogEntry.Id">
+            <summary>
+            获取或设置日志编号
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Infrastructure.Logging.StackExchangeLogEntry.GUID">
+            <summary>
+            获取或设置日志统一编号
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Infrastructure.Logging.StackExchangeLogEntry.ApplicationName">
+            <summary>
+            获取或设置应用程序名称
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Infrastructure.Logging.StackExchangeLogEntry.CreationDate">
+            <summary>
+            获取或设置日志创建时间
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Infrastructure.Logging.StackExchangeLogEntry.Type">
+            <summary>
+            获取或设置日志对象类型
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Infrastructure.Logging.StackExchangeLogEntry.IsProtected">
+            <summary>
+            获取或设置日志是否被保护
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Infrastructure.Logging.StackExchangeLogEntry.Host">
+            <summary>
+            获取或设置主机名称
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Infrastructure.Logging.StackExchangeLogEntry.Url">
+            <summary>
+            获取或设置日志相关URL地址
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Infrastructure.Logging.StackExchangeLogEntry.HttpMethod">
+            <summary>
+            获取或设置日志HTTP方法名称
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Infrastructure.Logging.StackExchangeLogEntry.IPAddress">
+            <summary>
+            获取或设置IP地址
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Infrastructure.Logging.StackExchangeLogEntry.Source">
+            <summary>
+            获取或设置日志源
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Infrastructure.Logging.StackExchangeLogEntry.Detail">
+            <summary>
+            获取或设置日志详细信息
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Infrastructure.Logging.StackExchangeLogEntry.StatusCode">
+            <summary>
+            获取或设置状态编号
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Infrastructure.Logging.StackExchangeLogEntry.SqlString">
+            <summary>
+            获取或设置相关SQL语句
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Infrastructure.Logging.StackExchangeLogEntry.ErrorHash">
+            <summary>
+            获取或设置错误Hash码
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Infrastructure.Logging.StackExchangeLogEntry.DeletionDate">
+            <summary>
+            获取或设置日志删除时间
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Infrastructure.Logging.StackExchangeLogEntry.DuplicateCount">
+            <summary>
+            获取或设置日志重复次数
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Infrastructure.UnityHelper">
+            <summary>
+            定义Unity辅助类，用于操作Unity相关内容
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Infrastructure.UnityHelper._Containers">
+            <summary>
+            保存Unity容器
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.UnityHelper.GetContainer(System.String,System.String)">
+            <summary>
+            创建并设置一个Unity对象容器
+            </summary>
+            <param name="configFilePath">配置文件路径</param>
+            <param name="containerName">Unity对象容器名称</param>
+            <returns>返回Unity容器对象</returns>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.UnityHelper.GetContainer(System.String,System.String,Microsoft.Practices.Unity.IUnityContainer)">
+            <summary>
+            创建并设置一个Unity对象容器
+            </summary>
+            <param name="configFilePath">配置文件路径</param>
+            <param name="containerName">Unity对象容器名称</param>
+            <param name="parentContainer">父容器对象</param>
+            <returns>返回Unity容器对象</returns>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.UnityHelper.GetContainer(System.String,System.String,System.String,Microsoft.Practices.Unity.IUnityContainer)">
+            <summary>
+            创建并设置一个Unity对象容器
+            </summary>
+            <param name="containerKey">容器</param>
+            <param name="configFilePath">配置文件路径</param>
+            <param name="containerName">Unity对象容器名称</param>
+            <param name="parentContainer">父容器对象</param>
+            <returns>返回Unity容器对象</returns>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.UnityHelper.GetContainer(Microsoft.Practices.Unity.Configuration.UnityConfigurationSection,System.String,Microsoft.Practices.Unity.IUnityContainer)">
+            <summary>
+            创建并设置一个Unity对象容器
+            </summary>
+            <param name="section">Unity配置对象</param>
+            <param name="containerName">Unity容器名称</param>
+            <param name="parentContainer">父容器对象</param>
+            <returns>返回Unity容器对象</returns>
+        </member>
+    </members>
+</doc>

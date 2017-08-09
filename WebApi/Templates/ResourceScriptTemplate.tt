@@ -1,0 +1,114 @@
+﻿<#@ template language="C#" #>
+<#@ assembly name="mscorlib" #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="System.Web.Http" #>
+<#@ import namespace="SH3H.WAP.WebApi" #>
+<#@ import namespace="SH3H.SDK.Share" #>
+<#@ import namespace="SH3H.SDK.WebApi.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Reflection" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.Web.Http" #>
+<#@ import namespace="System.Web.Http.Controllers" #>
+<#@ import namespace="System.Web.Http.Description" #>
+'use strict';
+var wapResources = null;
+
+try {
+	wapResources = angular.module('wapResources');
+} catch(err) {
+	wapResources = angular.module('wapResources', ['wapEnv']);
+}
+
+wapResources
+
+<#
+    var session = (Dictionary<string, object>)Session;		
+    var apis = (IEnumerable<ApiDescription>)session["apis"];
+    var req  = (HttpRequestContext)session["req"];
+
+    var groups = apis.GroupBy<ApiDescription, Type>(api => api.ActionDescriptor.ControllerDescriptor.ControllerType);
+    foreach (var group in groups)
+    {
+        // 获取资源名称
+        var attrRes = group.Key.GetCustomAttributes(typeof(ResourceAttribute), false).SingleOrDefault();
+        if (attrRes == null) continue;
+
+        // 获取资源相对根路径
+        var attrRoute = group.Key.GetCustomAttributes(typeof(RoutePrefixAttribute), false).SingleOrDefault();
+        if (attrRoute == null) continue;
+
+        string resName = ((ResourceAttribute)attrRes).Name;
+        string baseUrl = ((ResourceAttribute)attrRes).Url;
+        if(baseUrl == null)
+            baseUrl = string.Format("{0}/{1}", req.VirtualPathRoot, ((RoutePrefixAttribute)attrRoute).Prefix);
+        string paramsStr = ((ResourceAttribute)attrRes).Params;
+        if(paramsStr == null) paramsStr = "{ }";
+#>
+        .factory('<#=resName#>', ['$resource','envInfo',
+            function ($resource, envInfo) {
+                return $resource(envInfo.wapRes + '<#=baseUrl#>', <#=paramsStr#>, {						
+                    <#
+                        foreach (var api in group)
+                        {
+                            // 获取ActionParam特性
+                            var attrParam = api.ActionDescriptor.GetCustomAttributes<ActionParamAttribute>().SingleOrDefault() as ActionParamAttribute;							
+
+                            StringBuilder apiBuilder = new StringBuilder();
+                            apiBuilder.AppendFormat("{0}:{{", api.ActionDescriptor.ActionName.ToFirstCharacterLowerCase());
+                            apiBuilder.AppendFormat("method:'{0}'", api.HttpMethod.Method);          
+                            apiBuilder.AppendFormat(",url:envInfo.wapRes + '{0}/{1}'", req.VirtualPathRoot, Utils.UrlReplace(api.RelativePath));
+
+                            int paramCount = api.ParameterDescriptions
+                                                .Where(p => p.Source == ApiParameterSource.FromUri)
+                                                .Count(); 
+                            if (paramCount > 0)
+                            {
+                                apiBuilder.Append(",params: {");
+                                foreach (var param in api.ParameterDescriptions)
+                                {
+                                    if (param.Source == ApiParameterSource.FromUri)
+                                    {                        
+                                        apiBuilder.AppendFormat("{0}: '@{0}',", param.Name);
+                                    }
+                                }
+                                apiBuilder.Remove(apiBuilder.Length - 1, 1);
+                                apiBuilder.Append("}");
+                            }
+
+                            if(attrParam == null)
+                            {
+                                // 如果方法未设置ActionParamAttribute特性，尝试解析返回值
+                                var respType = api.ResponseDescription.DeclaredType;
+                                if (respType != null)
+                                {
+                                    if (respType.IsArray || respType.UnderlyingSystemType.Name == "IEnumerable`1")
+                                    {
+                                        apiBuilder.Append(",isArray:true");
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                if(attrParam.IsArray)	
+                                {
+                                    apiBuilder.Append(",isArray:true");
+                                }
+                            }
+
+                            apiBuilder.Append("},");
+                            WriteLine(apiBuilder.ToString());
+                        }							
+                    #>
+                });
+            }
+        ])
+<#
+    }
+	
+#>
+
+if (typeof exports === 'object' && typeof module !== 'undefined') {
+	module.exports = wapResources;
+}

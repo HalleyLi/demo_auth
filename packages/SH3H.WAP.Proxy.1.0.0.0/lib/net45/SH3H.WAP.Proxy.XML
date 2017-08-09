@@ -1,0 +1,173 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SH3H.WAP.Proxy</name>
+    </assembly>
+    <members>
+        <member name="T:SH3H.WAP.Proxy.IServiceProxyFactory">
+            <summary>
+            定义代理工厂对象，用于创建服务代理
+            </summary>    
+        </member>
+        <member name="M:SH3H.WAP.Proxy.IServiceProxyFactory.GetProxy``1(System.String)">
+            <summary>
+            获取服务代理对象实例
+            </summary>
+            <typeparam name="TService">服务代理类型</typeparam>
+            <param name="serviceName">服务名称</param>
+            <returns>返回服务代理对象</returns>
+        </member>
+        <member name="T:SH3H.WAP.Proxy.UnityServiceProxyFactory">
+            <summary>
+            定义基于Unity的代理工厂
+            </summary>
+        </member>
+        <member name="M:SH3H.WAP.Proxy.UnityServiceProxyFactory.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:SH3H.WAP.Proxy.UnityServiceProxyFactory.#ctor(Microsoft.Practices.Unity.IUnityContainer)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="container">Unity容器对象</param>
+        </member>
+        <member name="M:SH3H.WAP.Proxy.UnityServiceProxyFactory.GetProxy``1(System.String)">
+            <summary>
+            取得当前服务契约对应的服务代理对象
+            </summary>
+            <typeparam name="TService">服务代理类型</typeparam>
+            <param name="name">服务名称</param>
+            <returns>返回服务代理对象</returns>
+        </member>
+        <member name="P:SH3H.WAP.Proxy.UnityServiceProxyFactory.Container">
+            <summary>
+            获取或设置Unity对象容器
+            </summary>
+        </member>
+        <member name="T:SH3H.WAP.Proxy.Scada.WapPrintServiceProxy">
+            <summary>
+            定义打印服务代理对象
+            </summary>
+        </member>
+        <member name="M:SH3H.WAP.Proxy.Scada.WapPrintServiceProxy.GetPrintTemplate(System.String)">
+            <summary>
+            获取票据打印参数
+            </summary>
+            <param name="templateKey">票据模板KEY</param>
+            <returns>
+            返回打印设置对象
+            </returns>
+        </member>
+        <member name="M:SH3H.WAP.Proxy.Scada.WapPrintServiceProxy.GetPrintSetting(System.String,System.Int32)">
+            <summary>
+            获取打印配置
+            </summary>
+            <param name="key">票据模板KEY</param>
+            <param name="userId">用户编号</param>
+            <returns>返回打印配置对象</returns>
+        </member>
+        <member name="T:SH3H.WAP.Proxy.Scada.WapScadaWriteServiceProxy">
+            <summary>
+            定义Scada数据写入服务代理
+            </summary>
+        </member>
+        <member name="M:SH3H.WAP.Proxy.Scada.WapScadaWriteServiceProxy.AddPoint(SH3H.SharpFrame.Math.TimePoint)">
+            <summary>
+            添加SCADA时间点数据。
+            </summary>
+            <param name="point">SCADA时间点对象</param>
+            <returns>
+            如果添加成功返回True，否则返回False。
+            </returns>
+        </member>
+        <member name="M:SH3H.WAP.Proxy.Scada.WapScadaWriteServiceProxy.AddPoints(System.Collections.Generic.IEnumerable{SH3H.SharpFrame.Math.TimePoint})">
+            <summary>
+            添加多个SCADA时间点数据。
+            </summary>
+            <param name="points">SCADA时间点对象列表</param>
+            <returns>
+            如果添加成功返回True，否则返回False。
+            </returns>
+        </member>
+        <member name="M:SH3H.WAP.Proxy.Scada.WapScadaWriteServiceProxy.AddLine(SH3H.SharpFrame.Math.TimeLine)">
+            <summary>
+            添加SCADA时间线数据。
+            </summary>
+            <param name="line">SCADA时间线对象</param>
+            <returns>
+            如果添加成功返回True，否则返回False。
+            </returns>
+        </member>
+        <member name="M:SH3H.WAP.Proxy.Scada.WapScadaWriteServiceProxy.AddLines(System.Collections.Generic.IEnumerable{SH3H.SharpFrame.Math.TimeLine})">
+            <summary>
+            添加多条SCADA时间线数据。
+            </summary>
+            <param name="lines">SCADA时间线对象列表</param>
+            <returns>
+            如果添加成功返回True，否则返回False。
+            </returns>
+        </member>
+        <member name="T:SH3H.WAP.Proxy.Scada.WapScadaQueryServiceProxy">
+            <summary>
+            定义Scada数据查询服务代理
+            </summary>
+        </member>
+        <member name="M:SH3H.WAP.Proxy.Scada.WapScadaQueryServiceProxy.QueryValueLine(System.Int32,System.DateTime,System.DateTime)">
+            <summary>
+            根据查询条件获取对应的SCADA数据
+            </summary>
+            <param name="id">SCADA对象编号</param>
+            <param name="startTime">开始时间</param>
+            <param name="endTime">结束时间</param>
+            <returns>
+            返回SCADA时间线对象
+            </returns>
+        </member>
+        <member name="M:SH3H.WAP.Proxy.Scada.WapScadaQueryServiceProxy.QueryValueLine(SH3H.WAP.Model.Scada.WapScadaSearchCondition)">
+            <summary>
+            根据查询条件获取对应的SCADA数据
+            </summary>
+            <param name="condition">SCADA查询条件对象</param>
+            <returns>
+            返回SCADA时间线对象
+            </returns>
+        </member>
+        <member name="M:SH3H.WAP.Proxy.Scada.WapScadaQueryServiceProxy.QueryValueLines(SH3H.WAP.Model.Scada.WapScadaSearchCondition)">
+            <summary>
+            根据查询条件获取对应的SCADA数据
+            </summary>
+            <param name="condition">SCADA查询条件对象</param>
+            <returns>
+            返回SCADA时间线对象列表
+            </returns>
+        </member>
+        <member name="M:SH3H.WAP.Proxy.Scada.WapScadaQueryServiceProxy.QueryRecentPoints">
+            <summary>
+            查询所有SCADA最新数据。
+            </summary>
+            <returns>
+            返回SCADA最新数据时间点列表
+            </returns>
+        </member>
+        <member name="M:SH3H.WAP.Proxy.Scada.WapScadaQueryServiceProxy.QueryRecentPoint(System.Int32)">
+            <summary>
+            根据对象编号获取SCADA最新数据。
+            </summary>
+            <param name="id">对象编号</param>
+            <returns>
+            返回SCADA最新数据时间点
+            </returns>
+        </member>
+        <member name="M:SH3H.WAP.Proxy.Scada.WapScadaQueryServiceProxy.QueryRecentPoints(System.Collections.Generic.IEnumerable{System.Int32})">
+            <summary>
+            根据查询条件获取SCADA最新数据。
+            </summary>
+            <param name="ids">SCADA对象编号列表</param>
+            <returns>
+            返回SCADA最新数据时间点列表
+            </returns>
+        </member>
+    </members>
+</doc>

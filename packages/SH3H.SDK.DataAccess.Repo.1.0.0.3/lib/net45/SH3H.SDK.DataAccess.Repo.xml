@@ -1,0 +1,169 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SH3H.SDK.DataAccess.Repo</name>
+    </assembly>
+    <members>
+        <member name="T:SH3H.SDK.DataAccess.Repo.Repository`3">
+            <summary>
+            定义仓库抽象类型，该类型对实体类型、主键类型进行了泛型约束。
+            </summary>    
+            <typeparam name="TStorage">数据访问器对象类型</typeparam>
+            <typeparam name="TEntity">实体类型</typeparam>
+            <typeparam name="TPrimaryKey">主键类型</typeparam>
+        </member>
+        <member name="T:SH3H.SDK.DataAccess.Repo.Repository`1">
+            <summary>
+            定义对象仓库类
+            </summary>
+            <typeparam name="TStorage">数据访问器对象类型</typeparam>
+        </member>
+        <member name="M:SH3H.SDK.DataAccess.Repo.Repository`1.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.DataAccess.Repo.Repository`1.StorageProvider">
+            <summary>
+            获取或设置数据存储提供器对象
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.DataAccess.Repo.Repository`1.Storage">
+            <summary>
+            获取数据访问器对象
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.DataAccess.Repo.Repository`3.GetAll">
+            <summary>
+            获取所有实体对象
+            </summary>
+            <returns>返回实体对象列表</returns>
+        </member>
+        <member name="M:SH3H.SDK.DataAccess.Repo.Repository`3.GetAll(System.Linq.Expressions.Expression{System.Func{`1,System.Boolean}})">
+            <summary>
+            获取所有符合参数<paramref name="predicate"/>的实体对象。
+            </summary>
+            <param name="predicate">实体对象过滤器</param>
+            <returns>返回实体对象列表</returns>
+        </member>
+        <member name="M:SH3H.SDK.DataAccess.Repo.Repository`3.Get(`2)">
+            <summary>
+            根据主键获取对应的实体
+            </summary>
+            <param name="id">对象主键</param>
+            <returns>返回实体对象</returns>
+        </member>
+        <member name="M:SH3H.SDK.DataAccess.Repo.Repository`3.Single(System.Linq.Expressions.Expression{System.Func{`1,System.Boolean}})">
+            <summary>
+            获取一个符合参数<paramref name="predicate"/>的实体对象。 
+            </summary>
+            <param name="predicate">实体对象过滤器</param>
+            <returns>返回实体对象</returns>
+            <exception cref="T:System.InvalidOperationException">
+            如果结果中不包含实体或者包含超过一个实体将抛出异常
+            </exception>
+        </member>
+        <member name="M:SH3H.SDK.DataAccess.Repo.Repository`3.FirstOrDefault(`2)">
+            <summary>
+            根据主键获取对应的实体对象，如果不存在则返回NULL
+            </summary>
+            <param name="id">对象主键</param>
+            <returns>返回实体对象或者NULL</returns>
+        </member>
+        <member name="M:SH3H.SDK.DataAccess.Repo.Repository`3.FirstOrDefault(System.Linq.Expressions.Expression{System.Func{`1,System.Boolean}})">
+            <summary>
+            获取第一个符合参数<paramref name="predicate"/>的实体对象，
+            如果没有符合条件的实体则返回NULL。
+            </summary>
+            <param name="predicate">实体对象过滤器</param>
+            <returns>返回实体对象或者NULL</returns>
+        </member>
+        <member name="M:SH3H.SDK.DataAccess.Repo.Repository`3.Add(`1)">
+            <summary>
+            添加一个新的实体
+            </summary>
+            <param name="entity">待添加的实体对象</param>
+            <returns>返回添加后的实体对象</returns>
+        </member>
+        <member name="M:SH3H.SDK.DataAccess.Repo.Repository`3.AddAndGetId(`1)">
+            <summary>
+            添加一个新的实体并获取实体主键
+            </summary>
+            <param name="entity">待添加的实体对象</param>
+            <returns>返回实体主键</returns>
+        </member>
+        <member name="M:SH3H.SDK.DataAccess.Repo.Repository`3.Set(`1)">
+            <summary>
+            更新或者添加实体。
+            如果待操作的实体已经存在则执行更新操作，否则添加实体。
+            </summary>
+            <param name="entity">待操作的实体对象</param>
+            <returns>返回操作的实体对象</returns>
+        </member>
+        <member name="M:SH3H.SDK.DataAccess.Repo.Repository`3.SetAndGetId(`1)">
+            <summary>
+            更新或者添加实体并获取实体主键
+            如果待操作的实体已经存在则执行更新操作，否则添加实体。
+            </summary>
+            <param name="entity">待操作的实体对象</param>
+            <returns>返回操作的实体主键</returns>
+        </member>
+        <member name="M:SH3H.SDK.DataAccess.Repo.Repository`3.Modify(`2,`1)">
+            <summary>
+            修改实体对象
+            </summary>
+            <param name="id">实体主键</param>
+            <param name="entity">待修改的实体对象</param>
+            <returns>返回修改后的实体对象</returns>
+        </member>
+        <member name="M:SH3H.SDK.DataAccess.Repo.Repository`3.Remove(`1)">
+            <summary>
+            删除实体对象
+            </summary>
+            <param name="entity">待删除的实体对象</param>
+            <returns>如果删除成功返回true，否则返回false</returns>
+        </member>
+        <member name="M:SH3H.SDK.DataAccess.Repo.Repository`3.Remove(`2)">
+            <summary>
+            根据主键删除实体对象
+            </summary>
+            <param name="id">待删除的实体主键</param>
+            <returns>如果删除成功返回true，否则返回false</returns>
+        </member>
+        <member name="M:SH3H.SDK.DataAccess.Repo.Repository`3.Remove(System.Linq.Expressions.Expression{System.Func{`1,System.Boolean}})">
+            <summary>
+            删除所有符合参数<paramref name="predicate"/>的实体对象。
+            </summary>
+            <param name="predicate">实体对象过滤器</param>>
+            <returns>如果删除成功返回true，否则返回false</returns>
+        </member>
+        <member name="M:SH3H.SDK.DataAccess.Repo.Repository`3.Count">
+            <summary>
+            获取所有实体的数量
+            </summary>
+            <returns>返回实体数量</returns>
+        </member>
+        <member name="M:SH3H.SDK.DataAccess.Repo.Repository`3.Count(System.Linq.Expressions.Expression{System.Func{`1,System.Boolean}})">
+            <summary>
+            获取所有符合参数<paramref name="predicate"/>的实体数量。
+            </summary>
+            <param name="predicate">实体对象过滤器</param>
+            <returns>返回实体数量</returns>
+        </member>
+        <member name="M:SH3H.SDK.DataAccess.Repo.Repository`3.LongCount">
+            <summary>
+            获取所有实体的数量
+            如果实体数量大于<see cref="F:System.Int32.MaxValue"/>使用该方法
+            </summary>
+            <returns>返回实体数量</returns>
+        </member>
+        <member name="M:SH3H.SDK.DataAccess.Repo.Repository`3.LongCount(System.Linq.Expressions.Expression{System.Func{`1,System.Boolean}})">
+            <summary>
+            获取所有符合参数<paramref name="predicate"/>的实体数量。
+            如果实体数量大于<see cref="F:System.Int32.MaxValue"/>使用该方法
+            </summary>
+            <param name="predicate">实体对象过滤器</param>
+            <returns>返回实体数量</returns>
+        </member>
+    </members>
+</doc>

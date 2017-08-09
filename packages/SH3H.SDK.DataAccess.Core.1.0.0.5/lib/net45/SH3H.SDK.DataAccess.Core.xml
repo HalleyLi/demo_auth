@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SH3H.SDK.DataAccess.Core</name>
+    </assembly>
+    <members>
+        <member name="T:SH3H.SDK.DataAccess.Core.IStorageProvider">
+            <summary>
+            定义存储提供器对象接口
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.DataAccess.Core.IStorageProvider.GetStorage``1">
+            <summary>
+            获取指定类型的数据存储器对象
+            </summary>
+            <typeparam name="TStorage">数据存储器接口类型</typeparam>
+            <returns>返回指定的数据存储器对象实例</returns>
+        </member>
+        <member name="T:SH3H.SDK.DataAccess.Core.IStorage">
+            <summary>
+            定义数据库存储接口，用于抽象异构数据库的访问
+            </summary>    
+        </member>
+        <member name="T:SH3H.SDK.DataAccess.Core.IStorage`1">
+            <summary>
+            定义数据库存储接口，用于抽象异构数据库的访问
+            </summary>
+            <typeparam name="TEntity">实体类型</typeparam>
+        </member>
+        <member name="M:SH3H.SDK.DataAccess.Core.IStorage`1.CreateSchema">
+            <summary>
+            创建数据存储结构
+            </summary>
+            <returns>如果创建成果返回True，否则返回False</returns>
+        </member>
+        <member name="T:SH3H.SDK.DataAccess.Core.StorageProviderFactory">
+            <summary>
+            定义数据存储提供器工厂对象，用于创建对应的存储提供器对象实例
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.DataAccess.Core.StorageProviderFactory._CachedProvider">
+            <summary>
+            内部缓存的数据存储提供器对象
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.DataAccess.Core.StorageProviderFactory.GetProvider">
+            <summary>
+            创建存储提供器对象
+            </summary>
+            <returns>返回存储提供器对象</returns>
+        </member>
+        <member name="T:SH3H.SDK.DataAccess.Core.UnityStorageProvider">
+            <summary>
+            定义基于Unity的存储提供器对象
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.DataAccess.Core.UnityStorageProvider.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.DataAccess.Core.UnityStorageProvider.storageContainer">
+            <summary>
+            数据存储器容器对象
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.DataAccess.Core.UnityStorageProvider.GetStorage``1">
+            <summary>
+            获取指定类型的数据存储器对象
+            </summary>
+            <typeparam name="TStorage">数据存储器接口类型</typeparam>
+            <returns>
+            返回指定的数据存储器对象实例
+            </returns>
+        </member>
+    </members>
+</doc>

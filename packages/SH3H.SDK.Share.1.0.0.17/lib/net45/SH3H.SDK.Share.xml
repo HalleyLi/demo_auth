@@ -1,0 +1,453 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SH3H.SDK.Share</name>
+    </assembly>
+    <members>
+        <member name="T:SH3H.SDK.Share.Consts">
+            <summary>
+            定义平台级常量
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.APP_NAME">
+            <summary>
+            定义应用程序名称
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.NAMESPACE">
+            <summary>
+            WCF服务命名空间名称
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.URL_PREFIX_WAP">
+            <summary>
+            定义RESTful服务WAP地址前缀
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.UPLOAD_FOLDER">
+            <summary>
+            定义上传文件夹名称
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.MAX_SQL_SCRIPT_LENGTH">
+            <summary>
+            SQL语句最大长度
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.DEFAULT_CACHE_EXPIRE_TIME">
+            <summary>
+            定义默认缓存超时时间（秒）
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.BYTE_FACTOR">
+            <summary>
+            字节因子
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.B">
+            <summary>
+            1B
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.KB">
+            <summary>
+            1KB
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.MB">
+            <summary>
+            1MB
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.GB">
+            <summary>
+            1GB
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.TB">
+            <summary>
+            1TB
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.PB">
+            <summary>
+            1PB
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.EB">
+            <summary>
+            1EB
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.SECOND_PER_MILLIONSECOND">
+            <summary>
+            1秒 = 1000毫秒
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.MINUTE_PER_SECOND">
+            <summary>
+            1分钟 = 60秒
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.HOUR_PER_MINUTE">
+            <summary>
+            1小时 = 60分钟
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.HOUR_PER_SECOND">
+            <summary>
+            1小时 = 60分钟 = 3600秒
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.DAY_PER_HOUR">
+            <summary>
+            1天 = 24小时
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.DAY_PER_MINUTE">
+            <summary>
+            1天 = 24小时 = 1440分钟
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.DAY_PER_SECOND">
+            <summary>
+            1天 = 24小时 = 1440分钟 = 86400秒
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.CONFIG_FOLDER_NAME">
+            <summary>
+            定义配置文件根目录名称
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.CONFIG_FILE_UNITY">
+            <summary>
+            定义通用Unity配置文件路径
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.CONFIG_FILE_UNITY_SERVICE">
+            <summary>
+            定义服务Unity配置文件路径
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.CONFIG_FILE_UNITY_STORAGE">
+            <summary>
+            定义对象存储Unity配置文件路径
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.CONFIG_FILE_UNITY_WEBAPI">
+            <summary>
+            定义WebApi Unity配置文件路径
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.CONFIG_FILE_UNITY_CONSUME">
+            <summary>
+            定义Host Unity配置文件路径
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.CONFIG_FILE_UNITY_JOB">
+            <summary>
+            定义Job Unity配置文件路径
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.CONFIG_FILE_UNITY_HUB">
+            <summary>
+            定义SignalR Hub Unity配置文件路径
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.CONFIG_FILE_UNITY_HOST">
+            <summary>
+            定义Host Unity配置文件路径
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.CONFIG_FILE_UNITY_WCF">
+            <summary>
+            定义WCF服务Unity配置文件路径
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.CONFIG_FILE_UNITY_PROXY">
+            <summary>
+            定义WCF代理Unity配置文件路径
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.CONFIG_FILE_CONNECTION_STRING">
+            <summary>
+            定义数据库连接字符串配置文件路径
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.CONFIG_FILE_JOB">
+            <summary>
+            定义Quartz任务配置文件路径
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.SECTION_NAME_HOST">
+            <summary>
+            定义Host配置块名称
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.PRIMARY_DATABASE_CONNECTION_STRING">
+            <summary>
+            定义主数据库连接字符串配置项名称
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.SECONDARY_DATABASE_CONNECTION_STRING">
+            <summary>
+            定义次要数据库连接字符串配置项名称 
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.BUSINESS_DATABASE_CONNECTION_STRING">
+            <summary>
+            定义业务数据库连接字符串配置项名称 
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.AUTH_DATABASE_CONNECTION_STRING">
+            <summary>
+            定义权限与认证数据库连接字符串配置项名称
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.LOGGING_DATABASE_CONNECTION_STRING">
+            <summary>
+            定义日志数据库连接字符串配置项名称
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.AUDIT_DATABASE_CONNECTION_STRING">
+            <summary>
+            定义审计日志数据库连接字符串配置项名称
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.REPORT_DATABASE_CONNECTION_STRING">
+            <summary>
+            定义报表数据库连接字符串配置项名称
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.THEMATIC_DATABASE_CONNECTION_STRING">
+            <summary>
+            定义主题库数据库连接字符串配置项名称
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.RESOURCE_DATABASE_CONNECTION_STRING">
+            <summary>
+            定义资源数据库连接字符串配置项名称 
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.CONFIGURE_DATABASE_CONNECTION_STRING">
+            <summary>
+            定义系统配置数据库连接字符串配置项名称 
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.MODLE_DATABASE_CONNECTION_STRING">
+            <summary>
+            定义建模数据库连接字符串配置项名称
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.SCHEDULE_DATABASE_CONNECTION_STRING">
+            <summary>
+            定义调度数据库连接字符串配置项名称
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.SQLSERVER_DATABASE_CONNECTION_STRING">
+            <summary>
+            定义SqlServer数据库连接字符串配置项名称
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.ORACLE_DATABASE_CONNECTION_STRING">
+            <summary>
+            定义Oracle数据库连接字符串配置项名称
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.MYSQL_DATABASE_CONNECTION_STRING">
+            <summary>
+            定义MySql数据库连接字符串配置项名称
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.MOBILE_DATABASE_CONNECTION_STRING">
+            <summary>
+            定义移动平台数据库连接字符串配置项名称
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.HOTLINE_DATABASE_CONNECTION_STRING">
+            <summary>
+            定义热线系统数据库连接字符串配置项名称
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.BILLING_DATABASE_CONNECTION_STRING">
+            <summary>
+            定义营收系统数据库连接字符串配置项名称
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.SCADA_DATABASE_CONNECTION_STRING">
+            <summary>
+            定义SCADA数据库连接字符串配置项名称
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.NETSIMU_DATABASE_CONNECTION_STRING">
+            <summary>
+            定义管网模型数据库连接字符串配置项名称
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.NETSCHEDULE_DATABASE_CONNECTION_STRING">
+            <summary>
+            定义科学调度数据库连接字符串配置项名称
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.CALLCENTER_DATABASE_CONNECTION_STRING">
+            <summary>
+            定义客户服务热线系统数据库连接字符串配置项名称
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.NCSM_DATABASE_CONNECTION_STRING">
+            <summary>
+            定义报装管理系统数据库连接字符串配置项名称
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.MMS_DATABASE_CONNECTION_STRING">
+            <summary>
+            定义工单管理系统数据库连接字符串配置项名称
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.GIS_DATABASE_CONNECTION_STRING">
+            <summary>
+            定义GIS系统数据库连接字符串配置项名称
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.GDI_DATABASE_CONNECTION_STRING">
+            <summary>
+            定义GDI系统数据库连接字符串配置项名称
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.DATALOG_DATABASE_CONNECTION_STRING">
+            <summary>
+            定义Datalog系统数据库连接字符串配置项名称
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.CSMS_DATABASE_CONNECTION_STRING">
+            <summary>
+            定义客户服务管理系统数据库连接字符串配置项名称
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.MWMS_DATABASE_CONNECTION_STRING">
+            <summary>
+            定义表务仓库管理系统数据库连接字符串配置项名称
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.SMRMS_DATABASE_CONNECTION_STRING">
+            <summary>
+            定义智能抄表管理系统数据库连接字符串配置项名称
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.GENERAL_DATABASE_CONNECTION_STRING">
+            <summary>
+            定义General数据库连接字符串配置项名称
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.BPM_DATABASE_CONNECTION_STRING">
+            <summary>
+            定义BPM数据库连接字符串配置项名称
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.TASK_DATABASE_CONNECTION_STRING">
+            <summary>
+            定义任务系统数据库连接字符串配置项名称
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.WORKFLOW_DATABASE_CONNECTION_STRING">
+            <summary>
+            定义工作流系统数据库连接字符串配置项名称
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.WAREHOUSE_DATABASE_CONNECTION_STRING">
+            <summary>
+            定义表务仓库系统数据库连接字符串配置项名称
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.FILE_SERVER_DATABASE_CONNECTION_STRING">
+            <summary>
+            定义文件服务器数据库连接字符串配置项名称
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.WSMP_DATABASE_CONNECTION_STRING">
+            <summary>
+            定义供水管理平台数据库连接字符串配置项名称
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.WSMP_INSTRUCTION_DATABASE_CONNECTION_STRING">
+            <summary>
+            定义供水管理平台指令数据库连接字符串配置项名称
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.WSMP_PROPHET_DATABASE_CONNECTION_STRING">
+            <summary>
+            定义供水管理平台水量预测数据库连接字符串配置项名称
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.WSMP_LOGGING_DATABASE_CONNECTION_STRING">
+            <summary>
+            定义供水管理平台日志数据库连接字符串配置项名称
+            </summary> 
+        </member>
+        <member name="F:SH3H.SDK.Share.Consts.CACHE_KEY_PREFIX">
+            <summary>
+            定义缓存关键字前缀
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Share.Utils">
+            <summary>
+            定义工具类
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Utils.MinDate">
+            <summary>
+            定义系统最小日期
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Share.Utils.MaxDate">
+            <summary>
+            定义系统最大日期
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Share.Utils.CleanDateTime(System.DateTime,System.Boolean)">
+            <summary>
+            清除时间中的毫秒
+            </summary>
+            <param name="time">待清除的时间</param>
+            <param name="keepSecond">是否保留秒数</param>
+            <returns>返回清除后的时间</returns>
+        </member>
+        <member name="M:SH3H.SDK.Share.Utils.ToFirstCharacterLowerCase(System.String)">
+            <summary>
+            将字符串首字母变成小写字母
+            </summary>
+            <param name="str">待转换的字符串</param>
+            <returns>返回转换后的字符串</returns>
+        </member>
+        <member name="M:SH3H.SDK.Share.Utils.RegexRepalce(System.String,System.String,System.Func{System.String,System.String})">
+            <summary>
+            正则表达式替换
+            </summary>
+            <param name="pattern">正则表达式</param>
+            <param name="source">源字符串</param>
+            <param name="fn">回调函数</param>
+            <returns>返回替换后的字符串</returns>
+        </member>
+        <member name="M:SH3H.SDK.Share.Utils.UrlReplace(System.String)">
+            <summary>
+            将WebApi的URL转换为Javascript的URL
+            </summary>
+            <param name="url">URL字符串</param>
+            <returns>返回转换后的字符串</returns>
+        </member>
+        <member name="M:SH3H.SDK.Share.Utils.GetMd5(System.String)">
+            <summary>
+            为参数中的字符串生成MD5加密字符串
+            </summary>
+            <param name="str">原始字符串</param>
+            <returns>返回MD5加密后的字符串</returns>
+        </member>
+        <member name="M:SH3H.SDK.Share.Utils.GetMd5(System.Byte[])">
+            <summary>
+            对给定的二进制数组生成MD5序列
+            </summary>
+            <param name="buffer">待加密的二进制数组</param>
+            <returns>返回MD5加密字符串</returns>
+        </member>
+    </members>
+</doc>

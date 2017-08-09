@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>SH3H.WAP.Model</id>
+    <version>1.0.0.3</version>
+    <title>SH3H.WAP.Model</title>
+    <authors>Shanghai3h RD</authors>
+    <owners>Shanghai3h</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>The model definitions of WAP.</description>
+    <releaseNotes />
+    <tags>WAP ServicePackage Model Model.Dto Model.Message</tags>
+    <dependencies>
+      <dependency id="SH3H.SDK.Definition" version="1.0.0.5" />
+      <dependency id="SH3H.SharpFrame.Common" version="1.0.0.1" />
+    </dependencies>
+  </metadata>
+</package>

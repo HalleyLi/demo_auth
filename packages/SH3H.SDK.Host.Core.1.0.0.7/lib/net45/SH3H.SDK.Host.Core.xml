@@ -1,0 +1,632 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SH3H.SDK.Host.Core</name>
+    </assembly>
+    <members>
+        <member name="T:SH3H.SDK.Host.Core.Endpoints.BaseEndpoint">
+            <summary>
+            定义端点基类
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Host.Core.IEndpoint">
+            <summary>
+            定义通讯端点接口
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Host.Core.IEndpoint.Send(System.Object)">
+            <summary>
+            通过当前端点发送消息
+            </summary>        
+            <param name="message">消息对象</param>
+        </member>
+        <member name="M:SH3H.SDK.Host.Core.IEndpoint.Send(System.Object,System.String)">
+            <summary>
+            通过当前端点发送消息
+            </summary>        
+            <param name="message">消息对象</param>
+            <param name="address">消息接收地址</param>
+        </member>
+        <member name="M:SH3H.SDK.Host.Core.Endpoints.BaseEndpoint.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Host.Core.Endpoints.BaseEndpoint.#ctor(SH3H.SDK.Host.Core.RuntimeContext)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="context">运行时上下文对象</param>
+        </member>
+        <member name="M:SH3H.SDK.Host.Core.Endpoints.BaseEndpoint.Send(System.Object)">
+            <summary>
+            通过当前端点发送消息
+            </summary>
+            <param name="message">消息对象</param>
+        </member>
+        <member name="M:SH3H.SDK.Host.Core.Endpoints.BaseEndpoint.Send(System.Object,System.String)">
+            <summary>
+            通过当前端点发送消息
+            </summary>
+            <param name="message">消息对象</param>
+            <param name="address">消息接收地址</param>
+        </member>
+        <member name="M:SH3H.SDK.Host.Core.Endpoints.BaseEndpoint.Dispose(System.Boolean)">
+            <summary>
+            释放内部资源
+            </summary>
+            <param name="disposing">资源是否已经释放</param>
+        </member>
+        <member name="P:SH3H.SDK.Host.Core.Endpoints.BaseEndpoint.Context">
+            <summary>
+            获取或设置运行时上下文对象
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Host.Core.Runtimes.BaseRuntime">
+            <summary>
+            定义运行时基类
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Host.Core.IRuntime">
+            <summary>
+            定义Host运行时接口，用于抽象不同运行时，如Worker、Timer和Service
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Host.Core.IRuntime.Initialize(SH3H.SDK.Host.Core.RuntimeContext,System.String[])">
+            <summary>
+            初始化运行时
+            </summary>
+            <param name="context">运行时上下文对象</param>
+            <param name="args">命令行参数列表</param>
+            <returns>返回状态码</returns>
+        </member>
+        <member name="M:SH3H.SDK.Host.Core.IRuntime.Start(System.String[])">
+            <summary>
+            启动运行时
+            </summary>        
+            <param name="args">命令行参数</param>
+            <returns>返回状态码</returns>
+        </member>
+        <member name="M:SH3H.SDK.Host.Core.IRuntime.Stop">
+            <summary>
+            停止运行时
+            </summary>
+            <returns>返回状态码</returns>
+        </member>
+        <member name="P:SH3H.SDK.Host.Core.IRuntime.Name">
+            <summary>
+            获取运行时名称
+            </summary>        
+        </member>
+        <member name="P:SH3H.SDK.Host.Core.IRuntime.Context">
+            <summary>
+            获取运行时上下文对象
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Host.Core.Runtimes.BaseRuntime.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Host.Core.Runtimes.BaseRuntime.Initialize(SH3H.SDK.Host.Core.RuntimeContext,System.String[])">
+            <summary>
+            初始化运行时
+            </summary>
+            <param name="context">运行时上下文对象</param>
+            <param name="args">命令行参数列表</param>
+            <returns>
+            返回状态码
+            </returns>
+        </member>
+        <member name="M:SH3H.SDK.Host.Core.Runtimes.BaseRuntime.Start(System.String[])">
+            <summary>
+            启动运行时
+            </summary>
+            <param name="args">命令行参数</param>
+            <returns>
+            返回状态码
+            </returns>
+        </member>
+        <member name="M:SH3H.SDK.Host.Core.Runtimes.BaseRuntime.Stop">
+            <summary>
+            停止运行时
+            </summary>
+            <returns>
+            返回状态码
+            </returns>
+        </member>
+        <member name="M:SH3H.SDK.Host.Core.Runtimes.BaseRuntime.Send(System.Object)">
+            <summary>
+            通过当前端点发送消息
+            </summary>
+            <param name="message">消息对象</param>
+        </member>
+        <member name="M:SH3H.SDK.Host.Core.Runtimes.BaseRuntime.Send(System.Object,System.String)">
+            <summary>
+            通过当前端点发送消息
+            </summary>
+            <param name="message">消息对象</param>
+            <param name="address">消息接收地址</param>
+        </member>
+        <member name="M:SH3H.SDK.Host.Core.Runtimes.BaseRuntime.Dispose(System.Boolean)">
+            <summary>
+            释放内部资源
+            </summary>
+            <param name="disposing">资源是否已经释放</param>
+        </member>
+        <member name="P:SH3H.SDK.Host.Core.Runtimes.BaseRuntime.InboundEndpoints">
+            <summary>
+            获取或设置入站端点列表
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Host.Core.Runtimes.BaseRuntime.OutboundEndpoints">
+            <summary>
+            获取或设置出站端点列表
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Host.Core.Runtimes.BaseRuntime.Name">
+            <summary>
+            获取运行时名称
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Host.Core.Runtimes.BaseRuntime.Context">
+            <summary>
+            获取或设置运行时上下文对象
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Host.Core.Configurations.WapInboundConfigurationElement">
+            <summary>
+            定义入站端点配置节点
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Host.Core.Configurations.WapConfigurationElement">
+            <summary>
+            定义Wap配置节点基类
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Host.Core.Configurations.WapConfigurationElement.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Host.Core.Configurations.WapConfigurationElement.GetParameters">
+            <summary>
+            取得当前配置节点下的参数字典列表
+            </summary>
+            <returns>返回参数字典列表</returns>
+        </member>
+        <member name="M:SH3H.SDK.Host.Core.Configurations.WapConfigurationElement.CreateObject``1(Microsoft.Practices.Unity.IUnityContainer)">
+            <summary>
+            根据配置项创建对象实例
+            </summary>
+            <typeparam name="TObject">对象类型</typeparam>
+            <param name="container">容器对象</param>
+            <returns>返回对象实例或者NULL</returns>
+        </member>
+        <member name="P:SH3H.SDK.Host.Core.Configurations.WapConfigurationElement.GUID">
+            <summary>
+            获取配置元素的唯一标识
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Host.Core.Configurations.WapConfigurationElement.Name">
+            <summary>
+            获取或设置配置名称
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Host.Core.Configurations.WapConfigurationElement.Type">
+            <summary>
+            获取或设置配置对象类型
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Host.Core.Configurations.WapConfigurationElement.UnityConfigFile">
+            <summary>
+            获取或设置当前运行时对应的
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Host.Core.Configurations.WapConfigurationElement.ContainerName">
+            <summary>
+            获取或设置配置对象容器名称
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Host.Core.Configurations.WapConfigurationElement.RegisterName">
+            <summary>
+            获取或设置配置对象注册器名称
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Host.Core.Configurations.WapConfigurationElement.Parameters">
+            <summary>
+            获取或设置参数节点配置集合
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Host.Core.Configurations.WapInboundConfigurationElement.Bus">
+            <summary>
+            获取或设置消息总线服务配置
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Host.Core.Configurations.WapInboundConfigurationElement.Service">
+            <summary>
+            获取或设置服务配置对象
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Host.Core.Configurations.WapInboundConfigurationElementCollection">
+            <summary>
+            定义入站端点配置集合
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Host.Core.Configurations.WapConfigurationElementCollection`1">
+            <summary>
+            定义WSDP配置节点集合基类
+            </summary>        
+        </member>
+        <member name="T:SH3H.SDK.Host.Core.Configurations.WapOutboundConfigurationElement">
+            <summary>
+            定义出站端点配置节点
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Host.Core.Configurations.WapOutboundConfigurationElement.Bus">
+            <summary>
+            获取或设置消息总线服务配置
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Host.Core.Configurations.WapOutboundConfigurationElementCollection">
+            <summary>
+            定义出站端点配置集合
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Host.Core.Configurations.WapEventEngineConfigurationElement">
+            <summary>
+            定义事件引擎配置节点
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Host.Core.Configurations.WapEventEngineConfigurationElement.Processors">
+            <summary>
+            获取或设置事件领域配置对象集合
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Host.Core.Configurations.WapEventEngineConfigurationElementCollection">
+            <summary>
+            定义事件引擎配置集合
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Host.Core.Configurations.WapEventListenerConfigurationElement">
+            <summary>
+            定义事件服务配置节点
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Host.Core.Configurations.WapEventListenerConfigurationElementCollection">
+            <summary>
+            定义事件服务配置集合
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Host.Core.Configurations.WapEventProcessorConfigurationElement">
+            <summary>
+            定义事件处理器配置节点
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Host.Core.Configurations.WapEventProcessorConfigurationElement.Registrar">
+            <summary>
+            获取或设置事件注册器配置对象
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Host.Core.Configurations.WapEventProcessorConfigurationElement.Endpoints">
+            <summary>
+            获取或设置端点对象配置列表
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Host.Core.Configurations.WapEventProcessorConfigurationElement.Listeners">
+            <summary>
+            获取或设置事件监听器配置对象集合
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Host.Core.Configurations.WapEventProcessorConfigurationElementCollection">
+            <summary>
+            定义事件引擎处理器配置集合
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Host.Core.Configurations.WapEventRealmConfigurationElement">
+            <summary>
+            定义事件领域配置节点
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Host.Core.Configurations.WapEventRealmConfigurationElement.ConfigFile">
+            <summary>
+            获取或设置Esper配置文件路径
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Host.Core.Configurations.WapEventRealmConfigurationElement.Registrar">
+            <summary>
+            获取或设置事件注册器配置对象
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Host.Core.Configurations.WapEventRealmConfigurationElement.Processors">
+            <summary>
+            获取或设置事件处理器配置对象集合
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Host.Core.Configurations.WapEventRealmConfigurationElementCollection">
+            <summary>
+            定义事件引擎领域配置集合
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Host.Core.Configurations.WapEventRegistrarConfigurationElement">
+            <summary>
+            定义事件注册器配置节点
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Host.Core.Configurations.WapEventRegistrarConfigurationElementCollection">
+            <summary>
+            定义事件注册器配置集合
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Host.Core.Configurations.SimulatorConfigurationElement">
+            <summary>
+            定义模拟器配置节点
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Host.Core.Configurations.SimulatorConfigurationElement.Bus">
+            <summary>
+            获取或设置消息总线服务配置
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Host.Core.Configurations.SimulatorConfigurationElementCollection">
+            <summary>
+            定义模拟器配置集合
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Host.Core.Configurations.WapBusConfigurationElement">
+            <summary>
+            定义消息总线配置项节点
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Host.Core.Configurations.WapBusConfigurationElement.Address">
+            <summary>
+            获取或设置消息总线地址
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Host.Core.Configurations.WapBusConfigurationElement.UnityConfigFile">
+            <summary>
+            获取或设置当前运行时对应的
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Host.Core.Configurations.WapBusConfigurationElement.ContainerName">
+            <summary>
+            获取或设置配置对象容器名称
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Host.Core.Configurations.WapEndpointConfigurationElement">
+            <summary>
+            定义路由服务端点配置对象
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Host.Core.Configurations.WapEndpointConfigurationElement.Address">
+            <summary>
+            获取或设置消息总线地址
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Host.Core.Configurations.WapEndpointConfigurationElementCollection">
+            <summary>
+            定义路由服务端点配置集合
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Host.Core.Configurations.WapInitializerConfigurationElement">
+            <summary>
+            定义WSDP初始化器配置对象
+            </summary>    
+        </member>
+        <member name="T:SH3H.SDK.Host.Core.Configurations.WapInitializerConfigurationElementCollection">
+            <summary>
+            定义WSDP初始化器对象配置集合
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Host.Core.Configurations.WapParameterConfigurationElement">
+            <summary>
+            定义WSDP参数配置节点
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Host.Core.Configurations.WapParameterConfigurationElement.GetValue">
+            <summary>
+            取得参数值
+            </summary>
+            <returns>返回参数值</returns>
+        </member>
+        <member name="M:SH3H.SDK.Host.Core.Configurations.WapParameterConfigurationElement.GetValue``1">
+            <summary>
+            取得参数值
+            </summary>
+            <typeparam name="TValue">参数值类型</typeparam>
+            <returns>
+            返回参数值
+            </returns>
+        </member>
+        <member name="P:SH3H.SDK.Host.Core.Configurations.WapParameterConfigurationElement.Value">
+            <summary>
+            获取或设置参数配置值
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Host.Core.Configurations.WapParameterConfigurationElementCollection">
+            <summary>
+            定义WSDP参数配置集合
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Host.Core.Configurations.WapRuntimeConfigurationElement">
+            <summary>
+            定义WSDP运行时配置节点
+            </summary>    
+        </member>
+        <member name="P:SH3H.SDK.Host.Core.Configurations.WapRuntimeConfigurationElement.Initializers">
+            <summary>
+            获取或设置初始化器配置集合
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Host.Core.Configurations.WapRuntimeConfigurationElement.Workers">
+            <summary>
+            获取或设置工作对象配置集合
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Host.Core.Configurations.WapRuntimeConfigurationElement.Services">
+            <summary>
+            获取或设置服务配置对象集合
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Host.Core.Configurations.WapRuntimeConfigurationElement.Engine">
+            <summary>
+            获取或设置事件引擎配置对象
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Host.Core.Configurations.WapRuntimeConfigurationElement.Simulators">
+            <summary>
+            获取或设置模拟器配置集合
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Host.Core.Configurations.WapRuntimeConfigurationElement.Inbounds">
+            <summary>
+            获取或设置入站端点配置集合
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Host.Core.Configurations.WapRuntimeConfigurationElement.Outbounds">
+            <summary>
+            获取或设置出站端点配置集合
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Host.Core.Configurations.WapRuntimeConfigurationElementCollection">
+            <summary>
+            定义WSDP服务类型配置集合
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Host.Core.Configurations.WapServiceConfigurationElement">
+            <summary>
+            定义服务配置对象
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Host.Core.Configurations.WapServiceConfigurationElement.Restful">
+            <summary>
+            获取或设置一个值用于表示当前WCF服务是否支持RESTFUL方式
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Host.Core.Configurations.WapServiceConfigurationElementCollection">
+            <summary>
+            定义服务配置集合
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Host.Core.Configurations.WapWorkerConfigurationElement">
+            <summary>
+            定义服务工作对象配置节点
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Host.Core.Configurations.WapWorkerConfigurationElement.Bus">
+            <summary>
+            获取或设置消息总线服务配置
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Host.Core.Configurations.WapWorkerConfigurationElementCollection">
+            <summary>
+            定义服务工作对象配置集合
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Host.Core.IExecutor">
+            <summary>
+            定义执行器对象，执行器在每个运行时中只运行一次
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Host.Core.IExecutor.Execute(SH3H.SDK.Host.Core.RuntimeContext,System.String[])">
+            <summary>
+            执行运行器
+            </summary>
+            <param name="context">运行时上下文</param>
+            <param name="args">参数列表</param>
+            <returns>返回状态码</returns>
+        </member>
+        <member name="T:SH3H.SDK.Host.Core.IInboundEndpoint">
+            <summary>
+            定义入站端点接口
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Host.Core.IInboundEndpoint.Initialize(SH3H.SDK.Host.Core.Configurations.WapInboundConfigurationElement)">
+            <summary>
+            执行初始化过程
+            </summary>
+            <param name="element">入站端点配置对象</param>
+            <returns>返回状态码</returns>
+        </member>
+        <member name="T:SH3H.SDK.Host.Core.IInitializer">
+            <summary>
+            定义初始化器接口
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Host.Core.IInitializer.Initialize(SH3H.SDK.Host.Core.RuntimeContext,System.String[])">
+            <summary>
+            执行初始化过程
+            </summary>
+            <param name="context">运行时上下文对象</param>
+            <param name="args">命令行参数列表</param>
+            <returns>返回状态码</returns>
+        </member>
+        <member name="T:SH3H.SDK.Host.Core.IOutboundEndpoint">
+            <summary>
+            定义出站端点接口
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Host.Core.IOutboundEndpoint.Initialize(SH3H.SDK.Host.Core.Configurations.WapOutboundConfigurationElement)">
+            <summary>
+            执行初始化过程
+            </summary>
+            <param name="element">出站端点配置对象</param>
+            <returns>返回状态码</returns>
+        </member>
+        <member name="T:SH3H.SDK.Host.Core.ISimulator">
+            <summary>
+            定义模拟器接口
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Host.Core.ISimulator.Launch(SH3H.SDK.Host.Core.RuntimeContext,SH3H.SDK.Host.Core.Configurations.SimulatorConfigurationElement,System.String[])">
+            <summary>
+            启动模拟器
+            </summary>        
+            <param name="context">上下文对象</param>
+            <param name="element">配置节点对象</param>
+            <param name="args">命令行参数</param>
+            <returns>返回状态码</returns>
+        </member>
+        <member name="T:SH3H.SDK.Host.Core.RuntimeContext">
+            <summary>
+            定义运行时上下文对象
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Host.Core.RuntimeContext.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="name">运行时名称</param>
+        </member>
+        <member name="P:SH3H.SDK.Host.Core.RuntimeContext.UUID">
+            <summary>
+            获取或设置运行时ID
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Host.Core.RuntimeContext.Name">
+            <summary>
+            获取或设置运行时名称
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Host.Core.RuntimeContext.Element">
+            <summary>
+            获取或设置运行时配置项
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Host.Core.RuntimeContext.Runtime">
+            <summary>
+            获取或设置运行时实例
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Host.Core.RuntimeContext.Endpoint">
+            <summary>
+            获取或设置端点对象
+            </summary>        
+        </member>
+        <member name="P:SH3H.SDK.Host.Core.RuntimeContext.Container">
+            <summary>
+            获取或设置容器对象
+            </summary>
+        </member>
+    </members>
+</doc>

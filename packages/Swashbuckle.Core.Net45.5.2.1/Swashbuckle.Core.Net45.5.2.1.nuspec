@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Swashbuckle.Core.Net45</id>
+    <version>5.2.1</version>
+    <title>Swashbuckle.Core - Swagger for WebApi (.NET 4.5+)</title>
+    <authors>Richard Morris</authors>
+    <owners>Richard Morris</owners>
+    <licenseUrl>http://opensource.org/licenses/BSD-3-Clause</licenseUrl>
+    <projectUrl>https://github.com/SEEK-Jobs/Swashbuckle</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Seamlessly adds a Swagger to WebApi projects! Compiled for .NET 4.5 and up. This helps with mono compatability and does not require any assembly redirects.</description>
+    <summary>Combines ApiExplorer and Swagger/swagger-ui to provide a rich discovery, documentation and playground experience to your API consumers</summary>
+    <releaseNotes>Swagger-ui upgrade to v2.1.5-M2 and several bug fixes</releaseNotes>
+    <copyright>Copyright 2013</copyright>
+    <tags>Swagger SwaggerUi Documentation Discovery Help WebApi AspNet AspNetWebApi Docs SelfHost OWIN</tags>
+    <dependencies>
+      <dependency id="Microsoft.AspNet.WebApi.Core" version="5.2.2" />
+      <dependency id="Microsoft.AspNet.WebApi.Cors" version="5.2.2" />
+      <dependency id="Microsoft.AspNet.WebApi.Client" version="5.2.2" />
+    </dependencies>
+  </metadata>
+</package>

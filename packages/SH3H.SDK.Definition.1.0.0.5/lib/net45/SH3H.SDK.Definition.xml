@@ -1,0 +1,1467 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SH3H.SDK.Definition</name>
+    </assembly>
+    <members>
+        <member name="T:SH3H.SDK.Definition.Dto.ComboboxItemDto">
+            <summary>
+            定义用于返回Combobox或者Listbox选择项的DTO对象
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Dto.IDto">
+            <summary>
+            定义DTO对象接口，所有DTO对象必须实现该接口。
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Dto.ComboboxItemDto.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Dto.ComboboxItemDto.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="value">选择项值</param>
+            <param name="displayText">选择项显示文本</param>
+        </member>
+        <member name="P:SH3H.SDK.Definition.Dto.ComboboxItemDto.Value">
+            <summary>
+            获取或设置选择项值
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Definition.Dto.ComboboxItemDto.DisplayText">
+            <summary>
+            获取或设置选择项显示文本
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Dto.EntityDto`1">
+            <summary>
+            定义实体DTO对象
+            </summary>
+            <typeparam name="TPrimaryKey">实体主键类型</typeparam>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Dto.IEntityDto`1">
+            <summary>
+            定义实体DTO对象接口
+            </summary>
+            <typeparam name="TPrimaryKey">实体主键类型</typeparam>
+        </member>
+        <member name="P:SH3H.SDK.Definition.Dto.IEntityDto`1.Id">
+            <summary>
+            获取或设置获取或设置实体唯一标识值
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Dto.EntityDto`1.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Dto.EntityDto`1.#ctor(`0)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id">实体主键</param>
+        </member>
+        <member name="P:SH3H.SDK.Definition.Dto.EntityDto`1.Id">
+            <summary>
+            获取或设置实体唯一编号
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Dto.EntityDto">
+            <summary>
+            定义实体DTO对象，提供<see cref="T:System.Int32"/>类型的实体主键
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Dto.IEntityDto">
+            <summary>
+            定义实体DTO对象接口，提供<see cref="T:System.Int32"/>类型的实体主键
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Dto.EntityDto.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Dto.EntityDto.#ctor(System.Int32)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id">实体主键</param>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Dto.EntityRequestInput`1">
+            <summary>
+            定义用于请求实体对象的输入DTO对象
+            </summary>
+            <typeparam name="TPrimaryKey">实体主键类型</typeparam>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Dto.IInputDto">
+            <summary>
+            定义DTO对象接口，实现该接口的DTO对象将被作为输入参数使用。
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Validation.IValidate">
+            <summary>
+            定义验证接口。实现该接口的对象在使用前需要进行验证。
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Dto.EntityRequestInput`1.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Dto.EntityRequestInput`1.#ctor(`0)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id">实体唯一标识</param>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Dto.EntityRequestInput">
+            <summary>
+            定义用于请求实体对象的输入DTO对象，提供<see cref="T:System.Int32"/>类型的实体主键
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Dto.EntityRequestInput.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Dto.EntityRequestInput.#ctor(System.Int32)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id">实体唯一标识</param>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Dto.EntityResultOutput`1">
+            <summary>
+            定义返回实体结果的输入DTO对象
+            </summary>
+            <typeparam name="TPrimaryKey">实体主键类型</typeparam>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Dto.IOutputDto">
+            <summary>
+            定义DTO对象接口，实现该接口的DTO对象将被作为输出参数使用。
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Dto.EntityResultOutput`1.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Dto.EntityResultOutput`1.#ctor(`0)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id">实体唯一标识</param>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Dto.EntityResultOutput">
+            <summary>
+            定义返回实体结果的输入DTO对象，提供<see cref="T:System.Int32"/>类型的实体主键
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Dto.EntityResultOutput.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Dto.EntityResultOutput.#ctor(System.Int32)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id">实体唯一标识</param>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Dto.IdInput`1">
+            <summary>
+            定义只包含Id属性的输入DTO对象
+            </summary>
+            <typeparam name="TId">Id属性类型</typeparam>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Dto.IdInput`1.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Dto.IdInput`1.#ctor(`0)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id">Id属性值</param>
+        </member>
+        <member name="P:SH3H.SDK.Definition.Dto.IdInput`1.Id">
+            <summary>
+            获取或设置Id属性
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Dto.IdInput">
+            <summary>
+            定义只包含Id属性的输入DTO对象。提供<see cref="T:System.Int32"/>的Id属性类型
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Dto.IdInput.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Dto.IdInput.#ctor(System.Int32)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id">Id属性值</param>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Dto.IDoubleWayDto">
+            <summary>
+            定义DTO对象接口，实现该接口的DTO对象将被作为输入和输出参数使用。
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Dto.IHasLongTotalCount">
+            <summary>
+            定义可以用于返回<see cref="T:System.Int64"/>型项目总数的DTO对象。
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Definition.Dto.IHasLongTotalCount.TotalCount">
+            <summary>
+            获取或设置总数值
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Dto.IHasTotalCount">
+            <summary>
+            定义可以用于返回项目总数的DTO对象。
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Definition.Dto.IHasTotalCount.TotalCount">
+            <summary>
+            获取或设置总数值
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Dto.ILimitedResultRequest">
+            <summary>
+            定义用于请求可限制返回结果项数量的接口。
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Definition.Dto.ILimitedResultRequest.MaxResultCount">
+            <summary>
+            获取或设置最大结果集数量
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Dto.IListResult`1">
+            <summary>
+            定义支持以列表方式返回的结果集接口
+            </summary>
+            <typeparam name="T">返回结果集对象类型</typeparam>
+        </member>
+        <member name="P:SH3H.SDK.Definition.Dto.IListResult`1.Items">
+            <summary>
+            获取或设置返回列表。
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Dto.IPagedResult`1">
+            <summary>
+            定义支持以分页方式返回的结果集接口
+            </summary>
+            <typeparam name="T">返回结果集项类型</typeparam>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Dto.IPagedResultRequest">
+            <summary>
+            定义用于请求可分页结果集的接口。
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Definition.Dto.IPagedResultRequest.SkipCount">
+            <summary>
+            获取或设置跳过数量（起始页编号）
+            </summary>
+        </member>
+        <member name="T:Abp.Application.Services.Dto.ISortedResultRequest">
+            <summary>
+            定义用于请求可排序结果集的接口
+            </summary>
+        </member>
+        <member name="P:Abp.Application.Services.Dto.ISortedResultRequest.Sorting">
+            <summary>
+            获取或设置排序方式定义字符串。
+            排序方式字符串必须包含需要排序的字段名和可选的排序方式，如果有多个排序字段时中间用逗号","分割。               
+            </summary>
+            <example>
+            例如:
+            "Name"
+            "Name DESC"
+            "Name ASC, Age DESC"
+            </example>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Dto.ListResultDto`1">
+            <summary>
+            定义支持以列表方式返回的结果集DTO对象
+            </summary>
+            <typeparam name="T">返回结果集对象类型</typeparam>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Dto.ListResultDto`1.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Dto.ListResultDto`1.#ctor(System.Collections.Generic.IReadOnlyList{`0})">
+            <summary>
+            构造函数
+            </summary>
+            <param name="items">列表对象</param>
+        </member>
+        <member name="P:SH3H.SDK.Definition.Dto.ListResultDto`1.Items">
+            <summary>
+            获取或设置列表对象
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Dto.ListResultOutput`1">
+            <summary>
+            定义支持以列表方式返回的结果集DTO对象
+            </summary>
+            <typeparam name="T">返回结果集对象类型</typeparam>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Dto.ListResultOutput`1.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Dto.ListResultOutput`1.#ctor(System.Collections.Generic.IReadOnlyList{`0})">
+            <summary>
+            构造函数
+            </summary>
+            <param name="items">列表对象</param>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Dto.PagedResultDto`1">
+            <summary>
+            定义支持以分页方式返回的结果集接口 
+            </summary>
+            <typeparam name="T">返回结果集项类型</typeparam>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Dto.PagedResultDto`1.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Dto.PagedResultDto`1.#ctor(System.Int32,System.Collections.Generic.IReadOnlyList{`0})">
+            <summary>
+            构造函数
+            </summary>
+            <param name="totalCount">项目总数</param>
+            <param name="items">列表对象</param>
+        </member>
+        <member name="P:SH3H.SDK.Definition.Dto.PagedResultDto`1.TotalCount">
+            <summary>
+            获取或设置总数值
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Dto.PagedResultOutput`1">
+            <summary>
+            定义支持以分页方式返回的结果集接口 
+            </summary>
+            <typeparam name="T">返回结果集项类型</typeparam>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Dto.PagedResultOutput`1.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Dto.PagedResultOutput`1.#ctor(System.Int32,System.Collections.Generic.IReadOnlyList{`0})">
+            <summary>
+            构造函数
+            </summary>
+            <param name="totalCount">项目总数</param>
+            <param name="items">列表对象</param>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Auditing.AuditedEntity">
+            <summary>
+            定义主键类型为<see cref="T:System.Int32"/>的实体对象基类，并提供实体创建和更新审计功能。
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Auditing.AuditedEntity`1">
+            <summary>
+            定义支持创建和更新审计的实体对象基类。
+            </summary>
+            <typeparam name="TPrimaryKey">The type of the primary key.</typeparam>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Auditing.CreationAuditedEntity`1">
+            <summary>
+            定义支持创建审计的实体对象基类。
+            </summary>
+            <typeparam name="TPrimaryKey">对象主键类型</typeparam>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Entities.Entity`1">
+            <summary>
+            定义实体对象基类    
+            </summary>
+            <typeparam name="TPrimaryKey">主键类型</typeparam>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Entities.IEntity`1">
+            <summary>
+            定义实体对象接口，提供自定义主键类型
+            </summary>
+            <typeparam name="TPrimaryKey">主键类型</typeparam>
+        </member>
+        <member name="P:SH3H.SDK.Definition.Entities.IEntity`1.Id">
+            <summary>
+            获取或设置实体唯一标识值
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Entities.Entity`1.op_Equality(SH3H.SDK.Definition.Entities.Entity{`0},SH3H.SDK.Definition.Entities.Entity{`0})">
+            <inheritdoc/>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Entities.Entity`1.op_Inequality(SH3H.SDK.Definition.Entities.Entity{`0},SH3H.SDK.Definition.Entities.Entity{`0})">
+            <inheritdoc/>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Entities.Entity`1.Equals(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Entities.Entity`1.GetHashCode">
+            <inheritdoc/>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Entities.Entity`1.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="P:SH3H.SDK.Definition.Entities.Entity`1.Id">
+            <summary>
+            获取或设置实体唯一标识值
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Auditing.ICreationAudited">
+            <summary>
+            定义对象创建审计接口。
+            实现当前接口的对象将增加实体的创建时间和创建用户编号属性。
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Auditing.IHasCreationTime">
+            <summary>
+            实现当前接口后对象将增加<see cref="P:SH3H.SDK.Definition.Auditing.IHasCreationTime.CreationTime"/>属性，
+            该属性在将实体保存到数据库时会自动填写
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Definition.Auditing.IHasCreationTime.CreationTime">
+            <summary>
+            获取或设置创建时间
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Definition.Auditing.ICreationAudited.CreatorUserId">
+            <summary>
+            获取或设置对象创建用户编号
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Definition.Auditing.CreationAuditedEntity`1.CreatorUserId">
+            <summary>
+            获取或设置对象创建用户编号
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Definition.Auditing.CreationAuditedEntity`1.CreationTime">
+            <summary>
+            获取或设置创建时间
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Auditing.IAudited">
+            <summary>
+            定义实体审计接口。
+            当保存或者更新实体对象时相关属性将会自动被设置。
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Auditing.IModificationAudited">
+            <summary>
+            定义对象修改审计接口。
+            实现当前接口的实体对象可以包含最后修改时间和最后修改用户编号属性。
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Auditing.IHasModificationTime">
+            <summary>
+            实现当前接口后对象将增加<see cref="P:SH3H.SDK.Definition.Auditing.IHasModificationTime.LastModificationTime"/>属性，
+            该属性在将实体保存到数据库时会自动填写
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Definition.Auditing.IHasModificationTime.LastModificationTime">
+            <summary>
+            获取或设置最后修改时间
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Definition.Auditing.IModificationAudited.LastModifierUserId">
+            <summary>
+            获取或设置最后修改用户编号
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Definition.Auditing.AuditedEntity`1.LastModificationTime">
+            <summary>
+            获取或设置最后修改时间
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Definition.Auditing.AuditedEntity`1.LastModifierUserId">
+            <summary>
+            获取或设置最后修改用户编号
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Auditing.AuditedEntity`2">
+            <summary>
+            定义支持创建和更新审计的实体对象基类
+            </summary>
+            <typeparam name="TPrimaryKey">对象主键类型</typeparam>
+            <typeparam name="TUser">用户对象类型</typeparam>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Auditing.IAudited`1">
+            <summary>
+            定义实体审计接口。
+            当保存或者更新实体对象时相关属性将会自动被设置。
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Auditing.ICreationAudited`1">
+            <summary>
+            定义对象创建审计接口。
+            实现当前接口的对象将增加实体的创建时间和创建用户编号属性。
+            </summary>
+            <typeparam name="TUser">用户对象类型</typeparam>
+        </member>
+        <member name="P:SH3H.SDK.Definition.Auditing.ICreationAudited`1.CreatorUser">
+            <summary>
+            获取或设置创建用户对象
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Auditing.IModificationAudited`1">
+            <summary>
+            定义对象修改审计接口。
+            实现当前接口的实体对象可以包含最后修改时间和最后修改用户对象属性。
+            </summary>
+            <typeparam name="TUser">用户对象类型</typeparam>
+        </member>
+        <member name="P:SH3H.SDK.Definition.Auditing.IModificationAudited`1.LastModifierUser">
+            <summary>
+            获取或设置最后修改用户对象
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Definition.Auditing.AuditedEntity`2.CreatorUser">
+            <summary>
+            获取或设置创建用户对象
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Definition.Auditing.AuditedEntity`2.LastModifierUser">
+            <summary>
+            获取或设置最后修改用户对象
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Auditing.CreationAuditedEntity">
+            <summary>
+            定义主键类型为<see cref="T:System.Int32"/>的实体对象基类，并提供实体创建审计功能。
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Auditing.CreationAuditedEntity`2">
+            <summary>
+            定义支持创建审计的实体对象基类。 
+            </summary>
+            <typeparam name="TPrimaryKey">对象主键类型</typeparam>
+            <typeparam name="TUser">用户对象类型</typeparam>
+        </member>
+        <member name="P:SH3H.SDK.Definition.Auditing.CreationAuditedEntity`2.CreatorUser">
+            <summary>
+            获取或设置创建用户对象
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Auditing.FullAuditedEntity">
+            <summary>
+            定义<see cref="T:System.Int32"/>类型主键的实体抽象类，并提供完整的审计功能。
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Auditing.FullAuditedEntity`1">
+            <summary>
+            定义支持完整审计功能的实体对象基类。
+            </summary>
+            <typeparam name="TPrimaryKey">对象主键类型</typeparam>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Auditing.IFullAudited">
+            <summary>
+            定义完整对象审计接口，提供实体创建、修改和删除相关审计属性。
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Auditing.IDeletionAudited">
+            <summary>
+            定义对象删除审计接口。
+            实现当前接口的对象将增加实体的删除时间和删除用户编号属性。
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Auditing.IHasDeletionTime">
+            <summary>
+            实现当前接口后对象将增加<see cref="P:SH3H.SDK.Definition.Auditing.IHasDeletionTime.DeletionTime"/>属性，
+            该属性在将实体保存到数据库时会自动填写
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Definition.Auditing.IHasDeletionTime.DeletionTime">
+            <summary>
+            获取或设置删除时间
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Entities.ISoftDelete">
+            <summary>
+            定义软删除接口
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Definition.Entities.ISoftDelete.IsDeleted">
+            <summary>
+            获取或设置一个值用于表示当前实体是否已经被删除。
+            </summary>        
+        </member>
+        <member name="P:SH3H.SDK.Definition.Auditing.IDeletionAudited.DeleterUserId">
+            <summary>
+            获取或设置最后修改用户编号
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Definition.Auditing.FullAuditedEntity`1.IsDeleted">
+            <summary>
+            获取或设置一个值用于表示当前实体是否已经被删除。
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Definition.Auditing.FullAuditedEntity`1.DeleterUserId">
+            <summary>
+            获取或设置最后修改用户编号
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Definition.Auditing.FullAuditedEntity`1.DeletionTime">
+            <summary>
+            获取或设置删除时间
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Auditing.FullAuditedEntity`2">
+            <summary>
+            定义支持完整审计功能的实体对象基类。
+            </summary>
+            <typeparam name="TPrimaryKey">对象主键类型</typeparam>
+            <typeparam name="TUser">用户对象类型</typeparam>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Auditing.IFullAudited`1">
+            <summary>
+            定义完整对象审计接口，提供实体创建、修改和删除相关审计属性。
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Auditing.IDeletionAudited`1">
+            <summary>
+            定义对象删除审计接口。
+            实现当前接口的对象将增加实体的删除时间和删除用户对象属性。
+            </summary>
+            <typeparam name="TUser">用户对象类型</typeparam>
+        </member>
+        <member name="P:SH3H.SDK.Definition.Auditing.IDeletionAudited`1.DeleterUser">
+            <summary>
+            获取或设置删除用户对象
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Definition.Auditing.FullAuditedEntity`2.IsDeleted">
+            <summary>
+            获取或设置一个值用于表示当前实体是否已经被删除。
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Definition.Auditing.FullAuditedEntity`2.DeleterUser">
+            <summary>
+            获取或设置删除用户对象
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Definition.Auditing.FullAuditedEntity`2.DeleterUserId">
+            <summary>
+            获取或设置最后修改用户编号
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Definition.Auditing.FullAuditedEntity`2.DeletionTime">
+            <summary>
+            获取或设置删除时间
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Entities.HierarchicalEntity`1">
+            <summary>
+            定义实体对象基类    
+            </summary>
+            <typeparam name="TPrimaryKey">主键类型</typeparam>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Entities.IHierarchicalEntity`1">
+            <summary>
+            定义支持对象分级的接口，提供自定义主键类型
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Definition.Entities.IHierarchicalEntity`1.ParentId">
+            <summary>
+            获取或设置父节点对象编号
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Definition.Entities.HierarchicalEntity`1.ParentId">
+            <summary>
+            获取或设置实体唯一标识值
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Entities.HierarchicalEntity">
+            <summary>
+            定义实体对象基类，提供<see cref="T:System.Int32"/>类型的实体主键
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Entities.IHierarchicalEntity">
+            <summary>
+            定义支持对象分级的接口，提供<see cref="T:System.Int32"/>类型的实体主键
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Entities.NodeEntity`2">
+            <summary>
+            定义节点实体对象基类    
+            </summary>
+            <typeparam name="TPrimaryKey">主键类型</typeparam>
+            <typeparam name="TEntity">实体对象类型</typeparam>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Entities.INodeEntity`2">
+            <summary>
+            定义节点实体对象接口，提供自定义主键类型
+            </summary>
+            <typeparam name="TPrimaryKey">主键类型</typeparam>
+            <typeparam name="TEntity">节点包含的实体对象类型</typeparam>
+        </member>
+        <member name="P:SH3H.SDK.Definition.Entities.INodeEntity`2.Entity">
+            <summary>
+            获取或设置节点包含的实体对象
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Entities.NodeEntity`2.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Entities.NodeEntity`2.#ctor(`1)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="entity">实体对象</param>
+        </member>
+        <member name="P:SH3H.SDK.Definition.Entities.NodeEntity`2.Entity">
+            <summary>
+            获取或设置节点包含的实体对象
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Definition.Entities.NodeEntity`2.Nodes">
+            <summary>
+            获取或设置子节点列表
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Entities.NodeEntity">
+            <summary>
+            定义实体对象基类，提供<see cref="T:System.Int32"/>类型的实体主键
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Entities.IEntity">
+            <summary>
+            定义实体对象接口，提供<see cref="T:System.Int32"/>类型的实体主键
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Entities.Entity">
+            <summary>
+            定义实体对象基类，提供<see cref="T:System.Int32"/>类型的实体主键
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Entities.INodeEntity`1">
+            <summary>
+            定义节点实体对象接口，提供<see cref="T:System.Int32"/>类型的实体主键
+            </summary>
+            <typeparam name="TEntity">节点包含的实体对象类型</typeparam>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Entities.IPassivable">
+            <summary>
+            当前接口可以用于表示实体对象是否为Acitve或Passive
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Definition.Entities.IPassivable.IsActive">
+            <summary>
+            获取或设置值用于表示当前实体是否为激活状态
+            </summary>        
+        </member>
+        <member name="T:SH3H.SDK.Definition.Entities.IMayHaveTenant">
+            <summary>
+            该接口可以给实体增加可空的租户编号
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Definition.Entities.IMayHaveTenant.TenantId">
+            <summary>
+            获取或设置租户编号
+            </summary>        
+        </member>
+        <member name="T:SH3H.SDK.Definition.Entities.IMustHaveTenant">
+            <summary>
+            该接口可以给实体增加租户编号
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Definition.Entities.IMustHaveTenant.TenantId">
+            <summary>
+            获取或设置租户编号 
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Exceptions.WapException">
+            <summary>
+            定义WAP异常基类
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Exceptions.WapException.#ctor(System.Int32)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="code">错误代码</param>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Exceptions.WapException.#ctor(System.Int32,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="code">错误码</param>
+            <param name="message">异常消息</param>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Exceptions.WapException.#ctor(System.Int32,System.String,System.Exception)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="code">错误码</param>
+            <param name="message">异常消息</param>
+            <param name="innerException">内部异常</param>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Exceptions.WapException.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="P:SH3H.SDK.Definition.Exceptions.WapException.Code">
+            <summary>
+            获取或设置异常码
+            </summary>        
+        </member>
+        <member name="T:SH3H.SDK.Definition.Exceptions.WapKeyHasExistedException">
+            <summary>
+            关键字已经存在时抛出异常
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Exceptions.WapKeyHasExistedException.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="key">发生冲突的缓存关键字</param>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Exceptions.WapResourceNotFoundException">
+            <summary>
+            定义资源无法找到异常
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Exceptions.WapResourceNotFoundException.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="name">资源名称</param>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Messages.IMessage">
+            <summary>
+            定义消息接口
+            </summary>    
+        </member>
+        <member name="P:SH3H.SDK.Definition.Messages.IMessage.UUID">
+            <summary>
+            获取消息识别号
+            </summary>     
+        </member>
+        <member name="P:SH3H.SDK.Definition.Messages.IMessage.Tag">
+            <summary>
+            获取消息标签
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Definition.Messages.IMessage.SendTime">
+            <summary>
+            获取或设置消息发送时间
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Messages.ObjectMessage">
+            <summary>
+            定义对象消息
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Definition.Messages.ObjectMessage.hostName">
+            <summary>
+            机器名称
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Messages.ObjectMessage.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="tag">消息标签</param>
+        </member>
+        <member name="P:SH3H.SDK.Definition.Messages.ObjectMessage.UUID">
+            <summary>
+            获取消息识别号
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Definition.Messages.ObjectMessage.Tag">
+            <summary>
+            获取或设置消息标签
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Definition.Messages.ObjectMessage.HostName">
+            <summary>
+            获取消息发送主机名称
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Definition.Messages.ObjectMessage.SendTime">
+            <summary>
+            获取或设置消息发送时间
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Repo.IAggregateRepository`2">
+            <summary>
+            定义支持数据聚合的仓库接口
+            </summary>
+            <typeparam name="TEntity">实体类型</typeparam>
+            <typeparam name="TPrimaryKey">主键类型</typeparam>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Repo.IAggregateRepository`2.Count">
+            <summary>
+            获取所有实体的数量
+            </summary>
+            <returns>返回实体数量</returns>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Repo.IAggregateRepository`2.Count(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            获取所有符合参数<paramref name="predicate"/>的实体数量。
+            </summary>
+            <param name="predicate">实体对象过滤器</param>
+            <returns>返回实体数量</returns>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Repo.IAggregateRepository`2.LongCount">
+            <summary>
+            获取所有实体的数量
+            如果实体数量大于<see cref="F:System.Int32.MaxValue"/>使用该方法
+            </summary>
+            <returns>返回实体数量</returns>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Repo.IAggregateRepository`2.LongCount(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            获取所有符合参数<paramref name="predicate"/>的实体数量。
+            如果实体数量大于<see cref="F:System.Int32.MaxValue"/>使用该方法
+            </summary>
+            <param name="predicate">实体对象过滤器</param>
+            <returns>返回实体数量</returns>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Repo.IAggregateRepositoryAsync`2">
+            <summary>
+            定义支持异步数据聚合的仓库接口
+            </summary>
+            <typeparam name="TEntity">实体类型</typeparam>
+            <typeparam name="TPrimaryKey">主键类型</typeparam>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Repo.IAggregateRepositoryAsync`2.CountAsync">
+            <summary>
+            异步获取所有实体的数量
+            </summary>
+            <returns>返回实体数量</returns>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Repo.IAggregateRepositoryAsync`2.CountAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            获取所有符合参数<paramref name="predicate"/>的实体数量。
+            </summary>
+            <param name="predicate">实体对象过滤器</param>
+            <returns>返回实体数量</returns>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Repo.IAggregateRepositoryAsync`2.LongCountAsync">
+            <summary>
+            异步获取所有实体的数
+            如果实体数量大于<see cref="F:System.Int32.MaxValue"/>使用该方法量
+            </summary>
+            <returns>返回实体数量</returns>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Repo.IAggregateRepositoryAsync`2.LongCountAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            获取所有符合参数<paramref name="predicate"/>
+            如果实体数量大于<see cref="F:System.Int32.MaxValue"/>使用该方法的实体数量。
+            </summary>
+            <param name="predicate">实体对象过滤器</param>
+            <returns>返回实体数量</returns>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Repo.IGettableRepository`2">
+            <summary>
+            定义支持获取数据的仓库接口
+            </summary>
+            <typeparam name="TEntity">实体类型</typeparam>
+            <typeparam name="TPrimaryKey">主键类型</typeparam>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Repo.IGettableRepository`2.GetAll">
+            <summary>
+            获取所有实体对象
+            </summary>
+            <returns>返回实体对象列表</returns>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Repo.IGettableRepository`2.GetAll(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            获取所有符合参数<paramref name="predicate"/>的实体对象。
+            </summary>
+            <param name="predicate">实体对象过滤器</param>
+            <returns>返回实体对象列表</returns>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Repo.IGettableRepository`2.Get(`1)">
+            <summary>
+            根据主键获取对应的实体
+            </summary>
+            <param name="id">对象主键</param>
+            <returns>返回实体对象</returns>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Repo.IGettableRepository`2.Single(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            获取一个符合参数<paramref name="predicate"/>的实体对象。 
+            </summary>
+            <param name="predicate">实体对象过滤器</param>
+            <returns>返回实体对象</returns>
+            <exception cref="T:System.InvalidOperationException">
+            如果结果中不包含实体或者包含超过一个实体将抛出异常
+            </exception>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Repo.IGettableRepository`2.FirstOrDefault(`1)">
+            <summary>
+            根据主键获取对应的实体对象，如果不存在则返回NULL
+            </summary>
+            <param name="id">对象主键</param>
+            <returns>返回实体对象或者NULL</returns>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Repo.IGettableRepository`2.FirstOrDefault(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            获取第一个符合参数<paramref name="predicate"/>的实体对象，
+            如果没有符合条件的实体则返回NULL。
+            </summary>
+            <param name="predicate">实体对象过滤器</param>
+            <returns>返回实体对象或者NULL</returns>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Repo.IGettableRepositoryAsync`2">
+            <summary>
+            定义支持异步获取数据的仓库接口
+            </summary>
+            <typeparam name="TEntity">实体类型</typeparam>
+            <typeparam name="TPrimaryKey">主键类型</typeparam>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Repo.IGettableRepositoryAsync`2.GetAllAsync">
+            <summary>
+            异步获取所有实体对象
+            </summary>
+            <returns>返回实体对象列表</returns>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Repo.IGettableRepositoryAsync`2.GetAllAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            异步获取所有符合参数<paramref name="predicate"/>的实体对象。
+            </summary>
+            <param name="predicate">实体对象过滤器</param>
+            <returns>返回实体对象列表</returns>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Repo.IGettableRepositoryAsync`2.GetAsync(`1)">
+            <summary>
+            根据主键异步获取对应的实体
+            </summary>
+            <param name="id">对象主键</param>
+            <returns>返回实体对象</returns>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Repo.IGettableRepositoryAsync`2.SingleAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            异步获取一个符合参数<paramref name="predicate"/>的实体对象。 
+            </summary>
+            <param name="predicate">实体对象过滤器</param>
+            <returns>返回实体对象</returns>
+            <exception cref="T:System.InvalidOperationException">
+            如果结果中不包含实体或者包含超过一个实体将抛出异常
+            </exception>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Repo.IGettableRepositoryAsync`2.FirstOrDefaultAsync(`1)">
+            <summary>
+            根据主键异步获取对应的实体对象，如果不存在则返回NULL
+            </summary>
+            <param name="id">对象主键</param>
+            <returns>返回实体对象或者NULL</returns>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Repo.IGettableRepositoryAsync`2.FirstOrDefaultAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            异步获取第一个符合参数<paramref name="predicate"/>的实体对象，
+            如果没有符合条件的实体则返回NULL。
+            </summary>
+            <param name="predicate">实体对象过滤器</param>
+            <returns>返回实体对象或者NULL</returns>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Repo.IModifiableRepository`2">
+            <summary>
+            定义支持修改数据的仓库接口
+            </summary>
+            <typeparam name="TEntity">实体类型</typeparam>
+            <typeparam name="TPrimaryKey">主键类型</typeparam>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Repo.IModifiableRepository`2.Modify(`1,`0)">
+            <summary>
+            修改实体对象
+            </summary>
+            <param name="id">实体主键</param>
+            <param name="entity">待修改的实体对象</param>
+            <returns>返回修改后的实体对象</returns>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Repo.IModifiableRepositoryAsync`2">
+            <summary>
+            定义支持异步修改数据的仓库接口
+            </summary>
+            <typeparam name="TEntity">实体类型</typeparam>
+            <typeparam name="TPrimaryKey">主键类型</typeparam>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Repo.IModifiableRepositoryAsync`2.ModifyAsync(`1,`0)">
+            <summary>
+            异步修改实体对象
+            </summary>
+            <param name="id">实体主键</param>
+            <param name="entity">待修改的实体对象</param>
+            <returns>返回修改后的实体对象</returns>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Repo.IRemovableRepository`2">
+            <summary>
+            定义支持删除数据的仓库接口
+            </summary>
+            <typeparam name="TEntity">实体类型</typeparam>
+            <typeparam name="TPrimaryKey">主键类型</typeparam>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Repo.IRemovableRepository`2.Remove(`0)">
+            <summary>
+            删除实体对象
+            </summary>
+            <param name="entity">待删除的实体对象</param>
+            <returns>如果删除成功返回true，否则返回false</returns>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Repo.IRemovableRepository`2.Remove(`1)">
+            <summary>
+            根据主键删除实体对象
+            </summary>
+            <param name="id">待删除的实体主键</param>
+            <returns>如果删除成功返回true，否则返回false</returns>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Repo.IRemovableRepository`2.Remove(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            删除所有符合参数<paramref name="predicate"/>的实体对象。
+            </summary>
+            <param name="predicate">实体对象过滤器</param>
+            <returns>如果删除成功返回true，否则返回false</returns>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Repo.IRemovableRepositoryAsync`2">
+            <summary>
+            定义支持异步删除数据的仓库接口
+            </summary>
+            <typeparam name="TEntity">实体类型</typeparam>
+            <typeparam name="TPrimaryKey">主键类型</typeparam>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Repo.IRemovableRepositoryAsync`2.RemoveAsync(`0)">
+            <summary>
+            异步删除实体对象
+            </summary>
+            <param name="entity">待删除的实体对象</param>
+            <returns>如果删除成功返回true，否则返回false</returns>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Repo.IRemovableRepositoryAsync`2.RemoveAsync(`1)">
+            <summary>
+            根据主键异步删除实体对象
+            </summary>
+            <param name="id">待删除的实体主键</param>
+            <returns>如果删除成功返回true，否则返回false</returns>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Repo.IRemovableRepositoryAsync`2.Remove(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            异步删除所有符合参数<paramref name="predicate"/>的实体对象。
+            </summary>
+            <param name="predicate">实体对象过滤器</param>>
+            <returns>如果删除成功返回true，否则返回false</returns>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Repo.IRepository">
+            <summary>
+            定义仓库对象接口
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Repo.IRepository`1">
+            <summary>
+            定义<see cref="T:System.Int32"/>类型为主键的仓库接口
+            </summary>
+            <typeparam name="TEntity">实体类型</typeparam>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Repo.IRepository`2">
+            <summary>
+            定义仓库接口
+            </summary>
+            <typeparam name="TEntity">实体类型</typeparam>
+            <typeparam name="TPrimaryKey">主键类型</typeparam>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Repo.ISettableRepository`2">
+            <summary>
+            定义支持设置数据的仓库接口
+            </summary>
+            <typeparam name="TEntity">实体类型</typeparam>
+            <typeparam name="TPrimaryKey">主键类型</typeparam>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Repo.ISettableRepository`2.Add(`0)">
+            <summary>
+            添加一个新的实体
+            </summary>
+            <param name="entity">待添加的实体对象</param>
+            <returns>返回添加后的实体对象</returns>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Repo.ISettableRepository`2.AddAndGetId(`0)">
+            <summary>
+            添加一个新的实体并获取实体主键
+            </summary>
+            <param name="entity">待添加的实体对象</param>
+            <returns>返回实体主键</returns>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Repo.ISettableRepository`2.Set(`0)">
+            <summary>
+            更新或者添加实体。
+            如果待操作的实体已经存在则执行更新操作，否则添加实体。
+            </summary>
+            <param name="entity">待操作的实体对象</param>
+            <returns>返回操作的实体对象</returns>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Repo.ISettableRepository`2.SetAndGetId(`0)">
+            <summary>
+            更新或者添加实体并获取实体主键
+            如果待操作的实体已经存在则执行更新操作，否则添加实体。
+            </summary>
+            <param name="entity">待操作的实体对象</param>
+            <returns>返回操作的实体主键</returns>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Repo.IRepositoryAsync`1">
+            <summary>
+            定义<see cref="T:System.Int32"/>类型为主键的仓库接口并支持异步操作
+            </summary>
+            <typeparam name="TEntity">实体类型</typeparam>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Repo.IRepositoryAsync`2">
+            <summary>
+            定义异步仓库接口
+            </summary>
+            <typeparam name="TEntity">实体类型</typeparam>
+            <typeparam name="TPrimaryKey">主键类型</typeparam>
+        </member>
+        <member name="T:SH3H.SDK.Definition.Repo.ISettableRepositoryAsync`2">
+            <summary>
+            定义支持异步设置数据的仓库接口
+            </summary>
+            <typeparam name="TEntity">实体类型</typeparam>
+            <typeparam name="TPrimaryKey">主键类型</typeparam>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Repo.ISettableRepositoryAsync`2.AddAsync(`0)">
+            <summary>
+            异步添加一个新的实体
+            </summary>
+            <param name="entity">待添加的实体对象</param>
+            <returns>返回添加后的实体对象</returns>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Repo.ISettableRepositoryAsync`2.AddAndGetIdAsync(`0)">
+            <summary>
+            异步添加一个新的实体并获取实体主键
+            </summary>
+            <param name="entity">待添加的实体对象</param>
+            <returns>返回实体主键</returns>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Repo.ISettableRepositoryAsync`2.SetAsync(`0)">
+            <summary>
+            异步更新或者添加实体。
+            如果待操作的实体已经存在则执行更新操作，否则添加实体。
+            </summary>
+            <param name="entity">待操作的实体对象</param>
+            <returns>返回操作的实体对象</returns>
+        </member>
+        <member name="M:SH3H.SDK.Definition.Repo.ISettableRepositoryAsync`2.SetAndGetIdAsync(`0)">
+            <summary>
+            异步更新或者添加实体并获取实体主键
+            如果待操作的实体已经存在则执行更新操作，否则添加实体。
+            </summary>
+            <param name="entity">待操作的实体对象</param>
+            <returns>返回操作的实体主键</returns>
+        </member>
+        <member name="T:SH3H.SDK.Definition.StateCode">
+            <summary>
+            定义平台级返回码
+            </summary>
+            <remarks>
+            0x1001 - WAP
+            0x1002 - Auth
+            0x1003 - BM (Billing Manager)
+            0x1004 - CC (Call Center)
+            0x1005 - MW (Meter Warehouse)
+            0x1009 - Task
+            0x1010 - Mobile
+            0x1020 - Resource
+            </remarks>
+        </member>
+        <member name="F:SH3H.SDK.Definition.StateCode.CODE_SUCCESS">
+            <summary>
+            运行成功
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Definition.StateCode.CODE_FAILURE">
+            <summary>
+            失败状态
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Definition.StateCode.CODE_START_ERROR">
+            <summary>
+            启动失败
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Definition.StateCode.CODE_STOP_ERROR">
+            <summary>
+            停止失败
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Definition.StateCode.CODE_INVALID_ARGUMENTS">
+            <summary>
+            无效的命令行参数
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Definition.StateCode.CODE_INIT_FAILED">
+            <summary>
+            初始化失败
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Definition.StateCode.CODE_FILE_NOT_FOUND">
+            <summary>
+            找不到指定文件
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Definition.StateCode.CODE_FILENAME_INVALID">
+            <summary>
+            文件名非法
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Definition.StateCode.CODE_CONFIG_FILE_NOT_FOUND">
+            <summary>
+            找不到指定配置文件
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Definition.StateCode.CODE_LOAD_CONFIG_FILE_ERROR">
+            <summary>
+            加载配置文件错误
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Definition.StateCode.CODE_INIT_CONTAINER_ERROR">
+            <summary>
+            容器初始化失败
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Definition.StateCode.CODE_KEY_HAS_EXISTED">
+            <summary>
+            键已经存在
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Definition.StateCode.CODE_KEY_NOT_FOUND">
+            <summary>
+            找不到键值
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Definition.StateCode.CODE_WORD_GROUP_NOT_EXISTED">
+            <summary>
+            词语组不存在
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Definition.StateCode.CODE_USERNAME_ERROR">
+            <summary>
+            用户名错误
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Definition.StateCode.CODE_PASSWORD_ERROR">
+            <summary>
+            密码错误
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Definition.StateCode.CODE_USER_UNKNOWN">
+            <summary>
+            未知的用户
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Definition.StateCode.CODE_ACCESS_TOKEN_INVALID">
+            <summary>
+            非法的AccessToken
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Definition.StateCode.CODE_ACCESS_TOKEN_EXPIRED">
+            <summary>
+            AccessToken过期
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Definition.StateCode.CODE_TASK_TYPE_UNKNOWN">
+            <summary>
+            未知的任务类型
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Definition.StateCode.CODE_TASK_ID_NOT_EXISTED">
+            <summary>
+            任务编号不存在
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Definition.StateCode.CODE_DEVICE_UNKNOWN">
+            <summary>
+            未知设备
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Definition.StateCode.CODE_DEVICE_UNREGISTED">
+            <summary>
+            设备未注册
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Definition.StateCode.CODE_DEVICE_DISABLED">
+            <summary>
+            设备被禁用
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Definition.StateCode.CODE_RESOURCE_TYPE_NOT_ALLOWED">
+            <summary>
+            资源类型不被允许
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Definition.StateCode.CODE_RESOURCE_NOT_FOUND">
+            <summary>
+            找不到所请求的资源
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Definition.StateCode.CODE_RESOURCE_ID_NOT_EXISTED">
+            <summary>
+            资源编号不存在
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Definition.StateCode.CODE_RESOURCE_UPLOAD_COUNT_EXCEEDED">
+            <summary>
+            资源数量超过限制
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Definition.StateCode.CODE_RESOURCE_LOWER_LIMIT_EXCEEDED">
+            <summary>
+            资源尺寸超过下线
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Definition.StateCode.CODE_RESOURCE_UPPER_LIMIT_EXCEEDED">
+            <summary>
+            资源尺寸超过上限
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Definition.StateCode.CODE_UNKNOWN">
+            <summary>
+            未知状态
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Definition.StateCode.CODE_EXCEPTION">
+            <summary>
+            异常状态
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Definition.StateCode.CODE_UNHANDLED_EXCEPTION">
+            <summary>
+            发生未捕获异常
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Definition.StateCode.IsSuccess(System.Int32)">
+            <summary>
+            判断当前状态是否为成功状态
+            </summary>
+            <param name="code">状态码</param>
+            <returns>成功状态返回true，否则返回false</returns>
+        </member>
+        <member name="M:SH3H.SDK.Definition.StateCode.HasError(System.Int32)">
+            <summary>
+            判断当前状态中是否包含错误
+            </summary>
+            <param name="code">状态码</param>
+            <returns>错误状态返回true，否则返回false</returns>>
+        </member>
+        <member name="M:SH3H.SDK.Definition.StateCode.GetErrorCode(System.Int32)">
+            <summary>
+            根据状态码生成规则生成错误码
+            </summary>
+            <param name="code">状态编码</param>
+            <returns>返回错误码</returns>
+        </member>
+    </members>
+</doc>

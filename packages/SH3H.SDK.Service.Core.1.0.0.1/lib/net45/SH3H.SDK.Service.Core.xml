@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SH3H.SDK.Service.Core</name>
+    </assembly>
+    <members>
+        <member name="T:SH3H.SDK.Service.Core.BaseService">
+            <summary>
+            定义服务基类，实现了服务需要的基本功能
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Service.Core.BaseService.GetService``1">
+            <summary>
+            根据服务类型获取服务对象实例
+            </summary>
+            <typeparam name="TService">服务类型</typeparam>
+            <returns>返回服务对象实例</returns>
+        </member>
+        <member name="T:SH3H.SDK.Service.Core.ServiceFactory">
+            <summary>
+            定义服务工厂对象，用于创建指定类型的服务实例
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Service.Core.ServiceFactory._SyncLock">
+            <summary>
+            定义服务工厂同步锁对象
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Service.Core.ServiceFactory.serviceContainer">
+            <summary>
+            服务容器对象
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Service.Core.ServiceFactory.GetService``1">
+            <summary>
+            获取指定契约对应的服务
+            </summary>
+            <typeparam name="TService">服务契约类型</typeparam>
+            <returns>返回服务实例</returns>
+        </member>
+    </members>
+</doc>

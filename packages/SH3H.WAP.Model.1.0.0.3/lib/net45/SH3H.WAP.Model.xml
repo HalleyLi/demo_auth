@@ -1,0 +1,1308 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SH3H.WAP.Model</name>
+    </assembly>
+    <members>
+        <member name="T:SH3H.WAP.Model.Auth.WapApp">
+            <summary>
+            定义应用程序对象
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Auth.WapApp.AppKey">
+            <summary>
+            获取或设置应用程序Key
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Auth.WapApp.AppIdentity">
+            <summary>
+            获取或设置应用程序标识
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Auth.WapApp.AppName">
+            <summary>
+            获取或设置应用程序名称
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Auth.WapApp.IsActive">
+            <summary>
+            获取或设置应用程序是否激活
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Auth.WapApp.Comment">
+            <summary>
+            获取或设置应用程序描述
+            </summary>
+        </member>
+        <member name="T:SH3H.WAP.Model.Auth.WapAuthorization">
+            <summary>
+            定义授权对象
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Auth.WapAuthorization.Name">
+            <summary>
+            获取或设置功能点名称
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Auth.WapAuthorization.Code">
+            <summary>
+            获取或设置功能点编码
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Auth.WapAuthorization.Authorised">
+            <summary>
+            获取或设置当前功能是否已经授权
+            </summary>
+        </member>
+        <member name="T:SH3H.WAP.Model.Auth.WapCredential">
+            <summary>
+            定义用户登陆证书对象，描述登陆用户的相关认证信息
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Auth.WapCredential.UserId">
+            <summary>
+            获取或设置用户编号
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Auth.WapCredential.UserName">
+            <summary>
+            获取或设置用户名称
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Auth.WapCredential.Name">
+            <summary>
+            获取或设置登陆用户姓名
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Auth.WapCredential.JobNumber">
+            <summary>
+            获取或设置登陆用户工号
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Auth.WapCredential.IsSuccess">
+            <summary>
+            获取或设置一个值用于确定是否登陆成功
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Auth.WapCredential.Token">
+            <summary>
+            获取或设置用户登陆唯一识别号
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Auth.WapCredential.LoginTime">
+            <summary>
+            获取或设置用户登陆时间
+            </summary>
+        </member>
+        <member name="T:SH3H.WAP.Model.Auth.WapFunction">
+            <summary>
+            定义功能点对象
+            </summary>
+        </member>
+        <member name="M:SH3H.WAP.Model.Auth.WapFunction.Clone">
+            <summary>
+            复制功能点对象
+            </summary>
+            <returns>返回新的功能点对象</returns>
+        </member>
+        <member name="P:SH3H.WAP.Model.Auth.WapFunction.Key">
+            <summary>
+            获取或设置功能点关键字
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Auth.WapFunction.Code">
+            <summary>
+            获取或设置功能点代码
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Auth.WapFunction.Name">
+            <summary>
+            获取或设置功能点名称
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Auth.WapFunction.GroupName">
+            <summary>
+            获取或设置当前功能点所在分组
+            </summary>
+        </member>
+        <member name="T:SH3H.WAP.Model.Auth.WapLogon">
+            <summary>
+            定义用户登陆信息
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Auth.WapLogon.UserName">
+            <summary>
+            获取或设置用户名
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Auth.WapLogon.Password">
+            <summary>
+            获取或设置用户登陆密码
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Auth.WapLogon.AppIdentity">
+            <summary>
+            获取或设置登陆的应用程序标识
+            </summary>
+        </member>
+        <member name="T:SH3H.WAP.Model.Auth.WapMenu">
+            <summary>
+            定义WSDP菜单对象
+            </summary>
+        </member>
+        <member name="M:SH3H.WAP.Model.Auth.WapMenu.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Auth.WapMenu.Key">
+            <summary>
+            获取或设置菜单主键
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Auth.WapMenu.Name">
+            <summary>
+            获取或设置菜单名称
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Auth.WapMenu.ParentKey">
+            <summary>
+            获取或设置当前菜单的父菜单主键
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Auth.WapMenu.Menus">
+            <summary>
+            获取或设置当前菜单的子菜单列表
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Auth.WapMenu.IsActive">
+            <summary>
+            获取或设置当前菜单是否为活动菜单
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Auth.WapMenu.Description">
+            <summary>
+            获取或设置当前菜单的说明内容
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Auth.WapMenu.AuthCode">
+            <summary>
+            获取或设置当前菜单对应的权限码
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Auth.WapMenu.IsAuthActive">
+            <summary>
+            获取或设置当前菜单对应的权限是否有效
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Auth.WapMenu.AppCode">
+            <summary>
+            获取或设置应用编码
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Auth.WapMenu.Operation">
+            <summary>
+            获取或设置当前菜单的操作
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Auth.WapMenu.Component">
+            <summary>
+            获取或设置当前菜单对应的组件编号
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Auth.WapMenu.Css">
+            <summary>
+            获取或设置当前菜单应用的CSS样式名称
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Auth.WapMenu.IsShow">
+            <summary>
+            获取或设置当前菜单是否显示
+            </summary>
+        </member>
+        <member name="T:SH3H.WAP.Model.Auth.WapRole">
+            <summary>
+            定义角色对象。角色对象可以嵌套多个字角色对象。
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Auth.WapRole.RoleKey">
+            <summary>
+            获取或设置角色KEY
+            </summary>        
+        </member>
+        <member name="P:SH3H.WAP.Model.Auth.WapRole.RoleName">
+            <summary>
+            获取或设置角色名称
+            </summary>        
+        </member>
+        <member name="P:SH3H.WAP.Model.Auth.WapRole.RoleCode">
+            <summary>
+            获取或设置角色代码
+            </summary>        
+        </member>
+        <member name="P:SH3H.WAP.Model.Auth.WapRole.ParentRoleKey">
+            <summary>
+            获取或设置父角色KEY
+            </summary>        
+        </member>
+        <member name="P:SH3H.WAP.Model.Auth.WapRole.IsActive">
+            <summary>
+            获取或设置当前角色是否为活动角色
+            </summary>
+        </member>
+        <member name="T:SH3H.WAP.Model.Auth.WapUser">
+            <summary>
+            定义用户对象
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Auth.WapUser.UserKey">
+            <summary>
+            获取或设置用户唯一标识
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Auth.WapUser.Id">
+            <summary>
+            获取或设置用户编号
+            </summary>        
+        </member>
+        <member name="P:SH3H.WAP.Model.Auth.WapUser.Name">
+            <summary>
+            获取或设置用户姓名
+            </summary>        
+        </member>
+        <member name="P:SH3H.WAP.Model.Auth.WapUser.Code">
+            <summary>
+            获取或设置用户编码(拼音码)
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Auth.WapUser.Account">
+            <summary>
+            获取或设置用户账号
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Auth.WapUser.JobNumber">
+            <summary>
+            获取或设置用户工号
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Auth.WapUser.Cellphone">
+            <summary>
+            获取或设置用户手机号
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Auth.WapUser.Phone">
+            <summary>
+            获取或设置用户电话
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Auth.WapUser.Active">
+            <summary>
+            获取或设置用户状态
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Auth.WapUser.DomainAccount">
+            <summary>
+            获取或设置用户域帐户
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Auth.WapUser.Password">
+            <summary>
+            获取或设置用户密码
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Auth.WapUser.SortSn">
+            <summary>
+            获取或设置用户序号
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Auth.WapUser.Comment">
+            <summary>
+            获取或设置用户备注
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Auth.WapUser.Email">
+            <summary>
+            获取或设置用户邮箱
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Auth.WapUser.IdCard">
+            <summary>
+            获取或设置用户身份证号
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Auth.WapUser.Birthday">
+            <summary>
+            获取或设置用户生日
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Auth.WapUser.Sex">
+            <summary>
+            获取或设置用户性别
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Auth.WapUser.Address">
+            <summary>
+            获取或设置用户地址
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Auth.WapUser.PostNo">
+            <summary>
+            获取或设置用户邮编
+            </summary>
+        </member>
+        <member name="T:SH3H.WAP.Model.Bulletin.WapBulletin">
+            <summary>
+            定义公告板对象
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Bulletin.WapBulletin.Id">
+            <summary>
+            获取或设置公告板编号
+            </summary> 
+        </member>
+        <member name="P:SH3H.WAP.Model.Bulletin.WapBulletin.ChannelId">
+            <summary>
+            获取或设置频道编号
+            </summary> 
+        </member>
+        <member name="P:SH3H.WAP.Model.Bulletin.WapBulletin.ChannelName">
+            <summary>
+            获取或设置频道名称
+            </summary> 
+        </member>
+        <member name="P:SH3H.WAP.Model.Bulletin.WapBulletin.TypeId">
+            <summary>
+            获取或设置分类编号
+            </summary> 
+        </member>
+        <member name="P:SH3H.WAP.Model.Bulletin.WapBulletin.Title">
+            <summary>
+            获取或设置标题
+            </summary> 
+        </member>
+        <member name="P:SH3H.WAP.Model.Bulletin.WapBulletin.Content">
+            <summary>
+            获取或设置内容
+            </summary> 
+        </member>
+        <member name="P:SH3H.WAP.Model.Bulletin.WapBulletin.EffectiveTime">
+            <summary>
+            获取或设置起效日期
+            </summary> 
+        </member>
+        <member name="P:SH3H.WAP.Model.Bulletin.WapBulletin.FailureTime">
+            <summary>
+            获取或设置失效日期
+            </summary> 
+        </member>
+        <member name="P:SH3H.WAP.Model.Bulletin.WapBulletin.StateId">
+            <summary>
+            获取或设置状态
+            </summary> 
+        </member>
+        <member name="P:SH3H.WAP.Model.Bulletin.WapBulletin.CreateUser">
+            <summary>
+            获取或设置创建人
+            </summary> 
+        </member>
+        <member name="P:SH3H.WAP.Model.Bulletin.WapBulletin.CreateTime">
+            <summary>
+            获取或设置创建日期
+            </summary> 
+        </member>
+        <member name="P:SH3H.WAP.Model.Bulletin.WapBulletin.ModifyUser">
+            <summary>
+            获取或设置修改人
+            </summary> 
+        </member>
+        <member name="P:SH3H.WAP.Model.Bulletin.WapBulletin.ModifyTime">
+            <summary>
+            获取或设置修改日期
+            </summary> 
+        </member>
+        <member name="T:SH3H.WAP.Model.Bulletin.WapBulletinChannel">
+            <summary>
+            定义公告板对象
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Bulletin.WapBulletinChannel.Id">
+            <summary>
+            获取或设置频道编号
+            </summary> 
+        </member>
+        <member name="P:SH3H.WAP.Model.Bulletin.WapBulletinChannel.Name">
+            <summary>
+            获取或设置频道名字
+            </summary> 
+        </member>
+        <member name="P:SH3H.WAP.Model.Bulletin.WapBulletinChannel.Subject">
+            <summary>
+            获取或设置频道主题
+            </summary> 
+        </member>
+        <member name="P:SH3H.WAP.Model.Bulletin.WapBulletinChannel.State">
+            <summary>
+            获取或设置状态
+            </summary> 
+        </member>
+        <member name="P:SH3H.WAP.Model.Bulletin.WapBulletinChannel.CreateUser">
+            <summary>
+            获取或设置创建人
+            </summary> 
+        </member>
+        <member name="P:SH3H.WAP.Model.Bulletin.WapBulletinChannel.CreateTime">
+            <summary>
+            获取或设置创建日期
+            </summary> 
+        </member>
+        <member name="T:SH3H.WAP.Model.Bulletin.WapBulletinExtend">
+            <summary>
+            定义公告板对象
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Bulletin.WapBulletinExtend.BulletinId">
+            <summary>
+            获取或设置频道编号
+            </summary> 
+        </member>
+        <member name="P:SH3H.WAP.Model.Bulletin.WapBulletinExtend.ExtendCode">
+            <summary>
+            获取或设置频道名字
+            </summary> 
+        </member>
+        <member name="P:SH3H.WAP.Model.Bulletin.WapBulletinExtend.ExtendValue">
+            <summary>
+            获取或设置频道主题
+            </summary> 
+        </member>
+        <member name="T:SH3H.WAP.Model.Common.PagingResult`1">
+            <summary>
+            分页结果
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:SH3H.WAP.Model.Config.WapCalendar">
+            <summary>
+            定义文件资源描述对象
+            </summary>
+        </member>
+        <member name="M:SH3H.WAP.Model.Config.WapCalendar.GetHashCode">
+            <summary>
+            获取HashCode返回存在对象Id
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SH3H.WAP.Model.Config.WapCalendar.Equals(System.Object)">
+            <summary>
+            返回存在对象的Id
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="P:SH3H.WAP.Model.Config.WapCalendar.TenantId">
+            <summary>
+            获取或设置租户编号
+            </summary> 
+        </member>
+        <member name="P:SH3H.WAP.Model.Config.WapCalendar.CalendarCode">
+            <summary>
+            获取或设置日历编码
+            </summary> 
+        </member>
+        <member name="P:SH3H.WAP.Model.Config.WapCalendar.CalendarName">
+            <summary>
+            获取或设置日历名称
+            </summary> 
+        </member>
+        <member name="P:SH3H.WAP.Model.Config.WapCalendar.States">
+            <summary>
+            获取或设置是否放假状态
+            </summary> 
+        </member>
+        <member name="P:SH3H.WAP.Model.Config.WapCalendar.Remark">
+            <summary>
+            获取或设置备注信息
+            </summary> 
+        </member>
+        <member name="T:SH3H.WAP.Model.Config.WapCalendarDate">
+            <summary>
+            定义文件资源描述对象
+            </summary>
+        </member>
+        <member name="M:SH3H.WAP.Model.Config.WapCalendarDate.GetHashCode">
+            <summary>
+            获取HashCode返回存在对象Id
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SH3H.WAP.Model.Config.WapCalendarDate.Equals(System.Object)">
+            <summary>
+            返回存在对象的Id
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="P:SH3H.WAP.Model.Config.WapCalendarDate.CalendarId">
+            <summary>
+            获取或设置日历编号
+            </summary> 
+        </member>
+        <member name="P:SH3H.WAP.Model.Config.WapCalendarDate.CalendarDate">
+            <summary>
+            获取或设置日历日期
+            </summary> 
+        </member>
+        <member name="P:SH3H.WAP.Model.Config.WapCalendarDate.CalendarDateType">
+            <summary>
+            获取或设置日历日期类型
+            </summary> 
+        </member>
+        <member name="P:SH3H.WAP.Model.Config.WapCalendarDate.IsHoliday">
+            <summary>
+            获取或设置是否为假期的信息
+            </summary> 
+        </member>
+        <member name="P:SH3H.WAP.Model.Config.WapCalendarDate.IsWorkday">
+            <summary>
+            获取或设置是否为工作日的信息
+            </summary> 
+        </member>
+        <member name="P:SH3H.WAP.Model.Config.WapCalendarDate.CalendarDateName">
+            <summary>
+            获取或设置假期名称
+            </summary> 
+        </member>
+        <member name="P:SH3H.WAP.Model.Config.WapCalendarDate.Remark">
+            <summary>
+            获取或设置备注信息
+            </summary> 
+        </member>
+        <member name="T:SH3H.WAP.Model.Config.WapCaliber">
+            <summary>
+            口径对象
+            </summary>
+        </member>
+        <member name="M:SH3H.WAP.Model.Config.WapCaliber.GetHashCode">
+            <summary>
+            获取口径编号HashCode
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SH3H.WAP.Model.Config.WapCaliber.Equals(System.Object)">
+            <summary>
+            判断对象是否存在
+            </summary>
+            <param name="obj">口径对象</param>
+            <returns>对象编号</returns>
+        </member>
+        <member name="M:SH3H.WAP.Model.Config.WapCaliber.ToString">
+            <summary>
+            口径名称和值转化为字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:SH3H.WAP.Model.Config.WapCaliber.CaliberName">
+            <summary>
+            获取或设置口径名称
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Config.WapCaliber.CaliberValue">
+            <summary>
+            获取或设置口径值
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Config.WapCaliber.TenantId">
+            <summary>
+            获取或设置租户ID
+            </summary>
+        </member>
+        <member name="T:SH3H.WAP.Model.Config.WapConfiguration">
+            <summary>
+            系统配置对象
+            </summary>
+        </member>
+        <member name="M:SH3H.WAP.Model.Config.WapConfiguration.GetHashCode">
+            <summary>
+            获取HashCode返回存在对象Id
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SH3H.WAP.Model.Config.WapConfiguration.Equals(System.Object)">
+            <summary>
+            返回存在对象的Id
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="P:SH3H.WAP.Model.Config.WapConfiguration.Id">
+            <summary>
+            获取配置编号
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Config.WapConfiguration.ConfigName">
+            <summary>
+            获取或设置配置名称
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Config.WapConfiguration.ConfigCode">
+            <summary>
+            获取或设置配置编码
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Config.WapConfiguration.ConfigType">
+            <summary>
+            获取或设置配置项类型
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Config.WapConfiguration.ConfigValue">
+            <summary>
+            获取或设置配置值
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Config.WapConfiguration.ConfigDefault">
+            <summary>
+            获取或设置配置默认值
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Config.WapConfiguration.ConfigApp">
+            <summary>
+            获取或设置配置应用
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Config.WapConfiguration.ConfigGroup">
+            <summary>
+            获取或设置配置分组
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Config.WapConfiguration.ConfigState">
+            <summary>
+            获取或设置配置状态
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Config.WapConfiguration.Remark">
+            <summary>
+            获取或设置备注
+            </summary>
+        </member>
+        <member name="T:SH3H.WAP.Model.Config.WapDuty">
+            <summary>
+            职务对象
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Config.WapDuty.DutyCode">
+            <summary>
+            获取或设置职务编码
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Config.WapDuty.DutyName">
+            <summary>
+            获取或设置职务名称
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Config.WapDuty.TenantId">
+            <summary>
+            获取或设置租户ID
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Config.WapDuty.Remark">
+            <summary>
+            获取或设置备注
+            </summary>
+        </member>
+        <member name="T:SH3H.WAP.Model.Config.WapModel">
+            <summary>
+            水表型号对象
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Config.WapModel.ModelName">
+            <summary>
+            获取或设置型号名称
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Config.WapModel.DeviceType">
+            <summary>
+            获取或设置型号类型
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Config.WapModel.Remark">
+            <summary>
+            获取或设置备注
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Config.WapModel.TenantId">
+            <summary>
+            获取或设置租户ID
+            </summary>
+        </member>
+        <member name="T:SH3H.WAP.Model.Config.WapProducer">
+            <summary>
+            水表厂商对象
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Config.WapProducer.ProducerName">
+            <summary>
+            获取或设置制造商名称
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Config.WapProducer.DeviceType">
+            <summary>
+            获取或设置生产商类型
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Config.WapProducer.ProducerAddress">
+            <summary>
+            获取或设置生产商地址
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Config.WapProducer.ProducerContact">
+            <summary>
+            获取或设置联系人
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Config.WapProducer.ProducerTelephone">
+            <summary>
+            获取或设置联系电话
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Config.WapProducer.Remark">
+            <summary>
+            获取或设置备注
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Config.WapProducer.TenantId">
+            <summary>
+            获取或设置租户ID
+            </summary>
+        </member>
+        <member name="T:SH3H.WAP.Model.Config.WapStation">
+            <summary>
+            站点对象
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Config.WapStation.StationCode">
+            <summary>
+            获取或设置站点编码
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Config.WapStation.StationName">
+            <summary>
+            获取或设置站点名称
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Config.WapStation.StationAddress">
+            <summary>
+            获取或设置地址
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Config.WapStation.ParentId">
+            <summary>
+            获取或设置上级ID
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Config.WapStation.DutyMan">
+            <summary>
+            获取或设置责任人
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Config.WapStation.Tel">
+            <summary>
+            获取或设置联系电话
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Config.WapStation.SortIndex">
+            <summary>
+            获取或设置排序
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Config.WapStation.State">
+            <summary>
+            获取或设置状态
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Config.WapStation.StationType">
+            <summary>
+            获取或设置类型
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Config.WapStation.TenantId">
+            <summary>
+            获取或设置租户ID
+            </summary>
+        </member>
+        <member name="T:SH3H.WAP.Model.Config.WapWord">
+            <summary>
+            词语对象
+            </summary>
+        </member>
+        <member name="M:SH3H.WAP.Model.Config.WapWord.GetHashCode">
+            <summary>
+            获取HashCode返回存在对象Id
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SH3H.WAP.Model.Config.WapWord.Equals(System.Object)">
+            <summary>
+            返回存在对象的Id
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SH3H.WAP.Model.Config.WapWord.ToString">
+            <summary>
+            转化词语值和编码输出格式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:SH3H.WAP.Model.Config.WapWord.WordCode">
+            <summary>
+            获取或设置词语编码
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Config.WapWord.WordText">
+            <summary>
+            获取或设置词语内容
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Config.WapWord.WordValue">
+            <summary>
+            获取或设置词语的值
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Config.WapWord.WordSortIndex">
+            <summary>
+            获取或设置词语排序值
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Config.WapWord.WordState">
+            <summary>
+            获取或设置词语状态
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Config.WapWord.TenentId">
+            <summary>
+            获取或设置租户编号
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Config.WapWord.Remark">
+            <summary>
+            获取或设置词语备注
+            </summary>
+        </member>
+        <member name="T:SH3H.WAP.Model.FileServer.WapFileDescriptor">
+            <summary>
+            定义文件资源描述对象
+            </summary>
+        </member>
+        <member name="M:SH3H.WAP.Model.FileServer.WapFileDescriptor.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="P:SH3H.WAP.Model.FileServer.WapFileDescriptor.TenantId">
+            <summary>
+            获取或设置租户编号
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.FileServer.WapFileDescriptor.FileType">
+            <summary>
+            获取或设置文件类型
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.FileServer.WapFileDescriptor.FileName">
+            <summary>
+            获取或设置文件名称
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.FileServer.WapFileDescriptor.OriginFileName">
+            <summary>
+            获取或设置原始文件名
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.FileServer.WapFileDescriptor.FileSize">
+            <summary>
+            获取或设置文件尺寸
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.FileServer.WapFileDescriptor.FileHash">
+            <summary>
+            获取或设置文件MD5哈希值
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.FileServer.WapFileDescriptor.ContentType">
+            <summary>
+            获取或设置文件内容类型
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.FileServer.WapFileDescriptor.FileStream">
+            <summary>
+            获取或设置文件流对象
+            </summary>
+        </member>
+        <member name="T:SH3H.WAP.Model.FileServer.WapFileLocator">
+            <summary>
+            定义文件定位对象，用于描述文件所在位置
+            </summary>
+        </member>
+        <member name="M:SH3H.WAP.Model.FileServer.WapFileLocator.#ctor(System.Uri,SH3H.WAP.Model.FileServer.WapFileDescriptor)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="url">资源地质</param>
+            <param name="descriptor">文件描述对象</param>
+        </member>
+        <member name="P:SH3H.WAP.Model.FileServer.WapFileLocator.Url">
+            <summary>
+            获取或设置资源地址
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.FileServer.WapFileLocator.FileType">
+            <summary>
+            获取或设置文件类型
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.FileServer.WapFileLocator.FileSize">
+            <summary>
+            获取或设置文件大小
+            </summary>        
+        </member>
+        <member name="P:SH3H.WAP.Model.FileServer.WapFileLocator.FileHash">
+            <summary>
+            获取或设置文件Hash值
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.General.WapCaliber.CaliberChangeCycle">
+            <summary>
+            CALIBER_CHANGE_CYCLE
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.General.WapCaliber.CaliberHighVolume">
+            <summary>
+            CALIBER_HIGH_VOLUME
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.General.WapCaliber.CaliberId">
+            <summary>
+            CALIBER_ID
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.General.WapCaliber.CaliberInspectionCycle">
+            <summary>
+            CALIBER_INSPECTION_CYCLE
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.General.WapCaliber.CaliberLowVolume">
+            <summary>
+            CALIBER_LOW_VOLUME
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.General.WapCaliber.CaliberName">
+            <summary>
+            CALIBER_NAME
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.General.WapCaliber.CaliberRemark">
+            <summary>
+            CALIBER_REMARK
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.General.WapCaliber.CaliberState">
+            <summary>
+            CALIBER_STATE
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.General.WapCaliber.CaliberValue">
+            <summary>
+            CALIBER_VALUE
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.General.WapMeterModel.ModelId">
+            <summary>
+            MODEL_ID
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.General.WapMeterModel.ModelName">
+            <summary>
+            MODEL_NAME
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.General.WapMeterModel.ModelState">
+            <summary>
+            MODEL_STATE
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.General.WapMeterProducer.ProducerAddress">
+            <summary>
+            PRODUCER_ADDRESS
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.General.WapMeterProducer.ProducerId">
+            <summary>
+            PRODUCER_ID
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.General.WapMeterProducer.ProducerLinkman">
+            <summary>
+            PRODUCER_LINKMAN
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.General.WapMeterProducer.ProducerName">
+            <summary>
+            PRODUCER_NAME
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.General.WapMeterProducer.ProducerState">
+            <summary>
+            PRODUCER_STATE
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.General.WapMeterProducer.ProducerTelephone">
+            <summary>
+            PRODUCER_TELEPHONE
+            </summary>
+        </member>
+        <member name="T:SH3H.WAP.Model.Common.WapPagingRequestModel">
+            <summary>
+            分页输入模型
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Common.WapPagingRequestModel.StartRow">
+            <summary>
+            起始行
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Common.WapPagingRequestModel.EndRow">
+            <summary>
+            结束行
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Common.WapPagingRequestModel.SortField">
+            <summary>
+            排序字段
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Common.WapPagingRequestModel.SortDirection">
+            <summary>
+            排序方式
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.General.WapWord.WordGroupKey">
+            <summary>
+            词语组标识
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.General.WapWord.WordId">
+            <summary>
+            WORD_ID
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.General.WapWord.WordKey">
+            <summary>
+            词语标识
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.General.WapWord.WordParentId">
+            <summary>
+            WORD_PARENT_ID
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.General.WapWord.WordPycode">
+            <summary>
+            WORD_PYCODE
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.General.WapWord.WordRemark">
+            <summary>
+            WORD_REMARK
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.General.WapWord.WordSortIndex">
+            <summary>
+            WORD_SORT_INDEX
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.General.WapWord.WordState">
+            <summary>
+            状态 正常0,作废-1
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.General.WapWord.WordText">
+            <summary>
+            WORD_TEXT
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.General.WapWord.WordType">
+            <summary>
+            类型，留作备用字段
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.General.WapWord.WordValue">
+            <summary>
+            WORD_VALUE
+            </summary>
+        </member>
+        <member name="T:SH3H.WAP.Model.Print.WapPrintTemplate">
+            <summary>
+            定义打印模板对象
+            </summary>
+        </member>
+        <member name="M:SH3H.WAP.Model.Print.WapPrintTemplate.GetHashCode">
+            <summary>
+            获取HashCode返回存在对象Id
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SH3H.WAP.Model.Print.WapPrintTemplate.Equals(System.Object)">
+            <summary>
+            返回存在对象的Id
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="P:SH3H.WAP.Model.Print.WapPrintTemplate.Id">
+            <summary>
+            获取或设置打印设置编号
+            </summary>        
+        </member>
+        <member name="P:SH3H.WAP.Model.Print.WapPrintTemplate.TemplateKey">
+            <summary>
+            获取或设置打印模板KEY
+            </summary>      
+        </member>
+        <member name="P:SH3H.WAP.Model.Print.WapPrintTemplate.QualifiedName">
+            <summary>
+            获取或设置模板完整类型名称
+            </summary>  
+        </member>
+        <member name="P:SH3H.WAP.Model.Print.WapPrintTemplate.TemplateAssembly">
+            <summary>
+            获取或设置模板程序集
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Print.WapPrintTemplate.Hash">
+            <summary>
+            获取或设置模板程序集Hash码
+            </summary>
+        </member>
+        <member name="T:SH3H.WAP.Model.Print.WapPrintSetting">
+            <summary>
+            定义打印配置对象
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Print.WapPrintSetting.UserId">
+            <summary>
+            获取或设置用户编号
+            </summary>        
+        </member>
+        <member name="P:SH3H.WAP.Model.Print.WapPrintSetting.Name">
+            <summary>
+            获取或设置发票名称
+            </summary>        
+        </member>
+        <member name="P:SH3H.WAP.Model.Print.WapPrintSetting.IMKey">
+            <summary>
+            获取或设置IM编号
+            </summary>        
+        </member>
+        <member name="P:SH3H.WAP.Model.Print.WapPrintSetting.SubcomCode">
+            <summary>
+            获取或设置站点
+            </summary>        
+        </member>
+        <member name="P:SH3H.WAP.Model.Print.WapPrintSetting.PrinterName">
+            <summary>
+            获取或设置打印机名称
+            </summary>        
+        </member>
+        <member name="P:SH3H.WAP.Model.Print.WapPrintSetting.MarginLeft">
+            <summary>
+            获取或设置左边距
+            </summary>        
+        </member>
+        <member name="P:SH3H.WAP.Model.Print.WapPrintSetting.MarginRight">
+            <summary>
+            获取或设置右边距
+            </summary>        
+        </member>
+        <member name="P:SH3H.WAP.Model.Print.WapPrintSetting.UsePreView">
+            <summary>
+            获取或设置是否预览
+            </summary>        
+        </member>
+        <member name="T:SH3H.WAP.Model.Query.QueryParameter">
+            <summary>
+            定义数据库查询参数对象
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Query.QueryParameter.DbType">
+            <summary>
+            获取或设置字段类型
+            </summary>       
+        </member>
+        <member name="P:SH3H.WAP.Model.Query.QueryParameter.ParameterName">
+            <summary>
+            获取或设置参数名称
+            </summary>        
+        </member>
+        <member name="P:SH3H.WAP.Model.Query.QueryParameter.Size">
+            <summary>
+            获取或设置字段类型长度
+            </summary>        
+        </member>
+        <member name="P:SH3H.WAP.Model.Query.QueryParameter.Value">
+            <summary>
+            获取或设置参数值        
+            </summary>     
+        </member>
+        <member name="T:SH3H.WAP.Model.Scada.WapScadaSearchCondition">
+            <summary>
+            定义SCADA查询条件对象
+            </summary>
+        </member>
+        <member name="M:SH3H.WAP.Model.Scada.WapScadaSearchCondition.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:SH3H.WAP.Model.Scada.WapScadaSearchCondition.#ctor(System.Int32)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="objectId">SCADA对象编号</param>
+        </member>
+        <member name="M:SH3H.WAP.Model.Scada.WapScadaSearchCondition.#ctor(System.Int32,System.Int32)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="objectId">SCADA对象编号</param>
+            <param name="valueType">SCADA类型</param>
+        </member>
+        <member name="P:SH3H.WAP.Model.Scada.WapScadaSearchCondition.ObjectIds">
+            <summary>
+            获取或设置对象编号列表
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Scada.WapScadaSearchCondition.ValueTypes">
+            <summary>
+            获取或设置数据类型列表
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Scada.WapScadaSearchCondition.StartTime">
+            <summary>
+            获取或设置查询开始时间
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Scada.WapScadaSearchCondition.EndTime">
+            <summary>
+            获取或设置查询结束时间
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Scada.WapScadaSearchCondition.Step">
+            <summary>
+            获取或设置数据步长，默认为1分钟
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Model.Scada.WapScadaSearchCondition.RealOnly">
+            <summary>
+            获取或设置一个值用于表示是否只读取真实数据。默认为true
+            </summary>
+        </member>
+    </members>
+</doc>

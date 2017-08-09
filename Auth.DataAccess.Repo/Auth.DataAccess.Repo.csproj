@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{141519EB-8ED4-4963-8154-1F4F81407DF3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SH3H.WAP.Auth.DataAccess.Repo</RootNamespace>
+    <AssemblyName>SH3H.WAP.Auth.DataAccess.Repo</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\bin\Debug\SH3H.WAP.Auth.DataAccess.Repo.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\bin\Release\SH3H.WAP.Auth.DataAccess.Repo.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>shanghai3h.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\EnterpriseLibrary.Data.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\EnterpriseLibrary.ExceptionHandling.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\EnterpriseLibrary.ExceptionHandling.Logging.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\EnterpriseLibrary.Logging.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SH3H.SDK.DataAccess.Core, Version=1.0.0.5, Culture=neutral, PublicKeyToken=74ba8b940628b95d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SH3H.SDK.DataAccess.Core.1.0.0.5\lib\net45\SH3H.SDK.DataAccess.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="SH3H.SDK.DataAccess.Db, Version=1.0.0.10, Culture=neutral, PublicKeyToken=74ba8b940628b95d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SH3H.SDK.DataAccess.Db.1.0.0.10\lib\net45\SH3H.SDK.DataAccess.Db.dll</HintPath>
+    </Reference>
+    <Reference Include="SH3H.SDK.DataAccess.Repo, Version=1.0.0.3, Culture=neutral, PublicKeyToken=74ba8b940628b95d, processorArchitecture=MSIL">
+      <HintPath>..\packages\SH3H.SDK.DataAccess.Repo.1.0.0.3\lib\net45\SH3H.SDK.DataAccess.Repo.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SH3H.SDK.Definition, Version=1.0.0.5, Culture=neutral, PublicKeyToken=74ba8b940628b95d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SH3H.SDK.Definition.1.0.0.5\lib\net45\SH3H.SDK.Definition.dll</HintPath>
+    </Reference>
+    <Reference Include="SH3H.SDK.Infrastructure, Version=1.0.0.5, Culture=neutral, PublicKeyToken=74ba8b940628b95d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SH3H.SDK.Infrastructure.1.0.0.5\lib\net45\SH3H.SDK.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="SH3H.SDK.Infrastructure.Caching, Version=1.0.0.5, Culture=neutral, PublicKeyToken=74ba8b940628b95d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SH3H.SDK.Infrastructure.Caching.1.0.0.5\lib\net45\SH3H.SDK.Infrastructure.Caching.dll</HintPath>
+    </Reference>
+    <Reference Include="SH3H.SDK.Share, Version=1.0.0.17, Culture=neutral, PublicKeyToken=74ba8b940628b95d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SH3H.SDK.Share.1.0.0.17\lib\net45\SH3H.SDK.Share.dll</HintPath>
+    </Reference>
+    <Reference Include="SH3H.SharpFrame.Common, Version=1.0.0.1, Culture=neutral, PublicKeyToken=74ba8b940628b95d, processorArchitecture=MSIL">
+      <HintPath>..\packages\SH3H.SharpFrame.Common.1.0.0.1\lib\net45\SH3H.SharpFrame.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Contact\IAuthSeqRepository.cs" />
+    <Compile Include="Contact\IWapAppRepository.cs" />
+    <Compile Include="Contact\IWapAuthAuditRepository.cs" />
+    <Compile Include="Contact\IWapFuncGroupRelativeRepository.cs" />
+    <Compile Include="Contact\IWapFuncRelativeRepository.cs" />
+    <Compile Include="Contact\IWapFunctionAllRepository.cs" />
+    <Compile Include="Contact\IWapFunctionGroupRepository.cs" />
+    <Compile Include="Contact\IWapFunctionRepository.cs" />
+    <Compile Include="Contact\IWapMenuRepository.cs" />
+    <Compile Include="Contact\IWapOrganizationRepository.cs" />
+    <Compile Include="Contact\IWapRoleFunctionRepository.cs" />
+    <Compile Include="Contact\IWapRoleRepository.cs" />
+    <Compile Include="Contact\IWapUserInfoRepository.cs" />
+    <Compile Include="Contact\IWapUserRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WapAppRepository.cs" />
+    <Compile Include="WapAuthAuditRepository.cs" />
+    <Compile Include="WapAuthSeqRepository.cs" />
+    <Compile Include="WapFuncGroupRelativeRepository.cs" />
+    <Compile Include="WapFuncRelativeRepository.cs" />
+    <Compile Include="WapFunctionAllRepository.cs" />
+    <Compile Include="WapFunctionGroupRepository.cs" />
+    <Compile Include="WapFunctionRepository.cs" />
+    <Compile Include="WapMenuRepository.cs" />
+    <Compile Include="WapOrganizationRepository.cs" />
+    <Compile Include="WapRoleFunctionRepository.cs" />
+    <Compile Include="WapRoleRepository.cs" />
+    <Compile Include="WapUserInfoRepository.cs" />
+    <Compile Include="WapUserRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="shanghai3h.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Auth.DataAccess\Auth.DataAccess.csproj">
+      <Project>{e653c026-1eea-4099-a707-31036533fedf}</Project>
+      <Name>Auth.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Auth.Model\Auth.Model.csproj">
+      <Project>{de5dd3b1-6da3-43be-ab9a-ee817765c0ff}</Project>
+      <Name>Auth.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Share\Share.csproj">
+      <Project>{3f985f52-7cbf-4572-a9b2-6667d84d9eda}</Project>
+      <Name>Share</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

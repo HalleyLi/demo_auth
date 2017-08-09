@@ -1,0 +1,215 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SH3H.SDK.Infrastructure.Messaging</name>
+    </assembly>
+    <members>
+        <member name="T:SH3H.SDK.Infrastructure.Messaging.IMessageListener">
+            <summary>
+            定义消息监听器对象
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Messaging.IMessageListener.Connect">
+            <summary>
+            启动消息监听
+            </summary> 
+            <returns>如果监听器启动成功返回true，否则返回false</returns>
+        </member>
+        <member name="P:SH3H.SDK.Infrastructure.Messaging.IMessageListener.CanReceive">
+            <summary>
+            获取监听器是否可以接受消息
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Infrastructure.Messaging.IMessageSender">
+            <summary>
+            定义消息发送器器对象
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Messaging.IMessageSender.Publish``1(``0)">
+            <summary>
+            发送指定消息
+            </summary>
+            <typeparam name="TMessage">消息类型</typeparam>
+            <param name="message">待发送的消息</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Messaging.IMessageSender.Publish(System.Object)">
+            <summary>
+            发送指定消息
+            </summary>
+            <param name="message">待发送的消息</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Messaging.IMessageSender.Send``1(``0,System.String)">
+            <summary>
+            发送指定消息
+            </summary>
+            <typeparam name="TMessage">消息类型</typeparam>
+            <param name="message">待发送的消息</param>
+            <param name="address">消息接收方地址</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Messaging.IMessageSender.Send(System.Object,System.String)">
+            <summary>
+            发送指定消息
+            </summary>
+            <param name="message">待发送的消息</param>
+            <param name="address">消息接收方地址</param>
+        </member>
+        <member name="P:SH3H.SDK.Infrastructure.Messaging.IMessageSender.CanSend">
+            <summary>
+            获取发送器是否允许发送消息
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Infrastructure.Messaging.IMessage">
+            <summary>
+            定义消息接口
+            </summary>    
+        </member>
+        <member name="P:SH3H.SDK.Infrastructure.Messaging.IMessage.UUID">
+            <summary>
+            获取消息识别号
+            </summary>     
+        </member>
+        <member name="P:SH3H.SDK.Infrastructure.Messaging.IMessage.Tag">
+            <summary>
+            获取消息标签
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Infrastructure.Messaging.IMessage.SendTime">
+            <summary>
+            获取或设置消息发送时间
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Infrastructure.Messaging.ObjectMessage">
+            <summary>
+            定义对象消息
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Infrastructure.Messaging.ObjectMessage.hostName">
+            <summary>
+            机器名称
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Messaging.ObjectMessage.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="tag">消息标签</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Messaging.ObjectMessage.GetHashCode">
+            <inheritdoc/>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Messaging.ObjectMessage.Equals(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Messaging.ObjectMessage.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="P:SH3H.SDK.Infrastructure.Messaging.ObjectMessage.UUID">
+            <summary>
+            获取消息识别号
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Infrastructure.Messaging.ObjectMessage.Tag">
+            <summary>
+            获取或设置消息标签
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Infrastructure.Messaging.ObjectMessage.HostName">
+            <summary>
+            获取消息发送主机名称
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Infrastructure.Messaging.ObjectMessage.SendTime">
+            <summary>
+            获取或设置消息发送时间
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Infrastructure.Messaging.RabbitMQ.RabbitmqMessageNotifier">
+            <summary>
+            定义基于RabbitMQ的消息监听器对象
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Messaging.RabbitMQ.RabbitmqMessageNotifier.#ctor(System.Uri)">
+            <summary>
+            构造函数，不启动队列接收器。
+            </summary>
+            <param name="uri">消息总线连接地址</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Messaging.RabbitMQ.RabbitmqMessageNotifier.#ctor(System.Uri,Microsoft.Practices.Unity.IUnityContainer)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="uri">消息总线连接地址</param>
+            <param name="container">Unity容器对象</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Messaging.RabbitMQ.RabbitmqMessageNotifier.Connect">
+            <summary>
+            启动消息监听
+            </summary>
+            <returns>
+            如果监听器启动成功返回true，否则返回false
+            </returns>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Messaging.RabbitMQ.RabbitmqMessageNotifier.Publish``1(``0)">
+            <summary>
+            发送指定消息
+            </summary>
+            <typeparam name="TMessage">消息类型</typeparam>
+            <param name="message">待发送的消息</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Messaging.RabbitMQ.RabbitmqMessageNotifier.Publish(System.Object)">
+            <summary>
+            发送指定消息
+            </summary>
+            <param name="message">待发送的消息</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Messaging.RabbitMQ.RabbitmqMessageNotifier.Send``1(``0,System.String)">
+            <summary>
+            发送指定消息
+            </summary>
+            <typeparam name="TMessage">消息类型</typeparam>
+            <param name="message">待发送的消息</param>
+            <param name="address">消息接收方地址</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Messaging.RabbitMQ.RabbitmqMessageNotifier.Send(System.Object,System.String)">
+            <summary>
+            发送指定消息
+            </summary>
+            <param name="message">待发送的消息</param>
+            <param name="address">消息接收方地址</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Messaging.RabbitMQ.RabbitmqMessageNotifier.Dispose">
+            <inheritdoc/>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Messaging.RabbitMQ.RabbitmqMessageNotifier.Dispose(System.Boolean)">
+            <summary>
+            释放托管和非托管资源
+            </summary>
+            <param name="disposing">资源是否已经释放</param>
+        </member>
+        <member name="P:SH3H.SDK.Infrastructure.Messaging.RabbitMQ.RabbitmqMessageNotifier.Uri">
+            <summary>
+            获取或设置消息总线连接地址
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Infrastructure.Messaging.RabbitMQ.RabbitmqMessageNotifier.Container">
+            <summary>
+            获取或设置Unity容器对象
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Infrastructure.Messaging.RabbitMQ.RabbitmqMessageNotifier.Bus">
+            <summary>
+            获取或设置消息总线
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Infrastructure.Messaging.RabbitMQ.RabbitmqMessageNotifier.CanReceive">
+            <summary>
+            获取监听器是否可以接受消息
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Infrastructure.Messaging.RabbitMQ.RabbitmqMessageNotifier.CanSend">
+            <summary>
+            获取发送器是否允许发送消息
+            </summary>
+        </member>
+    </members>
+</doc>

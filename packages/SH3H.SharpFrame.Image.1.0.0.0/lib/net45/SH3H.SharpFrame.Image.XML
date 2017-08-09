@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SH3H.SharpFrame.Image</name>
+    </assembly>
+    <members>
+        <member name="T:SH3H.SharpFrame.Image.Quality">
+            <summary>
+            定义图片质量
+            </summary>
+        </member>
+        <member name="T:SH3H.SharpFrame.Image.BitmapExtensions">
+            <summary>
+            定义图片扩展函数
+            </summary>
+        </member>
+        <member name="M:SH3H.SharpFrame.Image.BitmapExtensions.Resize(System.Drawing.Bitmap,System.Int32,SH3H.SharpFrame.Image.Quality,System.String)">
+            <summary>
+            Resizes an image to a certain height
+            </summary>
+            <param name="originalImage">Image to resize</param>
+            <param name="maxSide">Max height/width for the final image</param>
+            <param name="quality">Quality of the resizing</param>
+            <param name="fileName">File to save to</param>
+            <returns>A bitmap object of the resized image</returns>
+        </member>
+        <member name="M:SH3H.SharpFrame.Image.BitmapExtensions.Resize(System.Drawing.Bitmap,System.Int32,System.Int32,SH3H.SharpFrame.Image.Quality,System.String)">
+            <summary>
+            Resizes an image to a certain height
+            </summary>
+            <param name="originalImage">Image to resize</param>
+            <param name="width">New width for the final image</param>
+            <param name="height">New height for the final image</param>
+            <param name="quality">Quality of the resizing</param>
+            <param name="fileName">File to save to</param>
+            <returns>A bitmap object of the resized image</returns>
+        </member>
+    </members>
+</doc>

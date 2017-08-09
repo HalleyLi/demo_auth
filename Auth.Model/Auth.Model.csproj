@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DE5DD3B1-6DA3-43BE-AB9A-EE817765C0FF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SH3H.WAP.Auth.Model</RootNamespace>
+    <AssemblyName>SH3H.WAP.Auth.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\bin\Debug\SH3H.WAP.Auth.Model.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\bin\Release\SH3H.WAP.Auth.Model.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>shanghai3h.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=4.2.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\AutoMapper.4.2.1\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="SH3H.SDK.Definition, Version=1.0.0.5, Culture=neutral, PublicKeyToken=74ba8b940628b95d, processorArchitecture=MSIL">
+      <HintPath>..\packages\SH3H.SDK.Definition.1.0.0.5\lib\net45\SH3H.SDK.Definition.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SH3H.SDK.Share, Version=1.0.0.17, Culture=neutral, PublicKeyToken=74ba8b940628b95d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SH3H.SDK.Share.1.0.0.17\lib\net45\SH3H.SDK.Share.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dto\ChangePasswordInputDto.cs" />
+    <Compile Include="Dto\RoleUserRelation.cs" />
+    <Compile Include="Dto\UpdateUserOrganizationRelationModel.cs" />
+    <Compile Include="Dto\UpdateUserOrganizationRelationObject.cs" />
+    <Compile Include="Dto\UserOrganizationRelation.cs" />
+    <Compile Include="Dto\WapAppAddDto.cs" />
+    <Compile Include="Dto\WapAppUpdateDto.cs" />
+    <Compile Include="Dto\WapAppDto.cs" />
+    <Compile Include="Dto\WapStateDto.cs" />
+    <Compile Include="Dto\WapAppStateDto.cs" />
+    <Compile Include="Dto\WapFunctionAllDto.cs" />
+    <Compile Include="Dto\WapFuncGroupRelativeDto.cs" />
+    <Compile Include="Dto\WapFuncRelativeDto.cs" />
+    <Compile Include="Dto\WapFunctionDto.cs" />
+    <Compile Include="Dto\WapFunctionGroupDto.cs" />
+    <Compile Include="Dto\WapOrganizationDto.cs" />
+    <Compile Include="Dto\WapRoleDto.cs" />
+    <Compile Include="Dto\WapRoleFunctionDto.cs" />
+    <Compile Include="Dto\WapRoleOutputDto.cs" />
+    <Compile Include="Dto\WapMenuDto.cs" />
+    <Compile Include="Dto\WapRoleRelativeDto.cs" />
+    <Compile Include="Dto\WapRoleUserRelationDto.cs" />
+    <Compile Include="Dto\WapUpdateFuncGroupRelationDto.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Dto\WapUpdateFuncsRelationDto.cs" />
+    <Compile Include="Dto\WapUpdateRoleFuncRelationDto.cs" />
+    <Compile Include="Dto\WapUpdateRoleRelationDto.cs" />
+    <Compile Include="Dto\WapUserDto.cs" />
+    <Compile Include="Dto\WapUserInDto.cs" />
+    <Compile Include="MapperProfile.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WapApp.cs" />
+    <Compile Include="WapAppState.cs" />
+    <Compile Include="WapAuthAudit.cs" />
+    <Compile Include="Dto\WapAuthorizationDto.cs" />
+    <Compile Include="WapAuthSequence.cs" />
+    <Compile Include="Dto\WapCredentialDto.cs" />
+    <Compile Include="WapFunction.cs" />
+    <Compile Include="WapFunctionGroup.cs" />
+    <Compile Include="Dto\WapLogonDto.cs" />
+    <Compile Include="WapRoleFunction.cs" />
+    <Compile Include="WapRole.cs" />
+    <Compile Include="WapOrganization.cs" />
+    <Compile Include="WapMenu.cs" />
+    <Compile Include="WapUser.cs" />
+    <Compile Include="WapUserInfo.cs" />
+    <Compile Include="Dto\WapUserInfoDto.cs" />
+    <Compile Include="WapUserState.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="shanghai3h.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Share\Share.csproj">
+      <Project>{3f985f52-7cbf-4572-a9b2-6667d84d9eda}</Project>
+      <Name>Share</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

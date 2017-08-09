@@ -1,0 +1,1041 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SH3H.SDK.Infrastructure.Caching</name>
+    </assembly>
+    <members>
+        <member name="T:SH3H.SDK.Infrastructure.Caching.BaseCache">
+            <summary>
+            定义缓存基类
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.BaseCache.#ctor">
+            <summary>
+            内部构造函数
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.BaseCache.Finalize">
+            <summary>
+            析构函数
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.BaseCache.Add``1(System.String,``0)">
+            <summary>
+            添加缓存值
+            </summary>
+            <param name="key">缓存键</param>
+            <param name="value">缓存值</param>
+            <typeparam name="TValue">缓存值类型</typeparam>
+            <returns>如果缓存中不存在对应的缓存键返回<c>true</c>，否则返回<c>false</c></returns>
+            <exception cref="T:System.ArgumentNullException">
+            如果 <paramref name="key"/> 或者 <paramref name="value"/> 为null
+            </exception>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.BaseCache.Add``1(System.String,``0,System.String)">
+            <summary>
+            在缓存区域中添加缓存值
+            </summary>
+            <param name="key">缓存键</param>
+            <param name="value">缓存值</param>
+            <param name="region">缓存区域</param>
+            <typeparam name="TValue">缓存值类型</typeparam>
+            <returns>如果缓存中不存在对应的缓存键返回<c>true</c>，否则返回<c>false</c></returns>
+            <exception cref="T:System.ArgumentNullException">
+            如果 <paramref name="key"/>, <paramref name="value"/> 或者 <paramref name="region"/> 为null
+            </exception>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.BaseCache.Add``1(SH3H.SDK.Infrastructure.Caching.CacheItem{``0})">
+            <summary>
+            添加缓存项
+            </summary>
+            <param name="item">缓存项</param>
+            <typeparam name="TValue">缓存值类型</typeparam>
+            <returns>如果缓存中不存在对应的缓存键返回<c>true</c>，否则返回<c>false</c></returns>
+            <exception cref="T:System.ArgumentNullException">
+            如果 <paramref name="item"/> 为null
+            </exception>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.BaseCache.Clear">
+            <summary>
+            清空缓存。缓存中的所有缓存值和缓存区域都将被清除。
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.BaseCache.ClearRegion(System.String)">
+            <summary>
+            清空缓存区域。指定缓存区域中的缓存值会被清除。
+            </summary>
+            <param name="region">缓存区域</param>
+            <exception cref="T:System.ArgumentNullException">
+            如果 <paramref name="region"/> 为null
+            </exception>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.BaseCache.Expire(System.String,SH3H.SDK.Infrastructure.Caching.ExpirationMode,System.TimeSpan)">
+            <summary>
+            设置指定缓存键的缓存模式和缓存超时时间
+            </summary>
+            <param name="key">缓存键</param>
+            <param name="mode">缓存模式</param>
+            <param name="timeout">缓存超时时间</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.BaseCache.Expire(System.String,System.String,SH3H.SDK.Infrastructure.Caching.ExpirationMode,System.TimeSpan)">
+            <summary>
+            设置缓存区域中指定缓存键的缓存模式和缓存超时时间
+            </summary>
+            <param name="key">缓存键</param>
+            <param name="region">缓存区域</param>
+            <param name="mode">缓存模式</param>
+            <param name="timeout">缓存超时时间</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.BaseCache.Expire(System.String,System.DateTimeOffset)">
+            <summary>
+            设置指定缓存键的绝对超时时间
+            </summary>
+            <param name="key">缓存键</param>
+            <param name="absoluteExpiration">缓存绝对超时时间</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.BaseCache.Expire(System.String,System.String,System.DateTimeOffset)">
+            <summary>
+            设置缓存区域中指定缓存键的绝对超时时间
+            </summary>
+            <param name="key">缓存键</param>
+            <param name="region">缓存区域</param>
+            <param name="absoluteExpiration">缓存绝对超时时间</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.BaseCache.Expire(System.String,System.TimeSpan)">
+            <summary>
+            设置指定缓存键的滑动超时时间
+            </summary>
+            <param name="key">缓存键</param>
+            <param name="slidingExpiration">缓存滑动超时时间</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.BaseCache.Expire(System.String,System.String,System.TimeSpan)">
+            <summary>
+            设置缓存区域指定缓存键的滑动超时时间
+            </summary>
+            <param name="key">缓存键</param>
+            <param name="region">缓存区域</param>
+            <param name="slidingExpiration">缓存滑动超时时间</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.BaseCache.Get``1(System.String)">
+            <summary>
+            获取指定缓存键的缓存值
+            </summary>
+            <param name="key">缓存键</param>
+            <typeparam name="TValue">缓存值类型</typeparam>
+            <returns>返回缓存值</returns>
+            <exception cref="T:System.ArgumentNullException">
+            如果 <paramref name="key"/> 为null
+            </exception>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.BaseCache.GetByRegion``1(System.String)">
+            <summary>
+            获取指定区域的缓存集合
+            </summary>
+            <typeparam name="TValue">缓存值类型</typeparam>
+            <param name="region">区域</param>
+            <returns></returns>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.BaseCache.GetByRegionInternal``1(System.String)">
+            <summary>
+            获取缓存缓存项集合根据键值模糊查询
+            </summary>
+            <typeparam name="TValue">缓存值类型</typeparam>
+            <param name="keyPattern">key Pattern</param>
+            <returns>返回缓存项集合</returns>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.BaseCache.Get``1(System.String,System.String)">
+            <summary>
+            获取缓存区域中指定缓存键的缓存值
+            </summary>
+            <param name="key">缓存键</param>
+            <param name="region">缓存区域</param>
+            <typeparam name="TValue">缓存值类型</typeparam>
+            <returns>返回缓存值</returns>
+            <exception cref="T:System.ArgumentNullException">
+            如果 <paramref name="key"/> 或者 <paramref name="region"/> 为null
+            </exception>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.BaseCache.GetCacheItem``1(System.String)">
+            <summary>
+            获取指定缓存键的缓存项
+            </summary>        
+            <param name="key">缓存键</param>
+            <typeparam name="TValue">缓存值类型</typeparam>
+            <returns>返回缓存项</returns>
+            <exception cref="T:System.ArgumentNullException">
+            如果 <paramref name="key"/> 为null
+            </exception>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.BaseCache.GetCacheItem``1(System.String,System.String)">
+            <summary>
+            获取缓存区域中指定缓存键的缓存项
+            </summary>        
+            <param name="key">缓存键</param>
+            <param name="region">缓存区域</param>
+            <typeparam name="TValue">缓存值类型</typeparam>
+            <returns>返回缓存项</returns>
+            <exception cref="T:System.ArgumentNullException">
+            如果 <paramref name="key"/> 或者 <paramref name="region"/> 为null
+            </exception>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.BaseCache.GetCacheItemsByKeypattern``1(System.String)">
+            <summary>
+            获取缓存缓存项集合根据键值模糊查询
+            </summary>
+            <typeparam name="TValue">缓存值类型</typeparam>
+            <param name="keyPattern">key Pattern</param>
+            <returns>返回缓存项集合</returns>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.BaseCache.Put``1(System.String,``0)">
+            <summary>
+            设置缓存值。如果缓存键已经存在则替换缓存值。
+            </summary>
+            <param name="key">缓存键</param>
+            <param name="value">缓存值</param>
+            <typeparam name="TValue">缓存值类型</typeparam>
+            <exception cref="T:System.ArgumentNullException">
+            如果 <paramref name="key"/> 或者 <paramref name="value"/> 为null
+            </exception>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.BaseCache.Put``1(System.String,``0,System.String)">
+            <summary>
+            在缓存区域中设置缓存值。如果缓存键已经存在则替换缓存值。
+            </summary>
+            <param name="key">缓存键</param>
+            <param name="value">缓存值</param>
+            <param name="region">缓存区域</param>
+            <typeparam name="TValue">缓存值类型</typeparam>
+            <exception cref="T:System.ArgumentNullException">
+            如果 <paramref name="key"/>, <paramref name="value"/> 或者 <paramref name="region"/> 为null
+            </exception>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.BaseCache.Put``1(SH3H.SDK.Infrastructure.Caching.CacheItem{``0})">
+            <summary>
+            设置缓存项。如果缓存键已经存在则替换缓存项。
+            </summary>
+            <param name="item">缓存项</param>
+            <typeparam name="TValue">缓存值类型</typeparam>
+            <exception cref="T:System.ArgumentNullException">
+            如果 <paramref name="item"/> 为null
+            </exception>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.BaseCache.Remove(System.String)">
+            <summary>
+            删除缓存值。
+            </summary>
+            <param name="key">缓存键</param>
+            <returns>如果缓存键存在且删除成功则返回<c>true</c>，否则返回<c>false</c></returns>
+            <exception cref="T:System.ArgumentNullException">
+            如果 <paramref name="key"/> 为null
+            </exception>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.BaseCache.Remove(System.String,System.String)">
+            <summary>
+            从缓存区域中删除缓存值。
+            </summary>
+            <param name="key">缓存键</param>
+            <param name="region">缓存区域</param>
+            <returns>如果缓存键存在且删除成功则返回<c>true</c>，否则返回<c>false</c></returns>
+            <exception cref="T:System.ArgumentNullException">
+            如果 <paramref name="key"/> 或者 <paramref name="region"/> 为null
+            </exception>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.BaseCache.RemoveExpiration(System.String)">
+            <summary>
+            移除指定缓存值上的缓存超时设置
+            </summary>
+            <param name="key">缓存键</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.BaseCache.RemoveExpiration(System.String,System.String)">
+            <summary>
+            移除缓存区域中指定缓存值上的缓存超时设置
+            </summary>
+            <param name="key">缓存键</param>
+            <param name="region">缓存区域</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.BaseCache.AddInternal``1(SH3H.SDK.Infrastructure.Caching.CacheItem{``0})">
+            <summary>
+            添加缓存项
+            </summary>
+            <param name="item">缓存项</param>
+            <typeparam name="TValue">缓存值类型</typeparam>
+            <returns>如果缓存中不存在对应的缓存键返回<c>true</c>，否则返回<c>false</c></returns>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.BaseCache.PutInternal``1(SH3H.SDK.Infrastructure.Caching.CacheItem{``0})">
+            <summary>
+            设置缓存项。如果缓存键已经存在则替换缓存项。
+            </summary>
+            <param name="item">缓存项</param>
+            <typeparam name="TValue">缓存值类型</typeparam>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.BaseCache.GetCacheItemInternal``1(System.String)">
+            <summary>
+            获取指定缓存键的缓存项
+            </summary>        
+            <param name="key">缓存键</param>
+            <typeparam name="TValue">缓存值类型</typeparam>
+            <returns>返回缓存项</returns>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.BaseCache.GetCacheItemInternal``1(System.String,System.String)">
+            <summary>
+            获取指定缓存键的缓存项
+            </summary>        
+            <param name="key">缓存键</param>
+            <param name="region">缓存所在区域</param>
+            <typeparam name="TValue">缓存值类型</typeparam>
+            <returns>返回缓存项</returns>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.BaseCache.GetCacheItemsByKeypatternInternal``1(System.String)">
+            <summary>
+            获取缓存缓存项集合根据键值模糊查询
+            </summary>
+            <typeparam name="TValue">缓存值类型</typeparam>
+            <param name="keyPattern">key Pattern</param>
+            <returns>返回缓存项集合</returns>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.BaseCache.RemoveInternal(System.String)">
+            <summary>
+            删除缓存值。
+            </summary>
+            <param name="key">缓存键</param>
+            <returns>如果缓存键存在且删除成功则返回<c>true</c>，否则返回<c>false</c></returns>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.BaseCache.RemoveInternal(System.String,System.String)">
+            <summary>
+            从缓存区域中删除缓存值。
+            </summary>
+            <param name="key">缓存键</param>
+            <param name="region">缓存区域</param>
+            <returns>如果缓存键存在且删除成功则返回<c>true</c>，否则返回<c>false</c></returns>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.BaseCache.GetCasted``1(System.Object)">
+            <summary>
+            获取缓存值并转换为<c>TOut</c>类型
+            </summary>
+            <typeparam name="TValue">返回的数据类型</typeparam>
+            <param name="value">转换前的数据值</param>
+            <returns>返回转换后的数据值</returns>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.BaseCache.Dispose(System.Boolean)">
+            <summary>
+            释放托管和非托管资源
+            </summary>
+            <param name="disposeManaged">
+            当参数值为<c>true</c>时将释放托管和非托管资源，<c>false</c>将只释放非托管资源。 
+            </param>
+        </member>
+        <member name="P:SH3H.SDK.Infrastructure.Caching.BaseCache.Disposed">
+            <summary>
+            获取或设置一个值用于表示当前对象是否已经释放。
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Infrastructure.Caching.BaseCache.Disposing">
+            <summary>
+            获取或设置一个值用于表示当前对象是否正在释放中。 
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Infrastructure.Caching.CacheItem`1">
+            <summary>
+            定义缓存对象。封装了缓存项Key和缓存项Value。
+            </summary>
+            <typeparam name="TValue">缓存值类型</typeparam>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.CacheItem`1.#ctor(System.String,`0)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="key">缓存项关键字</param>
+            <param name="value">缓存值</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.CacheItem`1.#ctor(System.String,System.String,`0)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="key">缓存项关键字</param>
+            <param name="region">缓存项所在区域</param>
+            <param name="value">缓存值</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.CacheItem`1.#ctor(System.String,`0,SH3H.SDK.Infrastructure.Caching.ExpirationMode,System.TimeSpan)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="key">缓存项关键字</param>
+            <param name="value">缓存值</param>
+            <param name="expiration">缓存项过期模式</param>
+            <param name="timeout">缓存项过期时间</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.CacheItem`1.#ctor(System.String,System.String,`0,SH3H.SDK.Infrastructure.Caching.ExpirationMode,System.TimeSpan)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="key">缓存项关键字</param>
+            <param name="region">缓存项所在区域</param>
+            <param name="value">缓存值</param>
+            <param name="expiration">缓存项过期模式</param>
+            <param name="timeout">缓存项过期时间</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.CacheItem`1.#ctor(System.String,System.String,`0,System.Nullable{SH3H.SDK.Infrastructure.Caching.ExpirationMode},System.Nullable{System.TimeSpan},System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
+            <summary>
+            私有构造函数
+            </summary>
+            <param name="key">缓存项关键字</param>
+            <param name="region">缓存项所在区域</param>
+            <param name="value">缓存值</param>
+            <param name="expiration">缓存项过期模式</param>
+            <param name="timeout">缓存项过期时间</param>
+            <param name="created">缓存项创建时间戳</param>
+            <param name="lastAccessed">缓存项最后访问时间戳</param> 
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.CacheItem`1.#ctor">
+            <summary>
+            内部构造函数
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.CacheItem`1.WithExpiration(SH3H.SDK.Infrastructure.Caching.ExpirationMode,System.TimeSpan)">
+            <summary>
+            创建当前缓存项的副本并支持过期
+            </summary>
+            <param name="mode">缓存项过期模式</param>
+            <param name="timeout">缓存项超时时间</param>
+            <returns>返回新的缓存项实例</returns>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.CacheItem`1.WithAbsoluteExpiration(System.DateTimeOffset)">
+            <summary>
+            创建当前缓存项的副本并支持绝对时间过期
+            </summary>
+            <param name="absoluteExpiration">缓存项过期时间</param>
+            <returns>返回新的缓存项实例</returns>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.CacheItem`1.WithSlidingExpiration(System.TimeSpan)">
+            <summary>
+            创建当前缓存项的副本并支持滑动窗口过期
+            </summary>
+            <param name="slidingExpiration">缓存项过期时间</param>
+            <returns>返回新的缓存项实例</returns>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.CacheItem`1.WithNoExpiration">
+            <summary>
+            创建当前缓存项的副本并移除过期模式
+            </summary>
+            <returns>返回新的缓存项实例</returns>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.CacheItem`1.WithValue(`0)">
+            <summary>
+            创建当前缓存项的副本并更新缓存项中的缓存值。
+            </summary>
+            <param name="value">缓存值</param>
+            <returns>返回新的缓存项实例</returns>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.CacheItem`1.WithCreated(System.DateTime)">
+            <summary>
+            创建当前缓存项的副本并更新缓存项创建时间
+            </summary>
+            <param name="created">创建时间</param>
+            <returns>返回新的缓存项实例</returns>
+        </member>
+        <member name="P:SH3H.SDK.Infrastructure.Caching.CacheItem`1.CreatedUtc">
+            <summary>
+            获取缓存项创建时间戳
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Infrastructure.Caching.CacheItem`1.ExpirationMode">
+            <summary>
+            获取缓存项过期模式
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Infrastructure.Caching.CacheItem`1.ExpirationTimeout">
+            <summary>
+            获取缓存项过期时间
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Infrastructure.Caching.CacheItem`1.Key">
+            <summary>
+            获取缓存项关键字
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Infrastructure.Caching.CacheItem`1.LastAccessedUtc">
+            <summary>
+            获取或设置最后访问时间戳
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Infrastructure.Caching.CacheItem`1.Region">
+            <summary>
+            获取缓存项所在区域 
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Infrastructure.Caching.CacheItem`1.Value">
+            <summary>
+            获取缓存值
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.Infrastructure.Caching.CacheItem`1.ValueType">
+            <summary>
+            获取缓存值类型
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Infrastructure.Caching.CacheManager">
+            <summary>
+            定义缓存管理器对象，用于获取、创建、管理缓存器实例。
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Infrastructure.Caching.ICache">
+            <summary>
+            定义缓存对象接口，该接口为所有类型缓存实现的基础接口
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.ICache.Add``1(System.String,``0)">
+            <summary>
+            添加缓存值
+            </summary>
+            <param name="key">缓存键</param>
+            <param name="value">缓存值</param>
+            <typeparam name="TValue">缓存值类型</typeparam>
+            <returns>如果缓存中不存在对应的缓存键返回<c>true</c>，否则返回<c>false</c></returns>
+            <exception cref="T:System.ArgumentNullException">
+            如果 <paramref name="key"/> 或者 <paramref name="value"/> 为null
+            </exception>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.ICache.Add``1(System.String,``0,System.String)">
+            <summary>
+            在缓存区域中添加缓存值
+            </summary>
+            <param name="key">缓存键</param>
+            <param name="value">缓存值</param>
+            <param name="region">缓存区域</param>
+            <typeparam name="TValue">缓存值类型</typeparam>
+            <returns>如果缓存中不存在对应的缓存键返回<c>true</c>，否则返回<c>false</c></returns>
+            <exception cref="T:System.ArgumentNullException">
+            如果 <paramref name="key"/>, <paramref name="value"/> 或者 <paramref name="region"/> 为null
+            </exception>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.ICache.Add``1(SH3H.SDK.Infrastructure.Caching.CacheItem{``0})">
+            <summary>
+            添加缓存项
+            </summary>
+            <param name="item">缓存项</param>
+            <typeparam name="TValue">缓存值类型</typeparam>
+            <returns>如果缓存中不存在对应的缓存键返回<c>true</c>，否则返回<c>false</c></returns>
+            <exception cref="T:System.ArgumentNullException">
+            如果 <paramref name="item"/> 为null
+            </exception>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.ICache.Clear">
+            <summary>
+            清空缓存。缓存中的所有缓存值和缓存区域都将被清除。
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.ICache.ClearRegion(System.String)">
+            <summary>
+            清空缓存区域。指定缓存区域中的缓存值会被清除。
+            </summary>
+            <param name="region">缓存区域</param>
+            <exception cref="T:System.ArgumentNullException">
+            如果 <paramref name="region"/> 为null
+            </exception>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.ICache.Expire(System.String,SH3H.SDK.Infrastructure.Caching.ExpirationMode,System.TimeSpan)">
+            <summary>
+            设置指定缓存键的缓存模式和缓存超时时间
+            </summary>
+            <param name="key">缓存键</param>
+            <param name="mode">缓存模式</param>
+            <param name="timeout">缓存超时时间</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.ICache.Expire(System.String,System.String,SH3H.SDK.Infrastructure.Caching.ExpirationMode,System.TimeSpan)">
+            <summary>
+            设置缓存区域中指定缓存键的缓存模式和缓存超时时间
+            </summary>
+            <param name="key">缓存键</param>
+            <param name="region">缓存区域</param>
+            <param name="mode">缓存模式</param>
+            <param name="timeout">缓存超时时间</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.ICache.Expire(System.String,System.DateTimeOffset)">
+            <summary>
+            设置指定缓存键的绝对超时时间
+            </summary>
+            <param name="key">缓存键</param>
+            <param name="absoluteExpiration">缓存绝对超时时间</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.ICache.Expire(System.String,System.String,System.DateTimeOffset)">
+            <summary>
+            设置缓存区域中指定缓存键的绝对超时时间
+            </summary>
+            <param name="key">缓存键</param>
+            <param name="region">缓存区域</param>
+            <param name="absoluteExpiration">缓存绝对超时时间</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.ICache.Expire(System.String,System.TimeSpan)">
+            <summary>
+            设置指定缓存键的滑动超时时间
+            </summary>
+            <param name="key">缓存键</param>
+            <param name="slidingExpiration">缓存滑动超时时间</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.ICache.Expire(System.String,System.String,System.TimeSpan)">
+            <summary>
+            设置缓存区域指定缓存键的滑动超时时间
+            </summary>
+            <param name="key">缓存键</param>
+            <param name="region">缓存区域</param>
+            <param name="slidingExpiration">缓存滑动超时时间</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.ICache.Get``1(System.String)">
+            <summary>
+            获取指定缓存键的缓存值
+            </summary>
+            <param name="key">缓存键</param>
+            <typeparam name="TValue">缓存值类型</typeparam>
+            <returns>返回缓存值</returns>
+            <exception cref="T:System.ArgumentNullException">
+            如果 <paramref name="key"/> 为null
+            </exception>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.ICache.GetByRegion``1(System.String)">
+            <summary>
+            获取指定区域的缓存集合
+            </summary>
+            <typeparam name="TValue">缓存值类型</typeparam>
+            <param name="region">区域</param>
+            <returns></returns>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.ICache.Get``1(System.String,System.String)">
+            <summary>
+            获取缓存区域中指定缓存键的缓存值
+            </summary>
+            <param name="key">缓存键</param>
+            <param name="region">缓存区域</param>
+            <typeparam name="TValue">缓存值类型</typeparam>
+            <returns>返回缓存值</returns>
+            <exception cref="T:System.ArgumentNullException">
+            如果 <paramref name="key"/> 或者 <paramref name="region"/> 为null
+            </exception>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.ICache.GetCacheItem``1(System.String)">
+            <summary>
+            获取指定缓存键的缓存项
+            </summary>        
+            <param name="key">缓存键</param>
+            <typeparam name="TValue">缓存值类型</typeparam>
+            <returns>返回缓存项</returns>
+            <exception cref="T:System.ArgumentNullException">
+            如果 <paramref name="key"/> 为null
+            </exception>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.ICache.GetCacheItem``1(System.String,System.String)">
+            <summary>
+            获取缓存区域中指定缓存键的缓存项
+            </summary>        
+            <param name="key">缓存键</param>
+            <param name="region">缓存区域</param>
+            <typeparam name="TValue">缓存值类型</typeparam>
+            <returns>返回缓存项</returns>
+            <exception cref="T:System.ArgumentNullException">
+            如果 <paramref name="key"/> 或者 <paramref name="region"/> 为null
+            </exception>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.ICache.GetCacheItemsByKeypattern``1(System.String)">
+            <summary>
+            获取缓存缓存项集合根据键值模糊查询
+            </summary>
+            <typeparam name="TValue"></typeparam>
+            <param name="keyPattern"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.ICache.Put``1(System.String,``0)">
+            <summary>
+            设置缓存值。如果缓存键已经存在则替换缓存值。
+            </summary>
+            <param name="key">缓存键</param>
+            <param name="value">缓存值</param>
+            <typeparam name="TValue">缓存值类型</typeparam>
+            <exception cref="T:System.ArgumentNullException">
+            如果 <paramref name="key"/> 或者 <paramref name="value"/> 为null
+            </exception>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.ICache.Put``1(System.String,``0,System.String)">
+            <summary>
+            在缓存区域中设置缓存值。如果缓存键已经存在则替换缓存值。
+            </summary>
+            <param name="key">缓存键</param>
+            <param name="value">缓存值</param>
+            <param name="region">缓存区域</param>
+            <typeparam name="TValue">缓存值类型</typeparam>
+            <exception cref="T:System.ArgumentNullException">
+            如果 <paramref name="key"/>, <paramref name="value"/> 或者 <paramref name="region"/> 为null
+            </exception>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.ICache.Put``1(SH3H.SDK.Infrastructure.Caching.CacheItem{``0})">
+            <summary>
+            设置缓存项。如果缓存键已经存在则替换缓存项。
+            </summary>
+            <param name="item">缓存项</param>
+            <typeparam name="TValue">缓存值类型</typeparam>
+            <exception cref="T:System.ArgumentNullException">
+            如果 <paramref name="item"/> 为null
+            </exception>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.ICache.Remove(System.String)">
+            <summary>
+            删除缓存值。
+            </summary>
+            <param name="key">缓存键</param>
+            <returns>如果缓存键存在且删除成功则返回<c>true</c>，否则返回<c>false</c></returns>
+            <exception cref="T:System.ArgumentNullException">
+            如果 <paramref name="key"/> 为null
+            </exception>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.ICache.Remove(System.String,System.String)">
+            <summary>
+            从缓存区域中删除缓存值。
+            </summary>
+            <param name="key">缓存键</param>
+            <param name="region">缓存区域</param>
+            <returns>如果缓存键存在且删除成功则返回<c>true</c>，否则返回<c>false</c></returns>
+            <exception cref="T:System.ArgumentNullException">
+            如果 <paramref name="key"/> 或者 <paramref name="region"/> 为null
+            </exception>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.ICache.RemoveExpiration(System.String)">
+            <summary>
+            移除指定缓存值上的缓存超时设置
+            </summary>
+            <param name="key">缓存键</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.ICache.RemoveExpiration(System.String,System.String)">
+            <summary>
+            移除缓存区域中指定缓存值上的缓存超时设置
+            </summary>
+            <param name="key">缓存键</param>
+            <param name="region">缓存区域</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.ICache.Exist(System.String)">
+            <summary>
+            判断缓存中是否存在指定的关键字
+            </summary>
+            <param name="key">缓存键</param>
+            <returns>如果缓存键存在则返回true，否则返回false</returns>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.ICache.Exist(System.String,System.String)">
+            <summary>
+            判断缓存中某个区域是否存在指定的关键字
+            </summary>
+            <param name="key">缓存键</param>
+            <param name="region">缓存区域</param>
+            <returns>如果缓存键存在则返回true，否则返回false</returns>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.CacheManager.#ctor">
+            <summary>
+            私有构造函数
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.CacheManager.Get">
+            <summary>
+            获取或创建远程缓存器对象实例
+            </summary>
+            <returns>返回缓存器对象实例</returns>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.CacheManager.GetLocal">
+            <summary>
+            获取或创建缓存器对象实例
+            </summary>
+            <returns>返回缓存器对象实例</returns>
+        </member>
+        <member name="F:SH3H.SDK.Infrastructure.Caching.CacheManager.defaultCache">
+            <summary>
+            定义默认的基于ObjectCache缓存
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.CacheManager.Clear">
+            <summary>
+            清空缓存。缓存中的所有缓存值和缓存区域都将被清除。
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.CacheManager.ClearRegion(System.String)">
+            <summary>
+            清空缓存区域。指定缓存区域中的缓存值会被清除。
+            </summary>
+            <param name="region">缓存区域</param>
+            <exception cref="T:System.ArgumentNullException">
+            如果 <paramref name="region"/> 为null
+            </exception>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.CacheManager.Expire(System.String,SH3H.SDK.Infrastructure.Caching.ExpirationMode,System.TimeSpan)">
+            <summary>
+            设置指定缓存键的缓存模式和缓存超时时间
+            </summary>
+            <param name="key">缓存键</param>
+            <param name="mode">缓存模式</param>
+            <param name="timeout">缓存超时时间</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.CacheManager.Expire(System.String,System.String,SH3H.SDK.Infrastructure.Caching.ExpirationMode,System.TimeSpan)">
+            <summary>
+            设置缓存区域中指定缓存键的缓存模式和缓存超时时间
+            </summary>
+            <param name="key">缓存键</param>
+            <param name="region">缓存区域</param>
+            <param name="mode">缓存模式</param>
+            <param name="timeout">缓存超时时间</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.CacheManager.Expire(System.Runtime.Caching.ObjectCache,System.String,SH3H.SDK.Infrastructure.Caching.ExpirationMode,System.TimeSpan)">
+            <summary>
+            设置指定缓存键的缓存模式和缓存超时时间
+            </summary>
+            <param name="cache">缓存</param>
+            <param name="key">缓存键</param>
+            <param name="mode">缓存区域</param>
+            <param name="timeout">缓存超时时间</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.CacheManager.AddInternal``1(SH3H.SDK.Infrastructure.Caching.CacheItem{``0})">
+            <summary>
+            添加缓存项
+            </summary>
+            <param name="item">缓存项</param>
+            <typeparam name="TValue">缓存值类型</typeparam>
+            <returns>如果缓存中不存在对应的缓存键返回<c>true</c>，否则返回<c>false</c></returns>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.CacheManager.PutInternal``1(SH3H.SDK.Infrastructure.Caching.CacheItem{``0})">
+            <summary>
+            设置缓存项。如果缓存键已经存在则替换缓存项。
+            </summary>
+            <param name="item">缓存项</param>
+            <typeparam name="TValue">缓存值类型</typeparam>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.CacheManager.GetCacheItemInternal``1(System.String)">
+            <summary>
+            获取指定缓存键的缓存项
+            </summary>        
+            <param name="key">缓存键</param>
+            <typeparam name="TValue">缓存值类型</typeparam>
+            <returns>返回缓存项</returns>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.CacheManager.GetCacheItemInternal``1(System.String,System.String)">
+            <summary>
+            获取指定缓存键的缓存项
+            </summary>        
+            <param name="key">缓存键</param>
+            <param name="region">缓存所在区域</param>
+            <typeparam name="TValue">缓存值类型</typeparam>
+            <returns>返回缓存项</returns>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.CacheManager.RemoveInternal(System.String)">
+            <summary>
+            删除缓存值。
+            </summary>
+            <param name="key">缓存键</param>
+            <returns>如果缓存键存在且删除成功则返回<c>true</c>，否则返回<c>false</c></returns>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.CacheManager.RemoveInternal(System.String,System.String)">
+            <summary>
+            从缓存区域中删除缓存值。
+            </summary>
+            <param name="key">缓存键</param>
+            <param name="region">缓存区域</param>
+            <returns>如果缓存键存在且删除成功则返回<c>true</c>，否则返回<c>false</c></returns>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.CacheManager.GetCacheItemsByKeypatternInternal``1(System.String)">
+            <summary>
+            获取缓存缓存项集合根据键值模糊查询
+            </summary>
+            <typeparam name="TValue">缓存值类型</typeparam>
+            <param name="keyPattern">key Pattern</param>
+            <returns>返回缓存项集合</returns>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.CacheManager.Exist(System.String)">
+            <summary>
+            判断缓存中是否存在指定的关键字
+            </summary>
+            <param name="key">缓存键</param>
+            <returns>如果缓存键存在则返回true，否则返回false</returns>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.CacheManager.Exist(System.String,System.String)">
+            <summary>
+            判断缓存中是否存在指定的关键字
+            </summary>
+            <param name="key">缓存键</param>
+            <returns>如果缓存键存在则返回true，否则返回false</returns>
+        </member>
+        <member name="T:SH3H.SDK.Infrastructure.Caching.ExpirationMode">
+            <summary>
+            定义缓存项过期模式
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Infrastructure.Caching.ExpirationMode.None">
+            <summary>
+            缓存项无过期
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Infrastructure.Caching.ExpirationMode.Sliding">
+            <summary>
+            定义sliding过期模式。当缓存项被访问后过期你时间将被刷新。
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Infrastructure.Caching.ExpirationMode.Absolute">
+            <summary>
+            定义绝对时间过期模式。缓存项将在指定时间后过期。
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.Infrastructure.Caching.RedisCache">
+            <summary>
+            定义基于Redis的缓存器
+            </summary>
+        </member>
+        <member name="F:SH3H.SDK.Infrastructure.Caching.RedisCache.connection">
+            <summary>
+            保存Redis缓存服务连接对象
+            </summary> 
+        </member>
+        <member name="F:SH3H.SDK.Infrastructure.Caching.RedisCache.server">
+            <summary>
+            Redis服务
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.RedisCache.Get">
+            <summary>
+            获取Redis缓存对象实例
+            </summary>
+            <returns>返回缓存管理器</returns>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.RedisCache.#ctor">
+            <summary>
+            构造函数
+            </summary>
+            <param name="database">Redis数据库对象</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.RedisCache.Clear">
+            <summary>
+            清空缓存。缓存中的所有缓存值和缓存区域都将被清除。
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.RedisCache.ClearRegion(System.String)">
+            <summary>
+            清空缓存区域。指定缓存区域中的缓存值会被清除。
+            </summary>
+            <param name="region">缓存区域</param>
+            <exception cref="T:System.ArgumentNullException">
+            如果 <paramref name="region"/> 为null
+            </exception>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.RedisCache.Expire(System.String,SH3H.SDK.Infrastructure.Caching.ExpirationMode,System.TimeSpan)">
+            <summary>
+            设置指定缓存键的缓存模式和缓存超时时间
+            </summary>
+            <param name="key">缓存键</param>
+            <param name="mode">缓存模式</param>
+            <param name="timeout">缓存超时时间</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.RedisCache.Expire(System.String,System.String,SH3H.SDK.Infrastructure.Caching.ExpirationMode,System.TimeSpan)">
+            <summary>
+            设置缓存区域中指定缓存键的缓存模式和缓存超时时间
+            </summary>
+            <param name="key">缓存键</param>
+            <param name="region">缓存区域</param>
+            <param name="mode">缓存模式</param>
+            <param name="timeout">缓存超时时间</param>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.RedisCache.AddInternal``1(SH3H.SDK.Infrastructure.Caching.CacheItem{``0})">
+            <summary>
+            添加缓存项
+            </summary>
+            <param name="item">缓存项</param>
+            <typeparam name="TValue">缓存值类型</typeparam>
+            <returns>如果缓存中不存在对应的缓存键返回<c>true</c>，否则返回<c>false</c></returns>
+            <exception cref="T:System.ArgumentNullException">
+            如果 <paramref name="item"/> 为null
+            </exception>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.RedisCache.PutInternal``1(SH3H.SDK.Infrastructure.Caching.CacheItem{``0})">
+            <summary>
+            设置缓存项。如果缓存键已经存在则替换缓存项。
+            </summary>
+            <param name="item">缓存项</param>
+            <typeparam name="TValue">缓存值类型</typeparam>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.RedisCache.GetCacheItemInternal``1(System.String)">
+            <summary>
+            获取指定缓存键的缓存项
+            </summary>        
+            <param name="key">缓存键</param>
+            <typeparam name="TValue">缓存值类型</typeparam>
+            <returns>返回缓存项</returns>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.RedisCache.GetCacheItemInternal``1(System.String,System.String)">
+            <summary>
+            获取指定缓存键的缓存项
+            </summary>        
+            <param name="key">缓存键</param>
+            <param name="region">缓存所在区域</param>
+            <typeparam name="TValue">缓存值类型</typeparam>
+            <returns>返回缓存项</returns>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.RedisCache.GetCacheItemsByKeypatternInternal``1(System.String)">
+            <summary>
+            获取缓存缓存项集合根据键值模糊查询
+            </summary>
+            <typeparam name="TValue">缓存值类型</typeparam>
+            <param name="keyPattern">key Pattern</param>
+            <returns>返回缓存项集合</returns>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.RedisCache.RemoveInternal(System.String)">
+            <summary>
+            删除缓存值。
+            </summary>
+            <param name="key">缓存键</param>
+            <returns>如果缓存键存在且删除成功则返回<c>true</c>，否则返回<c>false</c></returns>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.RedisCache.RemoveInternal(System.String,System.String)">
+            <summary>
+            从缓存区域中删除缓存值。
+            </summary>
+            <param name="key">缓存键</param>
+            <param name="region">缓存区域</param>
+            <returns>如果缓存键存在且删除成功则返回<c>true</c>，否则返回<c>false</c></returns>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.RedisCache.GetCacheitemByRegionInternal``1(System.String)">
+            <summary>
+            获取指定区域的缓存集合
+            </summary>
+            <typeparam name="TValue">缓存值类型</typeparam>
+            <param name="region">区域</param>
+            <returns>返回缓存对象集合</returns>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.RedisCache.GetByRegionInternal``1(System.String)">
+            <summary>
+            获取指定区域的缓存集合
+            </summary>
+            <typeparam name="TValue">缓存值类型</typeparam>
+            <param name="region">区域</param>
+            <returns>返回缓存值集合</returns>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.RedisCache.ToJson(System.Object)">
+            <summary>
+            将对象转换为JSON字符串
+            </summary>
+            <param name="value">待转换的对象实例</param>
+            <returns>返回JSON字符串</returns>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.RedisCache.FromJson``1(System.String)">
+            <summary>
+            将JSON字符串转换为对象
+            </summary>
+            <typeparam name="TValue">返回对象类型</typeparam>
+            <param name="json">json字符串</param>
+            <returns>返回转换后的对象</returns>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.RedisCache.Exist(System.String)">
+            <summary>
+            判断缓存中是否存在指定的关键字
+            </summary>
+            <param name="key">缓存键</param>
+            <returns>如果缓存键存在则返回true，否则返回false</returns>
+        </member>
+        <member name="M:SH3H.SDK.Infrastructure.Caching.RedisCache.Exist(System.String,System.String)">
+            <summary>
+            判断缓存中某个区域是否存在指定的关键字
+            </summary>
+            <param name="key">缓存键</param>
+            <param name="region">缓存区域</param>
+            <returns>如果缓存键存在则返回true，否则返回false</returns>
+        </member>
+    </members>
+</doc>
